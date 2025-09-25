@@ -1,0 +1,1878 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sd_sdram_vga_run_msim_rtl_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_ver ./verilog_libs/altera_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_ver ./verilog_libs/altera_ver 
+# Copying D:/Program/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:01 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module dffeas_pr
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+# -- Compiling UDP PRIM_GDFF_HIGH
+# -- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	dffeas_pr
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 16:49:03 on Dec 08,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# Errors: 0, Warnings: 1
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap lpm_ver ./verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:03 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/220model.v 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 16:49:03 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# Errors: 0, Warnings: 1
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap sgate_ver ./verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:03 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/sgate.v 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 16:49:03 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:04 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 16:49:04 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:05 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module common_28nm_lutram_register
+# -- Compiling module generic_14nm_mlab_cell_impl
+# -- Compiling module common_14nm_lutram_register
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_chainout_adder_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module altera_syncram_forwarding_logic
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module dps_pulse_gen
+# -- Compiling module altera_iopll
+# -- Compiling module dps_pulse_gen_iopll
+# -- Compiling module twentynm_iopll_arlol
+# -- Compiling module fourteennm_altera_iopll
+# -- Compiling module dps_pulse_gen_fourteennm_iopll
+# -- Compiling package fourteennm_iopll_functions
+# -- Compiling module fourteennm_simple_iopll
+# -- Importing package fourteennm_iopll_functions
+# -- Compiling module fourteennm_sub_iopll
+# -- Compiling module twentynm_iopll_ip
+# -- Compiling module altera_iopll_rotation_lcells
+# -- Compiling module altera_pll_dps_lcell_comb
+# -- Compiling module iopll_bootstrap
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_14nm_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 	altera_iopll
+# 	fourteennm_altera_iopll
+# 	fourteennm_simple_iopll
+# End time: 16:49:05 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/cyclone10lp_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclone10lp_ver".
+# Errors: 0, Warnings: 1
+# vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cyclone10lp_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/cyclone10lp_atoms.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:05 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclone10lp_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/cyclone10lp_atoms.v 
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFE
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS_HIGH
+# -- Compiling module cyclone10lp_dffe
+# -- Compiling module cyclone10lp_mux21
+# -- Compiling module cyclone10lp_mux41
+# -- Compiling module cyclone10lp_and1
+# -- Compiling module cyclone10lp_and16
+# -- Compiling module cyclone10lp_bmux21
+# -- Compiling module cyclone10lp_b17mux21
+# -- Compiling module cyclone10lp_nmux21
+# -- Compiling module cyclone10lp_b5mux21
+# -- Compiling module cyclone10lp_latch
+# -- Compiling module cyclone10lp_routing_wire
+# -- Compiling module cyclone10lp_m_cntr
+# -- Compiling module cyclone10lp_n_cntr
+# -- Compiling module cyclone10lp_scale_cntr
+# -- Compiling module cyclone10lp_pll_reg
+# -- Compiling module cyclone10lp_pll
+# -- Compiling module cyclone10lp_lcell_comb
+# -- Compiling module cyclone10lp_ff
+# -- Compiling module cyclone10lp_ram_pulse_generator
+# -- Compiling module cyclone10lp_ram_register
+# -- Compiling module cyclone10lp_ram_block
+# -- Compiling module cyclone10lp_mac_data_reg
+# -- Compiling module cyclone10lp_mac_sign_reg
+# -- Compiling module cyclone10lp_mac_mult_internal
+# -- Compiling module cyclone10lp_mac_mult
+# -- Compiling module cyclone10lp_mac_out
+# -- Compiling module cyclone10lp_io_ibuf
+# -- Compiling module cyclone10lp_io_obuf
+# -- Compiling module cyclone10lp_ddio_out
+# -- Compiling module cyclone10lp_ddio_oe
+# -- Compiling module cyclone10lp_pseudo_diff_out
+# -- Compiling module cyclone10lp_io_pad
+# -- Compiling module cyclone10lp_asmiblock
+# -- Compiling module cyclone10lp_ena_reg
+# -- Compiling module cyclone10lp_clkctrl
+# -- Compiling module cyclone10lp_rublock
+# -- Compiling module cyclone10lp_apfcontroller
+# -- Compiling module cyclone10lp_termination_ctrl
+# -- Compiling module cyclone10lp_termination_rupdn
+# -- Compiling module cyclone10lp_termination
+# -- Compiling module cyclone10lp_jtag
+# -- Compiling module cyclone10lp_crcblock
+# -- Compiling module cyclone10lp_oscillator
+# 
+# Top level modules:
+# 	cyclone10lp_dffe
+# 	cyclone10lp_and1
+# 	cyclone10lp_and16
+# 	cyclone10lp_bmux21
+# 	cyclone10lp_b17mux21
+# 	cyclone10lp_nmux21
+# 	cyclone10lp_b5mux21
+# 	cyclone10lp_pll_reg
+# 	cyclone10lp_pll
+# 	cyclone10lp_lcell_comb
+# 	cyclone10lp_ff
+# 	cyclone10lp_ram_block
+# 	cyclone10lp_mac_mult
+# 	cyclone10lp_mac_out
+# 	cyclone10lp_io_ibuf
+# 	cyclone10lp_io_obuf
+# 	cyclone10lp_ddio_out
+# 	cyclone10lp_ddio_oe
+# 	cyclone10lp_pseudo_diff_out
+# 	cyclone10lp_io_pad
+# 	cyclone10lp_asmiblock
+# 	cyclone10lp_clkctrl
+# 	cyclone10lp_rublock
+# 	cyclone10lp_apfcontroller
+# 	cyclone10lp_termination
+# 	cyclone10lp_jtag
+# 	cyclone10lp_crcblock
+# 	cyclone10lp_oscillator
+# End time: 16:49:05 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is 28408@DESKTOP-T1B5OP5.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_scan.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_scan.v 
+# -- Compiling module seg_scan
+# 
+# Top level modules:
+# 	seg_scan
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_decoder.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_decoder.v 
+# -- Compiling module seg_decoder
+# 
+# Top level modules:
+# 	seg_decoder
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_define.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_define.v 
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_read_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_read_write.v 
+# -- Compiling module frame_read_write
+# 
+# Top level modules:
+# 	frame_read_write
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/spi_master.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/spi_master.v 
+# -- Compiling module spi_master
+# 
+# Top level modules:
+# 	spi_master
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_top.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_top.v 
+# -- Compiling module sd_card_top
+# 
+# Top level modules:
+# 	sd_card_top
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_sec_read_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_sec_read_write.v 
+# -- Compiling module sd_card_sec_read_write
+# 
+# Top level modules:
+# 	sd_card_sec_read_write
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_cmd.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_cmd.v 
+# -- Compiling module sd_card_cmd
+# 
+# Top level modules:
+# 	sd_card_cmd
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/video_pll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/video_pll.v 
+# -- Compiling module video_pll
+# 
+# Top level modules:
+# 	video_pll
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ax_debounce.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ax_debounce.v 
+# -- Compiling module ax_debounce
+# 
+# Top level modules:
+# 	ax_debounce
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/sys_pll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/sys_pll.v 
+# -- Compiling module sys_pll
+# 
+# Top level modules:
+# 	sys_pll
+# End time: 16:49:06 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram/sdram_core.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:06 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram/sdram_core.v 
+# -- Compiling module sdram_core
+# 
+# Top level modules:
+# 	sdram_core
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_timing_data.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_timing_data.v 
+# -- Compiling module video_timing_data
+# 
+# Top level modules:
+# 	video_timing_data
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/top.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card_bmp.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card_bmp.v 
+# -- Compiling module sd_card_bmp
+# 
+# Top level modules:
+# 	sd_card_bmp
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_write.v 
+# -- Compiling module frame_fifo_write
+# 
+# Top level modules:
+# 	frame_fifo_write
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_read.v 
+# -- Compiling module frame_fifo_read
+# 
+# Top level modules:
+# 	frame_fifo_read
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/bmp_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/bmp_read.v 
+# -- Compiling module bmp_read
+# 
+# Top level modules:
+# 	bmp_read
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/afifo_16_256.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/afifo_16_256.v 
+# -- Compiling module afifo_16_256
+# 
+# Top level modules:
+# 	afifo_16_256
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/sys_state_ctrl.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/sys_state_ctrl.v 
+# -- Compiling module sys_state_ctrl
+# 
+# Top level modules:
+# 	sys_state_ctrl
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_write_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_write_read.v 
+# -- Compiling module flash_write_read
+# 
+# Top level modules:
+# 	flash_write_read
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Qspi_master.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Qspi_master.v 
+# -- Compiling module Qspi_master
+# 
+# Top level modules:
+# 	Qspi_master
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_writer.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_writer.v 
+# -- Compiling module flash_writer
+# 
+# Top level modules:
+# 	flash_writer
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_cmd.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_cmd.v 
+# -- Compiling module flash_cmd
+# 
+# Top level modules:
+# 	flash_cmd
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_step.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_step.v 
+# -- Compiling module flash_step
+# 
+# Top level modules:
+# 	flash_step
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_reader.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_reader.v 
+# -- Compiling module flash_reader
+# 
+# Top level modules:
+# 	flash_reader
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/sys_pll_altpll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/sys_pll_altpll.v 
+# -- Compiling module sys_pll_altpll
+# 
+# Top level modules:
+# 	sys_pll_altpll
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/video_pll_altpll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/video_pll_altpll.v 
+# -- Compiling module video_pll_altpll
+# 
+# Top level modules:
+# 	video_pll_altpll
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/color_bar.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/color_bar.v 
+# -- Compiling module color_bar
+# 
+# Top level modules:
+# 	color_bar
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:49:07 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv 
+# -- Compiling module Tb_flash
+# 
+# Top level modules:
+# 	Tb_flash
+# End time: 16:49:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs="+acc"  Tb_flash
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs=""+acc"" Tb_flash 
+# Start time: 16:49:08 on Dec 08,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 9 FSMs in module "flash_cmd(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "Qspi_master(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "sys_state_ctrl(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "flash_writer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "flash_reader(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "flash_step(fast)".
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2685) [TFMPC] - Too few port connections for 'sys_state_ctrl_m1'.  Expected 45, found 9.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_data_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_wr_burst_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_data_valid'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'flash_rd_burst_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_data_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'sd_card_wr_burst_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_data_valid'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'video_rd_burst_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_data_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'wr_burst_req'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_finish'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_data_valid'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_data'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_addr'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_len'.
+# ** Warning: D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(112): (vopt-2718) [TFMPC] - Missing connection for port 'rd_burst_req'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=37.
+# Loading sv_std.std
+# Loading work.Tb_flash(fast)
+# Loading work.flash_write_read(fast)
+# Loading work.flash_reader(fast)
+# Loading work.flash_writer(fast)
+# Loading work.flash_cmd(fast)
+# Loading work.flash_step(fast)
+# Loading work.Qspi_master(fast)
+# Loading work.sys_state_ctrl(fast)
+# Loading work.ax_debounce(fast)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 28408  Hostname: DESKTOP-T1B5OP5  ProcessID: 23100
+#           Attempting to use alternate WLF file "./wlft6r6j9v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6r6j9v
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(73)
+#    Time: 0 ps  Iteration: 0  Instance: /Tb_flash
+# Break in Module Tb_flash at D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv line 73
+add wave -position insertpoint  \
+sim:/Tb_flash/flash_write_read_m1/flash_writer_m0/len_cnt
+add wave -position insertpoint  \
+sim:/Tb_flash/flash_write_read_m1/flash_writer_m0/wait_cnt
+add wave -position insertpoint  \
+sim:/Tb_flash/flash_write_read_m1/flash_writer_m0/state
+run -all
+# ** Note: $stop    : D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(87)
+#    Time: 5050 ns  Iteration: 0  Instance: /Tb_flash
+# Break in Module Tb_flash at D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv line 87
+run -all
+run -all
+do sd_sdram_vga_run_msim_rtl_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_ver ./verilog_libs/altera_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_ver ./verilog_libs/altera_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:21 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module dffeas_pr
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+# -- Compiling UDP PRIM_GDFF_HIGH
+# -- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	dffeas_pr
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 16:54:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# Errors: 0, Warnings: 1
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap lpm_ver ./verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:21 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/220model.v 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 16:54:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# Errors: 0, Warnings: 1
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap sgate_ver ./verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:22 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/sgate.v 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 16:54:22 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:22 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 16:54:22 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:22 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module common_28nm_lutram_register
+# -- Compiling module generic_14nm_mlab_cell_impl
+# -- Compiling module common_14nm_lutram_register
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_chainout_adder_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module altera_syncram_forwarding_logic
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module dps_pulse_gen
+# -- Compiling module altera_iopll
+# -- Compiling module dps_pulse_gen_iopll
+# -- Compiling module twentynm_iopll_arlol
+# -- Compiling module fourteennm_altera_iopll
+# -- Compiling module dps_pulse_gen_fourteennm_iopll
+# -- Compiling package fourteennm_iopll_functions
+# -- Compiling module fourteennm_simple_iopll
+# -- Importing package fourteennm_iopll_functions
+# -- Compiling module fourteennm_sub_iopll
+# -- Compiling module twentynm_iopll_ip
+# -- Compiling module altera_iopll_rotation_lcells
+# -- Compiling module altera_pll_dps_lcell_comb
+# -- Compiling module iopll_bootstrap
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_14nm_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 	altera_iopll
+# 	fourteennm_altera_iopll
+# 	fourteennm_simple_iopll
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/cyclone10lp_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclone10lp_ver".
+# Errors: 0, Warnings: 1
+# vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cyclone10lp_ver {d:/program/intelfpga/18.1/quartus/eda/sim_lib/cyclone10lp_atoms.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclone10lp_ver d:/program/intelfpga/18.1/quartus/eda/sim_lib/cyclone10lp_atoms.v 
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFE
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS
+# -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS_HIGH
+# -- Compiling module cyclone10lp_dffe
+# -- Compiling module cyclone10lp_mux21
+# -- Compiling module cyclone10lp_mux41
+# -- Compiling module cyclone10lp_and1
+# -- Compiling module cyclone10lp_and16
+# -- Compiling module cyclone10lp_bmux21
+# -- Compiling module cyclone10lp_b17mux21
+# -- Compiling module cyclone10lp_nmux21
+# -- Compiling module cyclone10lp_b5mux21
+# -- Compiling module cyclone10lp_latch
+# -- Compiling module cyclone10lp_routing_wire
+# -- Compiling module cyclone10lp_m_cntr
+# -- Compiling module cyclone10lp_n_cntr
+# -- Compiling module cyclone10lp_scale_cntr
+# -- Compiling module cyclone10lp_pll_reg
+# -- Compiling module cyclone10lp_pll
+# -- Compiling module cyclone10lp_lcell_comb
+# -- Compiling module cyclone10lp_ff
+# -- Compiling module cyclone10lp_ram_pulse_generator
+# -- Compiling module cyclone10lp_ram_register
+# -- Compiling module cyclone10lp_ram_block
+# -- Compiling module cyclone10lp_mac_data_reg
+# -- Compiling module cyclone10lp_mac_sign_reg
+# -- Compiling module cyclone10lp_mac_mult_internal
+# -- Compiling module cyclone10lp_mac_mult
+# -- Compiling module cyclone10lp_mac_out
+# -- Compiling module cyclone10lp_io_ibuf
+# -- Compiling module cyclone10lp_io_obuf
+# -- Compiling module cyclone10lp_ddio_out
+# -- Compiling module cyclone10lp_ddio_oe
+# -- Compiling module cyclone10lp_pseudo_diff_out
+# -- Compiling module cyclone10lp_io_pad
+# -- Compiling module cyclone10lp_asmiblock
+# -- Compiling module cyclone10lp_ena_reg
+# -- Compiling module cyclone10lp_clkctrl
+# -- Compiling module cyclone10lp_rublock
+# -- Compiling module cyclone10lp_apfcontroller
+# -- Compiling module cyclone10lp_termination_ctrl
+# -- Compiling module cyclone10lp_termination_rupdn
+# -- Compiling module cyclone10lp_termination
+# -- Compiling module cyclone10lp_jtag
+# -- Compiling module cyclone10lp_crcblock
+# -- Compiling module cyclone10lp_oscillator
+# 
+# Top level modules:
+# 	cyclone10lp_dffe
+# 	cyclone10lp_and1
+# 	cyclone10lp_and16
+# 	cyclone10lp_bmux21
+# 	cyclone10lp_b17mux21
+# 	cyclone10lp_nmux21
+# 	cyclone10lp_b5mux21
+# 	cyclone10lp_pll_reg
+# 	cyclone10lp_pll
+# 	cyclone10lp_lcell_comb
+# 	cyclone10lp_ff
+# 	cyclone10lp_ram_block
+# 	cyclone10lp_mac_mult
+# 	cyclone10lp_mac_out
+# 	cyclone10lp_io_ibuf
+# 	cyclone10lp_io_obuf
+# 	cyclone10lp_ddio_out
+# 	cyclone10lp_ddio_oe
+# 	cyclone10lp_pseudo_diff_out
+# 	cyclone10lp_io_pad
+# 	cyclone10lp_asmiblock
+# 	cyclone10lp_clkctrl
+# 	cyclone10lp_rublock
+# 	cyclone10lp_apfcontroller
+# 	cyclone10lp_termination
+# 	cyclone10lp_jtag
+# 	cyclone10lp_crcblock
+# 	cyclone10lp_oscillator
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is 28408@DESKTOP-T1B5OP5.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is 28408@DESKTOP-T1B5OP5.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_scan.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_scan.v 
+# -- Compiling module seg_scan
+# 
+# Top level modules:
+# 	seg_scan
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_decoder.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/seg_decoder.v 
+# -- Compiling module seg_decoder
+# 
+# Top level modules:
+# 	seg_decoder
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_define.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_define.v 
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_read_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_read_write.v 
+# -- Compiling module frame_read_write
+# 
+# Top level modules:
+# 	frame_read_write
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/spi_master.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/spi_master.v 
+# -- Compiling module spi_master
+# 
+# Top level modules:
+# 	spi_master
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_top.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_top.v 
+# -- Compiling module sd_card_top
+# 
+# Top level modules:
+# 	sd_card_top
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_sec_read_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:23 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_sec_read_write.v 
+# -- Compiling module sd_card_sec_read_write
+# 
+# Top level modules:
+# 	sd_card_sec_read_write
+# End time: 16:54:23 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_cmd.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card/sd_card_cmd.v 
+# -- Compiling module sd_card_cmd
+# 
+# Top level modules:
+# 	sd_card_cmd
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/video_pll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/video_pll.v 
+# -- Compiling module video_pll
+# 
+# Top level modules:
+# 	video_pll
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ax_debounce.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ax_debounce.v 
+# -- Compiling module ax_debounce
+# 
+# Top level modules:
+# 	ax_debounce
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/sys_pll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/sys_pll.v 
+# -- Compiling module sys_pll
+# 
+# Top level modules:
+# 	sys_pll
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram/sdram_core.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sdram/sdram_core.v 
+# -- Compiling module sdram_core
+# 
+# Top level modules:
+# 	sdram_core
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_timing_data.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/video_timing_data.v 
+# -- Compiling module video_timing_data
+# 
+# Top level modules:
+# 	video_timing_data
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/top.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card_bmp.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/sd_card_bmp.v 
+# -- Compiling module sd_card_bmp
+# 
+# Top level modules:
+# 	sd_card_bmp
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_write.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_write.v 
+# -- Compiling module frame_fifo_write
+# 
+# Top level modules:
+# 	frame_fifo_write
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/frame_fifo_read.v 
+# -- Compiling module frame_fifo_read
+# 
+# Top level modules:
+# 	frame_fifo_read
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/bmp_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/bmp_read.v 
+# -- Compiling module bmp_read
+# 
+# Top level modules:
+# 	bmp_read
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/afifo_16_256.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/ip_core/afifo_16_256.v 
+# -- Compiling module afifo_16_256
+# 
+# Top level modules:
+# 	afifo_16_256
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/sys_state_ctrl.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/sys_state_ctrl.v 
+# -- Compiling module sys_state_ctrl
+# 
+# Top level modules:
+# 	sys_state_ctrl
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_write_read.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_write_read.v 
+# -- Compiling module flash_write_read
+# 
+# Top level modules:
+# 	flash_write_read
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Qspi_master.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Qspi_master.v 
+# -- Compiling module Qspi_master
+# 
+# Top level modules:
+# 	Qspi_master
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_writer.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_writer.v 
+# -- Compiling module flash_writer
+# 
+# Top level modules:
+# 	flash_writer
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_cmd.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:24 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_cmd.v 
+# -- Compiling module flash_cmd
+# 
+# Top level modules:
+# 	flash_cmd
+# End time: 16:54:24 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_step.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_step.v 
+# -- Compiling module flash_step
+# 
+# Top level modules:
+# 	flash_step
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_reader.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/flash_reader.v 
+# -- Compiling module flash_reader
+# 
+# Top level modules:
+# 	flash_reader
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/sys_pll_altpll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/sys_pll_altpll.v 
+# -- Compiling module sys_pll_altpll
+# 
+# Top level modules:
+# 	sys_pll_altpll
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/video_pll_altpll.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/db/video_pll_altpll.v 
+# -- Compiling module video_pll_altpll
+# 
+# Top level modules:
+# 	video_pll_altpll
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/color_bar.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/src/color_bar.v 
+# -- Compiling module color_bar
+# 
+# Top level modules:
+# 	color_bar
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga {D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:54:25 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga" D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv 
+# -- Compiling module Tb_flash
+# 
+# Top level modules:
+# 	Tb_flash
+# End time: 16:54:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs="+acc"  Tb_flash
+# End time: 16:54:26 on Dec 08,2023, Elapsed time: 0:05:18
+# Errors: 0, Warnings: 39
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs=""+acc"" Tb_flash 
+# Start time: 16:54:26 on Dec 08,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "flash_writer(fast)".
+# Loading sv_std.std
+# Loading work.Tb_flash(fast)
+# Loading work.flash_write_read(fast)
+# Loading work.flash_reader(fast)
+# Loading work.flash_writer(fast)
+# Loading work.flash_cmd(fast)
+# Loading work.flash_step(fast)
+# Loading work.Qspi_master(fast)
+# Loading work.sys_state_ctrl(fast)
+# Loading work.ax_debounce(fast)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 28408  Hostname: DESKTOP-T1B5OP5  ProcessID: 23100
+#           Attempting to use alternate WLF file "./wlft1sbkf6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1sbkf6
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(73)
+#    Time: 0 ps  Iteration: 0  Instance: /Tb_flash
+# Break in Module Tb_flash at D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv line 73
+run -all
+# ** Note: $stop    : D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv(87)
+#    Time: 5050 ns  Iteration: 0  Instance: /Tb_flash
+# Break in Module Tb_flash at D:/Projects/2023_10_10_HX4S20_test/spi_FLASH_SDRAM_pic/14_TF_sdram_vga/Tb_flash.sv line 87
+run -all
+# End time: 18:27:07 on Dec 08,2023, Elapsed time: 1:32:41
+# Errors: 0, Warnings: 2
