@@ -1,4 +1,4 @@
-Location         : D:\Anlu\2025-Anlogic\td_project\my_project\lab_ex_5_HX4S20_OV5640\pic_sdram_Runs\phy_1
+Location         : D:\Anlu\my_project\lab_ex_5_HX4S20_OV5640\pic_sdram_Runs\phy_1
 Running with     : Tang Dynasty v6.2.168116
                    Copyright (c) 2012-2025 Anlogic Inc.
 Top Model        : top
@@ -13,9 +13,9 @@ Flow Statistics  :
 --------------------------------------------------------------------------------------------------
      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 --------------------------------------------------------------------------------------------------
-      place      |    1     |  28s(100%)  |   48(100%)    |        257        |        257        
+      place      |    1     |  28s(100%)  |   46(100%)    |        259        |        259        
     import_db    |    1     |   0s(0%)    |     0(0%)     |        186        |        186        
-  import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        84         |        84         
 --------------------------------------------------------------------------------------------------
-      total      |    3     |     28s     |      48       |        257        |        257        
+      total      |    3     |     28s     |      46       |        259        |        259        
 --------------------------------------------------------------------------------------------------

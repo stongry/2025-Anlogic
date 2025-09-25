@@ -1,12 +1,12 @@
 Created by          : Tang Dynasty v6.2.168116
                     : Copyright (c) 2012-2025 Anlogic Inc.
-Generated           : Wed Sep 24 23:54:25 2025
+Generated           : Thu Sep 25 16:21:09 2025
 
 Top Model           : top
 Device              : EG4S20BG256
 Speed               : NA
 STA coverage        : 94.17%
-Constraint File     : D:/Anlu/2025-Anlogic/td_project/my_project/lab_ex_5_HX4S20_OV5640/top.sdc;
+Constraint File     : D:/Anlu/my_project/lab_ex_5_HX4S20_OV5640/top.sdc;
 Confidence          : Placed
 Check Corner        : Both (Slow and Fast)
 CRPR Enabled        : Yes
