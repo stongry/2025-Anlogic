@@ -1,0 +1,3 @@
+read_verilog -sv -formal -overwrite {workspace}/video_delay.v
+design -reset-vlog; proc;
+write_json {workspace}/netlist/video_delay.json
