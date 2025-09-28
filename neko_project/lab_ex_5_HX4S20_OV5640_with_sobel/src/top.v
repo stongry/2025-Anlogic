@@ -1,18 +1,18 @@
 module top(
 	input                       clk,
 	input                       rst_n,
- 
+  
     output			vga_out_hs,
     output			vga_out_vs,
 //    output			vga_out_de,
     output	[11:0]	vga_data,
-    //hdmi接口                         
+    //hdmi接口
 	//HDMI
 	output			HDMI_CLK_P,
 	output			HDMI_D2_P,
 	output			HDMI_D1_P,
 	output			HDMI_D0_P,
-	//摄像头接口                       
+	//摄像头接口
     input                 cam_pclk     ,  //cmos 数据像素时钟
     input                 cam_vsync    ,  //cmos 场同步信号
     input                 cam_href     ,  //cmos 行同步信号
@@ -20,7 +20,11 @@ module top(
     output                cam_rst_n    ,  //cmos 复位信号，低电平有效
     output                cam_pwdn     ,  //电源休眠模式选择 0：正常模式 1：电源休眠模式
     output                cam_scl      ,  //cmos SCCB_SCL线
-    inout                 cam_sda        //cmos SCCB_SDA线     
+    inout                 cam_sda      ,  //cmos SCCB_SDA线
+	//按键接口
+    input                 key_strong_dec,     // 按键1：减少强边缘阈值
+    input                 key_medium_inc,     // 按键2：增加中等边缘阈值
+    input                 key_medium_dec      // 按键3：减少中等边缘阈值
 );
 
 parameter MEM_DATA_BITS         = 32  ;            //external memory user interface data width
@@ -177,7 +181,11 @@ video_delay video_delay_m0
 	.hs_r                       (hs                       ),
 	.vs_r                       (vs                       ),
 	.de_r                       (de                       ),
-	.vout_data					(vout_data)
+	.vout_data					(vout_data),
+	// 按键控制信号
+	.key_strong_dec             (key_strong_dec),
+	.key_medium_inc             (key_medium_inc),
+	.key_medium_dec             (key_medium_dec)
 );
 hdmi_tx #(.FAMILY("EG4"))	//EF2、EF3、EG4、AL3、PH1
 
