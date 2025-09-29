@@ -17,9 +17,10 @@ module video_delay
 	input                       hs,                 // 水平同步信号
 	input                       vs,                 // 垂直同步信号
 	input                       de,                 // 视频有效信号
-	input                       key_strong_dec,     // 按键1：减少强边缘阈值
-	input                       key_medium_inc,     // 按键2：增加中等边缘阈值
-	input                       key_medium_dec,     // 按键3：减少中等边缘阈值
+	input                       key_weak_inc,       // 按键1：增加弱边缘阈值
+	input                       key_weak_dec,       // 按键2：减少弱边缘阈值
+	input                       switch_threshold_select, // 乒乓开关1：选择控制阈值类型（0=强边缘，1=弱边缘）
+	input                       switch_step_size,   // 乒乓开关2：选择调整步长（0=25，1=10）
 
 	// 输出信号
 	output                      hs_r,               // 延迟后的水平同步信号
@@ -40,14 +41,15 @@ localparam B_WEIGHT = 8'd29;   // 标准权重：0.114 * 256
 // 阈值参数和按键处理
 // ============================================================================
 reg [10:0] strong_threshold;    // 强边缘阈值寄存器
-reg [10:0] medium_threshold;    // 中等边缘阈值寄存器
-reg [2:0] key_sync;             // 按键同步寄存器
-wire [2:0] key_press;           // 按键按下信号
+reg [10:0] weak_threshold;      // 弱边缘阈值寄存器
+reg [1:0] key_sync;             // 按键同步寄存器（2位）
+wire [1:0] key_press;           // 按键按下信号（2位）
+reg [10:0] step_size;           // 步长寄存器
 
 // 初始阈值设置
 initial begin
-    strong_threshold = 11'd1450;  // 初始强边缘阈值
-    medium_threshold = 11'd1200;  // 初始中等边缘阈值
+    strong_threshold = 11'd1450; // 初始强边缘阈值
+    weak_threshold = 11'd1075;   // 初始弱边缘阈值
 end
 
 // ============================================================================
@@ -82,6 +84,12 @@ reg [20:0] hs_d;                // 水平同步延迟链
 reg [20:0] vs_d;                // 垂直同步延迟链
 reg [20:0] de_d;                // 数据有效延迟链
 reg [DATA_WIDTH - 1:0] vout_data_r;  // 输出数据寄存器
+
+// ============================================================================
+// 椒盐噪声消除相关定义
+// ============================================================================
+reg [7:0] prev_edge_result;           // 前一个边缘检测结果
+reg noise_removed_result;             // 噪声消除后的结果
 
 // 循环计数器
 integer i;
@@ -259,18 +267,18 @@ end
 // 按键同步处理
 always @(posedge video_clk or posedge rst) begin
 	if (rst) begin
-		key_sync <= 3'b0;
+		key_sync <= 2'b0;
 	end else begin
 		// 按键同步，防止亚稳态
-		key_sync <= {key_strong_dec, key_medium_inc, key_medium_dec};
+		key_sync <= {key_weak_inc, key_weak_dec};
 	end
 end
 
 // 按键边沿检测
-reg [2:0] key_sync_d;
+reg [1:0] key_sync_d;
 always @(posedge video_clk or posedge rst) begin
 	if (rst) begin
-		key_sync_d <= 3'b0;
+		key_sync_d <= 2'b0;
 	end else begin
 		key_sync_d <= key_sync;
 	end
@@ -283,19 +291,32 @@ always @(posedge video_clk or posedge rst) begin
 	if (rst) begin
 		// 复位时恢复默认阈值
 		strong_threshold <= 11'd1450;
-		medium_threshold <= 11'd1200;
+		weak_threshold <= 11'd1075;
 	end else begin
-		// 按键1：减少强边缘阈值（-25）
-		if (key_press[2] && (strong_threshold > 11'd25)) begin
-			strong_threshold <= strong_threshold - 11'd25;
-		end
-		// 按键2：增加中等边缘阈值（+25）
-		else if (key_press[1] && (medium_threshold < strong_threshold - 11'd25)) begin
-			medium_threshold <= medium_threshold + 11'd25;
-		end
-		// 按键3：减少中等边缘阈值（-25）
-		else if (key_press[0] && (medium_threshold > 11'd25)) begin
-			medium_threshold <= medium_threshold - 11'd25;
+		// 根据乒乓开关2选择步长
+		step_size <= switch_step_size ? 11'd10 : 11'd25;
+		
+		// 根据乒乓开关1选择调整的阈值类型
+		if (switch_threshold_select) begin
+			// 调整弱边缘阈值
+			// 按键1：增加弱边缘阈值
+			if (key_press[1] && (weak_threshold < strong_threshold - step_size)) begin
+				weak_threshold <= weak_threshold + step_size;
+			end
+			// 按键2：减少弱边缘阈值
+			else if (key_press[0] && (weak_threshold > step_size)) begin
+				weak_threshold <= weak_threshold - step_size;
+			end
+		end else begin
+			// 调整强边缘阈值
+			// 按键1：增加强边缘阈值
+			if (key_press[1] && (strong_threshold < 11'd2040 - step_size)) begin
+				strong_threshold <= strong_threshold + step_size;
+			end
+			// 按键2：减少强边缘阈值
+			else if (key_press[0] && (strong_threshold > weak_threshold + step_size)) begin
+				strong_threshold <= strong_threshold - step_size;
+			end
 		end
 	end
 end
@@ -309,11 +330,11 @@ always @(posedge video_clk or posedge rst) begin
 		if (gradient > strong_threshold) begin
 			// 强边缘：输出最大值
 			edge_result <= 8'hFF;
-		end else if (gradient > medium_threshold) begin
-			// 中等边缘：线性放大
+		end else if (gradient > weak_threshold) begin
+			// 弱边缘：线性放大
 			edge_result <= gradient[7:0] << 1;
 		end else begin
-			// 弱边缘或无边缘：输出0
+			// 无边缘：输出0
 			edge_result <= 8'h00;
 		end
 	end else begin
@@ -322,17 +343,44 @@ always @(posedge video_clk or posedge rst) begin
 end
 
 // ============================================================================
-// 输出数据赋值模块（带边缘增强）
-// 功能：将边缘检测结果转换为RGB格式输出
+// 椒盐噪声消除模块
+// 功能：使用简单的阈值判断消除椒盐噪声，极省资源
+// 方法：如果当前像素是强边缘(255)但周围像素都是弱边缘或无边缘，则认为是噪声
+// ============================================================================
+always @(posedge video_clk or posedge rst) begin
+	if (rst) begin
+		prev_edge_result <= 8'd0;
+		noise_removed_result <= 1'b0;
+	end else if (de) begin
+		// 保存前一个像素值
+		prev_edge_result <= edge_result;
+		
+		// 简单的椒盐噪声消除逻辑
+		// 如果当前像素是强边缘(255)但前一个像素是0，则认为是孤立噪声点
+		if (edge_result == 8'hFF && prev_edge_result == 8'h00) begin
+			noise_removed_result <= 1'b0;  // 消除噪声
+		end else begin
+			noise_removed_result <= (edge_result > 8'h00);  // 保持原有边缘
+		end
+	end
+end
+
+// ============================================================================
+// 输出数据赋值模块（带边缘增强和简单噪声消除）
+// 功能：将噪声消除后的边缘检测结果转换为RGB格式输出
 // ============================================================================
 always @(posedge video_clk or posedge rst) begin
 	if (rst == 1'b1) begin
 		// 复位时清零输出数据
 		vout_data_r <= {DATA_WIDTH{1'b0}};
 	end else if (de_d[19]) begin // 匹配原始延迟时序
-		// 将边缘结果转换为RGB格式（灰度图像）
+		// 将噪声消除后的边缘结果转换为RGB格式（灰度图像）
 		// R=G=B=边缘强度值
-		vout_data_r <= {edge_result, edge_result, edge_result};
+		if (noise_removed_result) begin
+			vout_data_r <= {8'hFF, 8'hFF, 8'hFF};  // 白色边缘
+		end else begin
+			vout_data_r <= {DATA_WIDTH{1'b0}};     // 黑色背景
+		end
 	end
 end
 

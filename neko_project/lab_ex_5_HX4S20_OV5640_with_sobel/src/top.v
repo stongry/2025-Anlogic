@@ -22,9 +22,10 @@ module top(
     output                cam_scl      ,  //cmos SCCB_SCL线
     inout                 cam_sda      ,  //cmos SCCB_SDA线
 	//按键接口
-    input                 key_strong_dec,     // 按键1：减少强边缘阈值
-    input                 key_medium_inc,     // 按键2：增加中等边缘阈值
-    input                 key_medium_dec      // 按键3：减少中等边缘阈值
+	   input                 key_weak_inc,       // 按键1：增加弱边缘阈值
+	   input                 key_weak_dec,       // 按键2：减少弱边缘阈值
+	   input                 switch_threshold_select, // 乒乓开关1：选择控制阈值类型（0=强边缘，1=弱边缘）
+	   input                 switch_step_size    // 乒乓开关2：选择调整步长（0=25，1=10）
 );
 
 parameter MEM_DATA_BITS         = 32  ;            //external memory user interface data width
@@ -183,9 +184,10 @@ video_delay video_delay_m0
 	.de_r                       (de                       ),
 	.vout_data					(vout_data),
 	// 按键控制信号
-	.key_strong_dec             (key_strong_dec),
-	.key_medium_inc             (key_medium_inc),
-	.key_medium_dec             (key_medium_dec)
+	.key_weak_inc               (key_weak_inc),
+	.key_weak_dec               (key_weak_dec),
+	.switch_threshold_select    (switch_threshold_select),
+	.switch_step_size           (switch_step_size)
 );
 hdmi_tx #(.FAMILY("EG4"))	//EF2、EF3、EG4、AL3、PH1
 
