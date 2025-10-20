@@ -1,0 +1,66 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        14805                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+|     Hold WNS              |          694                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         1035                |
+|     #luts                 |          394                |
+|     #lut1                 |           20                |
+|     #lut1(~A)             |           20                |
+|     #slices               |          110                |
+|     slices percentage     |        1.12%                |
+|     #RAMs                 |            6                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |           21                |
+|     #insts in MACRO       |          110                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          344                |
+|     #keep_hier            |           67                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |         8.62                |
+| dff(single fanout)->dff   |          338                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total                 |            0                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+------------------------------------------------------------------
+  Clock        |  Period            |  0    |  1    |  2   |  3
+------------------------------------------------------------------
+  DeriveClock  |  20.000ns (50MHz)  |  525  |  259  |  82  |  63
+------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++----------------------------------------------------------------------------+
+|Inst              |Model             |Rent     |Cell     |Pin     |Term     |
++----------------------------------------------------------------------------+
+|top               |auto_created_cwc2 |0.11     |2300     |6089    |6        |
+|  wrapper_cwc_top |top_cwc_hub_1     |0.63     |2300     |6089    |345      |
++----------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+

@@ -1,0 +1,54 @@
+standard
+***Report Model: auto_created_cwc2 Device: EG4S20BG256***
+
+IO Statistics
+#IO                       345   out of    188  183.51%
+  #input                  321
+  #output                  24
+  #inout                    0
+
+LUT Statistics
+#Total_luts               394
+  #lut4                   309
+  #lut5                    85
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                      614   out of  19600    3.13%
+#reg                     1059   out of  19600    5.40%
+#bram                       6   out of     64    9.38%
+  #bram9k                   6
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                        0   out of    188    0.00%
+#pll                        0   out of      4    0.00%
+#gclk                       0   out of     16    0.00%
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------------------------------------------------------------+
+|Instance                                                    |Module                 |lut     |ripple  |seq     |bram    |dsp     |
++---------------------------------------------------------------------------------------------------------------------------------+
+|top                                                         |auto_created_cwc2      |504     |110     |1059    |6       |0       |
+|  wrapper_cwc_top                                           |top_cwc_hub            |504     |110     |1059    |6       |0       |
+|    U_cwc                                                   |anlogic01_cwc          |499     |110     |660     |0       |0       |
+|      TRIG_ONLY_MODE$U_emb_ctrl                             |anlogic04_cwc_emb_ctrl |41      |13      |36      |0       |0       |
+|      U_cwc_bus_top                                         |anlogic02_cwc_bus_top  |318     |72      |354     |0       |0       |
+|        CWC_BUS_DETECTOR[0]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[10]$BUS_DETECTOR$U_cwc_bus_det     |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|        CWC_BUS_DETECTOR[11]$NON_BUS_DETECTOR$U_cwc_bus_det |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[1]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[2]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[3]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|        CWC_BUS_DETECTOR[4]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|        CWC_BUS_DETECTOR[5]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|        CWC_BUS_DETECTOR[6]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[7]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|        CWC_BUS_DETECTOR[8]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |9       |0       |12      |0       |0       |
+|        CWC_BUS_DETECTOR[9]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |44      |12      |47      |0       |0       |
+|    U_cwc_ram                                               |anlogic05_cwc_ram      |1       |0       |0       |6       |0       |
+|    status_pipe                                             |anlogic06_pipe         |1       |0       |17      |0       |0       |
+|    watch_pipe                                              |anlogic06_pipe         |0       |0       |378     |0       |0       |
++---------------------------------------------------------------------------------------------------------------------------------+

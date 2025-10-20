@@ -1,0 +1,22 @@
+Location         : C:\Users\Neko\Documents\FPGA\hand_cnn\lab_ex_2_CNN\UDP_EG4_6.2\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\phy_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : manhattan
+Setup            : WNS   268ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS  -111ps  TNS    -6185ps  NUM_FEPS   162
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+      place      |    1     |  30s(100%)  |   39(100%)    |        441        |        441        
+    import_db    |    4     |   0s(0%)    |     0(0%)     |        298        |        298        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+      pack       |    1     |   0s(0%)    |     0(0%)     |        299        |        299        
+--------------------------------------------------------------------------------------------------
+      total      |    7     |     30s     |      39       |        441        |        441        
+--------------------------------------------------------------------------------------------------
