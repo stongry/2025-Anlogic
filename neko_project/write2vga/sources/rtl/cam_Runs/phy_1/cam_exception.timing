@@ -1,0 +1,46 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Tue Oct  7 01:42:35 2025
+
+Top Model           : test_camera
+Device              : EG4S20BG256
+Speed               : NA
+STA coverage        : 96.87%
+Constraint File     : 
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+Status of timing exceptions
+--------------------------------------------------
+
+MCP/SMD Details
+--------------------
+
+
+Details on timing exceptions
+--------------------------------------------------
+
+
+

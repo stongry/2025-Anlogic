@@ -1,0 +1,22 @@
+Location         : C:\Users\Neko\Documents\FPGA\t\write2vga\sources\rtl\cam_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : test_camera
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS  2476ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_gate  |    1     |  34s(70%)   |    33(70%)    |        472        |        473        
+  optimize_rtl   |    1     |  14s(29%)   |    14(29%)    |        383        |        400        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        145        |        145        
+--------------------------------------------------------------------------------------------------
+      total      |    4     |     48s     |      47       |        472        |        473        
+--------------------------------------------------------------------------------------------------

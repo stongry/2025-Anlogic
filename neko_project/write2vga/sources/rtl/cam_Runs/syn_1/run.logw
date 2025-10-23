@@ -1,0 +1,66 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     Neko
+   Run Date =   Tue Oct  7 01:39:28 2025
+
+   Run on =     NEKO_DESKTOP
+============================================================
+HDL-5317 WARNING: input port 'jtdo[1]' is not connected on this instance in ../../../al_ip/ip_pll_sim.v(28)
+HDL-5317 WARNING: input port 'load_reg' is not connected on this instance in ../../../al_ip/ip_pll_sim.v(94)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/ip_ram.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(201)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(207)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/01.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(298)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(302)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(335)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(339)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/02.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 11 for port 'addrb' in ../../test_camera.v(379)
+HDL-5007 WARNING: actual bit length 11 differs from formal bit length 16 for port 'ram_waddr' in ../../test_camera.v(399)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 11 for port 'addrb' in ../../test_camera.v(419)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM03_512.v(73)
+HDL-5007 WARNING: actual bit length 11 differs from formal bit length 9 for port 'addra' in ../../test_camera.v(460)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM04_1024.v(73)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'ceb' in ../../PRE_LAYER.v(78)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 10 for port 'addrb_vga' in ../../test_camera.v(484)
+HDL-5007 WARNING: using initial value of 'weight_1' since it is never assigned in ../../conv1.v(59)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM12_1024.v(73)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 11 for port 'ram_addrb' in ../../conv1_layer1.v(44)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM12_512.v(73)
+HDL-5007 WARNING: using initial value of 'bias' since it is never assigned in ../../conv2.v(85)
+HDL-5314 WARNING: net 'weight' does not have a driver in ../../full_layer.v(27)
+HDL-5314 WARNING: net 'bias' does not have a driver in ../../full_layer.v(28)
+HDL-5314 WARNING: net 'T0' does not have a driver in ../../output_layer.v(10)
+HDL-5314 WARNING: net 'T1' does not have a driver in ../../output_layer.v(11)
+HDL-5314 WARNING: net 'T2' does not have a driver in ../../output_layer.v(12)
+HDL-5314 WARNING: net 'T3' does not have a driver in ../../output_layer.v(13)
+HDL-5314 WARNING: net 'T4' does not have a driver in ../../output_layer.v(14)
+HDL-5314 WARNING: net 'T5' does not have a driver in ../../output_layer.v(15)
+HDL-5314 WARNING: net 'T6' does not have a driver in ../../output_layer.v(16)
+HDL-5314 WARNING: net 'T7' does not have a driver in ../../output_layer.v(17)
+HDL-5314 WARNING: net 'T8' does not have a driver in ../../output_layer.v(18)
+HDL-5314 WARNING: net 'T9' does not have a driver in ../../output_layer.v(19)
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "U_PRE_LAYER/RAM_2vga/inst" in ../../../al_ip/RAM04_1024.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "U_PRE_LAYER/RAM_2vga/inst" in ../../../al_ip/RAM04_1024.v(59) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT1/inst" in ../../../al_ip/RAM20_191.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT1/inst" in ../../../al_ip/RAM20_191.v(59) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT2/inst" in ../../../al_ip/RAM20_191.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT2/inst" in ../../../al_ip/RAM20_191.v(59) / pin "beb[0]"
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-6562 WARNING: The init value of "CNN_RAM_C1/inst(../../../al_ip/01.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "CNN_RAM_Y/inst(../../../al_ip/01.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_C2/inst(../../../al_ip/02.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_P1/inst(../../../al_ip/02.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_P2/inst(../../../al_ip/RAM03_512.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv1_layer/RAM1/inst(../../../al_ip/RAM12_512.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv1_layer/u_conv1/RAM1/inst(../../../al_ip/RAM12_1024.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/RAM1/inst(../../../al_ip/RAM12_128.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/u_conv2/RAM1/inst(../../../al_ip/RAM14_256.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/u_conv2/RAMT1/inst(../../../al_ip/RAM20_191.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/u_conv2/RAMT2/inst(../../../al_ip/RAM20_191.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_img/inst(../../../al_ip/ip_ram.v(59))" will be ignored since gate eram_init is set to off

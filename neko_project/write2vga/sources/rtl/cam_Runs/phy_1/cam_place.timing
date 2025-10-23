@@ -1,0 +1,966 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Tue Oct  7 01:40:59 2025
+
+Top Model           : test_camera
+Device              : EG4S20BG256
+Speed               : NA
+STA coverage        : 96.87%
+Constraint File     : 
+Confidence          : Placed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 4.362ns, STNS: 0.000ns
+	HWNS: 0.059ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:       50.000         2949   DeriveClock
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000     10.000                20.000          50.000                14.498          68.975            4.362      0.000            0.059      0.000            0.000             2949               17             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DeriveClock -> DeriveClock
+Type           :     Self
+From Clock     :     DeriveClock
+To Clock       :     DeriveClock
+Min Period     :     14.498ns
+Fmax           :     68.975MHz
+
+Statistics:
+Max            : SWNS      4.362ns, STNS      0.000ns,         0 Viol Endpoints,      6719 Total Endpoints,     63643 Paths Analyzed
+Min            : HWNS      0.059ns, HTNS      0.000ns,         0 Viol Endpoints,      6719 Total Endpoints,     63643 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 4.362ns
+Begin Point         : u_camera_reader/pixel_counter_reg[5]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_img/inst_syn_28.csa (falling edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { DeriveClock falling@10.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 5.638ns (cell 2.138ns (37%), net 3.500ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=3  LUT4=2  LUT2=1 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x004y046z2          0.146    r     0.146          pin: u_camera_reader/pixel_counter_reg[5]_syn_4.q[1]
+net (fo=2)                              0.250          0.396          net: u_camera_reader/pixel_counter[5],  ../../camera_reader.v(32)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.b[1]
+LUT3                x002y045z3          0.431    f     0.827       1  pin: u_camera_reader/wraddr[12]_syn_43.f[1]
+net (fo=1)                              0.100          0.927          net: u_camera_reader/wraddr[12]_syn_18,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.d[0]
+LUT3                x002y045z3          0.262    r     1.189       2  pin: u_camera_reader/wraddr[12]_syn_43.f[0]
+net (fo=1)                              0.150          1.339          net: u_camera_reader/wraddr[12]_syn_20,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_50.a[0]
+LUT4                x002y046z2          0.424    f     1.763       3  pin: u_camera_reader/wraddr[12]_syn_50.f[0]
+net (fo=1)                              0.150          1.913          net: u_camera_reader/wraddr[12]_syn_24,  ../../camera_reader.v(29)
+                                                                      pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.a[1]
+LUT4                x002y045z1          0.408    f     2.321       4  pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.f[1]
+net (fo=1)                              0.400          2.721          net: u_camera_reader/wraddr[12]_syn_30,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_47.d[1]
+LUT3                x003y040z3          0.262    r     2.983       5  pin: u_camera_reader/wraddr[12]_syn_47.f[1]
+net (fo=3)                              0.500          3.483          net: u_camera_reader/wrreq,  ../../camera_reader.v(27)
+                                                                      pin: u_conv1_layer/u_conv1/ramread0_syn_184212.d[0]
+LUT2                x006y035z1          0.205    r     3.688       6  pin: u_conv1_layer/u_conv1/ramread0_syn_184212.f[0]
+net (fo=2)                              1.950          5.638          net: u_camera_reader/wraddr[12]_syn_14,  ../../camera_reader.v(29)
+                                                                      pin: u_img/inst_syn_28.csa
+EMB32K (reg)        x008y000            0.000    f     5.638               
+--------------------------------------------------------------------  ---------------
+Arrival                                                5.638               
+
+capture edge                           10.000    f    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.000         10.000               
+clock uncertainty                       0.000         10.000               
+clock pessimism                         0.000         10.000               
+--------------------------------------------------------------------  ---------------
+Required                                              10.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.362               
+
+Slack               : 4.755ns
+Begin Point         : u_camera_reader/pixel_counter_reg[5]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_img/inst_syn_10.csa (falling edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { DeriveClock falling@10.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 5.245ns (cell 2.195ns (41%), net 3.050ns (59%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=3  LUT4=2  LUT5=1 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x004y046z2          0.146    r     0.146          pin: u_camera_reader/pixel_counter_reg[5]_syn_4.q[1]
+net (fo=2)                              0.250          0.396          net: u_camera_reader/pixel_counter[5],  ../../camera_reader.v(32)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.b[1]
+LUT3                x002y045z3          0.431    f     0.827       1  pin: u_camera_reader/wraddr[12]_syn_43.f[1]
+net (fo=1)                              0.100          0.927          net: u_camera_reader/wraddr[12]_syn_18,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.d[0]
+LUT3                x002y045z3          0.262    r     1.189       2  pin: u_camera_reader/wraddr[12]_syn_43.f[0]
+net (fo=1)                              0.150          1.339          net: u_camera_reader/wraddr[12]_syn_20,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_50.a[0]
+LUT4                x002y046z2          0.424    f     1.763       3  pin: u_camera_reader/wraddr[12]_syn_50.f[0]
+net (fo=1)                              0.150          1.913          net: u_camera_reader/wraddr[12]_syn_24,  ../../camera_reader.v(29)
+                                                                      pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.a[1]
+LUT4                x002y045z1          0.408    f     2.321       4  pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.f[1]
+net (fo=1)                              0.400          2.721          net: u_camera_reader/wraddr[12]_syn_30,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_47.d[1]
+LUT3                x003y040z3          0.262    r     2.983       5  pin: u_camera_reader/wraddr[12]_syn_47.f[1]
+net (fo=3)                              0.450          3.433          net: u_camera_reader/wrreq,  ../../camera_reader.v(27)
+                                                                      pin: u_camera_reader/wraddr_reg[4]_syn_4.d[1]
+LUT5                x007y037z3          0.262    r     3.695       6  pin: u_camera_reader/wraddr_reg[4]_syn_4.f[1]
+net (fo=2)                              1.550          5.245          net: u_camera_reader/wraddr[12]_syn_12,  ../../camera_reader.v(29)
+                                                                      pin: u_img/inst_syn_10.csa
+EMB32K (reg)        x008y009            0.000    f     5.245               
+--------------------------------------------------------------------  ---------------
+Arrival                                                5.245               
+
+capture edge                           10.000    f    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.000         10.000               
+clock uncertainty                       0.000         10.000               
+clock pessimism                         0.000         10.000               
+--------------------------------------------------------------------  ---------------
+Required                                              10.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.755               
+
+Slack               : 4.812ns
+Begin Point         : u_camera_reader/pixel_counter_reg[5]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_img/inst_syn_19.csa (falling edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { DeriveClock falling@10.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 5.188ns (cell 2.138ns (41%), net 3.050ns (59%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=3  LUT4=2  LUT2=1 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x004y046z2          0.146    r     0.146          pin: u_camera_reader/pixel_counter_reg[5]_syn_4.q[1]
+net (fo=2)                              0.250          0.396          net: u_camera_reader/pixel_counter[5],  ../../camera_reader.v(32)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.b[1]
+LUT3                x002y045z3          0.431    f     0.827       1  pin: u_camera_reader/wraddr[12]_syn_43.f[1]
+net (fo=1)                              0.100          0.927          net: u_camera_reader/wraddr[12]_syn_18,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.d[0]
+LUT3                x002y045z3          0.262    r     1.189       2  pin: u_camera_reader/wraddr[12]_syn_43.f[0]
+net (fo=1)                              0.150          1.339          net: u_camera_reader/wraddr[12]_syn_20,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_50.a[0]
+LUT4                x002y046z2          0.424    f     1.763       3  pin: u_camera_reader/wraddr[12]_syn_50.f[0]
+net (fo=1)                              0.150          1.913          net: u_camera_reader/wraddr[12]_syn_24,  ../../camera_reader.v(29)
+                                                                      pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.a[1]
+LUT4                x002y045z1          0.408    f     2.321       4  pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.f[1]
+net (fo=1)                              0.400          2.721          net: u_camera_reader/wraddr[12]_syn_30,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_47.d[1]
+LUT3                x003y040z3          0.262    r     2.983       5  pin: u_camera_reader/wraddr[12]_syn_47.f[1]
+net (fo=3)                              0.500          3.483          net: u_camera_reader/wrreq,  ../../camera_reader.v(27)
+                                                                      pin: u_conv1_layer/u_conv1/ramread0_syn_184212.d[0]
+LUT2                x006y035z1          0.205    r     3.688       6  pin: u_conv1_layer/u_conv1/ramread0_syn_184212.f[0]
+net (fo=2)                              1.500          5.188          net: u_camera_reader/wraddr[12]_syn_14,  ../../camera_reader.v(29)
+                                                                      pin: u_img/inst_syn_19.csa
+EMB32K (reg)        x008y009            0.000    f     5.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                5.188               
+
+capture edge                           10.000    f    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.000         10.000               
+clock uncertainty                       0.000         10.000               
+clock pessimism                         0.000         10.000               
+--------------------------------------------------------------------  ---------------
+Required                                              10.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.812               
+
+Slack               : 5.305ns
+Begin Point         : u_camera_reader/pixel_counter_reg[5]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_img/inst_syn_1.csa (falling edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { DeriveClock falling@10.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 4.695ns (cell 2.195ns (46%), net 2.500ns (54%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=3  LUT4=2  LUT5=1 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x004y046z2          0.146    r     0.146          pin: u_camera_reader/pixel_counter_reg[5]_syn_4.q[1]
+net (fo=2)                              0.250          0.396          net: u_camera_reader/pixel_counter[5],  ../../camera_reader.v(32)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.b[1]
+LUT3                x002y045z3          0.431    f     0.827       1  pin: u_camera_reader/wraddr[12]_syn_43.f[1]
+net (fo=1)                              0.100          0.927          net: u_camera_reader/wraddr[12]_syn_18,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_43.d[0]
+LUT3                x002y045z3          0.262    r     1.189       2  pin: u_camera_reader/wraddr[12]_syn_43.f[0]
+net (fo=1)                              0.150          1.339          net: u_camera_reader/wraddr[12]_syn_20,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_50.a[0]
+LUT4                x002y046z2          0.424    f     1.763       3  pin: u_camera_reader/wraddr[12]_syn_50.f[0]
+net (fo=1)                              0.150          1.913          net: u_camera_reader/wraddr[12]_syn_24,  ../../camera_reader.v(29)
+                                                                      pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.a[1]
+LUT4                x002y045z1          0.408    f     2.321       4  pin: u_conv2_layer/u_conv2/con_12_reg[1]_syn_20.f[1]
+net (fo=1)                              0.400          2.721          net: u_camera_reader/wraddr[12]_syn_30,  ../../camera_reader.v(29)
+                                                                      pin: u_camera_reader/wraddr[12]_syn_47.d[1]
+LUT3                x003y040z3          0.262    r     2.983       5  pin: u_camera_reader/wraddr[12]_syn_47.f[1]
+net (fo=3)                              0.450          3.433          net: u_camera_reader/wrreq,  ../../camera_reader.v(27)
+                                                                      pin: u_camera_reader/wraddr_reg[4]_syn_4.d[1]
+LUT5                x007y037z3          0.262    r     3.695       6  pin: u_camera_reader/wraddr_reg[4]_syn_4.f[1]
+net (fo=2)                              1.000          4.695          net: u_camera_reader/wraddr[12]_syn_12,  ../../camera_reader.v(29)
+                                                                      pin: u_img/inst_syn_1.csa
+EMB32K (reg)        x008y054            0.000    f     4.695               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.695               
+
+capture edge                           10.000    f    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.000         10.000               
+clock uncertainty                       0.000         10.000               
+clock pessimism                         0.000         10.000               
+--------------------------------------------------------------------  ---------------
+Required                                              10.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.305               
+
+Slack               : 5.502ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[17]_syn_4.c[0] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.382ns (cell 9.732ns (67%), net 4.650ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 10 ( ADDER=9  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          0.836    f     7.019       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fco
+net (fo=1)                              0.000          7.019          net: u_conv2_layer/u_conv2/add13_syn_1228,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2849.fci
+ADDER               x015y011z3          0.453    f     7.472       2  pin: u_conv2_layer/u_conv2/add13_syn_2849.fx[1]
+net (fo=1)                              0.350          7.822          net: u_conv2_layer/u_conv2/add13_syn_144[6],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2879.e[1]
+ADDER               x017y014z3          0.715    f     8.537       3  pin: u_conv2_layer/u_conv2/add13_syn_2879.fco
+net (fo=1)                              0.000          8.537          net: u_conv2_layer/u_conv2/add13_syn_1825,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2880.fci
+ADDER               x017y015z2          0.387    f     8.924       4  pin: u_conv2_layer/u_conv2/add13_syn_2880.fx[0]
+net (fo=1)                              0.300          9.224          net: u_conv2_layer/u_conv2/add13_syn_264[8],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2910.b[0]
+ADDER               x014y014z2          0.836    f    10.060       5  pin: u_conv2_layer/u_conv2/add13_syn_2910.fco
+net (fo=1)                              0.000         10.060          net: u_conv2_layer/u_conv2/add13_syn_2417,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2911.fci
+ADDER               x014y014z3          0.387    f    10.447       6  pin: u_conv2_layer/u_conv2/add13_syn_2911.fx[0]
+net (fo=1)                              0.800         11.247          net: u_conv2_layer/u_conv2/add13_syn_384[12],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2926.b[0]
+ADDER               x015y027z3          0.836    f    12.083       7  pin: u_conv2_layer/u_conv2/add13_syn_2926.fco
+net (fo=1)                              0.000         12.083          net: u_conv2_layer/u_conv2/add13_syn_2715,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2927.fci
+ADDER               x015y028z2          0.387    f    12.470       8  pin: u_conv2_layer/u_conv2/add13_syn_2927.fx[0]
+net (fo=1)                              0.250         12.720          net: u_conv2_layer/u_conv2/add13_syn_444[16],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2932.e[0]
+ADDER               x013y029z2          1.102    f    13.822       9  pin: u_conv2_layer/u_conv2/add13_syn_2932.fx[1]
+net (fo=1)                              0.200         14.022          net: u_conv2_layer/u_conv2/conv_out_b4[18],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[17]_syn_4.c[0]
+LUT2 (reg)          x012y030z0          0.360    r    14.382      10  net: u_conv2_layer/u_conv2/conv_out[18],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.382               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.502               
+
+Slack               : 5.544ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[11]_syn_4.c[0] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.340ns (cell 9.640ns (67%), net 4.700ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 9 ( ADDER=8  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          1.157    f     7.340       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fx[1]
+net (fo=1)                              0.350          7.690          net: u_conv2_layer/u_conv2/add13_syn_144[2],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2878.e[1]
+ADDER               x017y014z2          0.715    f     8.405       2  pin: u_conv2_layer/u_conv2/add13_syn_2878.fco
+net (fo=1)                              0.000          8.405          net: u_conv2_layer/u_conv2/add13_syn_1821,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2879.fci
+ADDER               x017y014z3          0.387    f     8.792       3  pin: u_conv2_layer/u_conv2/add13_syn_2879.fx[0]
+net (fo=1)                              0.300          9.092          net: u_conv2_layer/u_conv2/add13_syn_264[4],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2909.b[0]
+ADDER               x014y013z3          1.157    f    10.249       4  pin: u_conv2_layer/u_conv2/add13_syn_2909.fx[1]
+net (fo=1)                              0.800         11.049          net: u_conv2_layer/u_conv2/add13_syn_384[6],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2924.b[1]
+ADDER               x015y026z3          0.770    f    11.819       5  pin: u_conv2_layer/u_conv2/add13_syn_2924.fco
+net (fo=1)                              0.000         11.819          net: u_conv2_layer/u_conv2/add13_syn_2707,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2925.fci
+ADDER               x015y027z2          0.453    f    12.272       6  pin: u_conv2_layer/u_conv2/add13_syn_2925.fx[1]
+net (fo=1)                              0.250         12.522          net: u_conv2_layer/u_conv2/add13_syn_444[10],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2930.e[1]
+ADDER               x013y028z2          0.715    f    13.237       7  pin: u_conv2_layer/u_conv2/add13_syn_2930.fco
+net (fo=1)                              0.000         13.237          net: u_conv2_layer/u_conv2/add13_syn_2809,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2931.fci
+ADDER               x013y028z3          0.387    f    13.624       8  pin: u_conv2_layer/u_conv2/add13_syn_2931.fx[0]
+net (fo=1)                              0.250         13.874          net: u_conv2_layer/u_conv2/conv_out_b4[12],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[11]_syn_4.c[0]
+LUT2 (reg)          x011y029z2          0.466    f    14.340       9  net: u_conv2_layer/u_conv2/conv_out[12],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.340               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.544               
+
+Slack               : 5.578ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[13]_syn_4.c[0] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.306ns (cell 9.706ns (67%), net 4.600ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 9 ( ADDER=8  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          1.157    f     7.340       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fx[1]
+net (fo=1)                              0.350          7.690          net: u_conv2_layer/u_conv2/add13_syn_144[2],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2878.e[1]
+ADDER               x017y014z2          0.715    f     8.405       2  pin: u_conv2_layer/u_conv2/add13_syn_2878.fco
+net (fo=1)                              0.000          8.405          net: u_conv2_layer/u_conv2/add13_syn_1821,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2879.fci
+ADDER               x017y014z3          0.387    f     8.792       3  pin: u_conv2_layer/u_conv2/add13_syn_2879.fx[0]
+net (fo=1)                              0.300          9.092          net: u_conv2_layer/u_conv2/add13_syn_264[4],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2909.b[0]
+ADDER               x014y013z3          0.836    f     9.928       4  pin: u_conv2_layer/u_conv2/add13_syn_2909.fco
+net (fo=1)                              0.000          9.928          net: u_conv2_layer/u_conv2/add13_syn_2413,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2910.fci
+ADDER               x014y014z2          0.387    f    10.315       5  pin: u_conv2_layer/u_conv2/add13_syn_2910.fx[0]
+net (fo=1)                              0.800         11.115          net: u_conv2_layer/u_conv2/add13_syn_384[8],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2925.b[0]
+ADDER               x015y027z2          0.836    f    11.951       6  pin: u_conv2_layer/u_conv2/add13_syn_2925.fco
+net (fo=1)                              0.000         11.951          net: u_conv2_layer/u_conv2/add13_syn_2711,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2926.fci
+ADDER               x015y027z3          0.387    f    12.338       7  pin: u_conv2_layer/u_conv2/add13_syn_2926.fx[0]
+net (fo=1)                              0.250         12.588          net: u_conv2_layer/u_conv2/add13_syn_444[12],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2931.e[0]
+ADDER               x013y028z3          1.102    f    13.690       8  pin: u_conv2_layer/u_conv2/add13_syn_2931.fx[1]
+net (fo=1)                              0.150         13.840          net: u_conv2_layer/u_conv2/conv_out_b4[14],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[13]_syn_4.c[0]
+LUT2 (reg)          x013y029z3          0.466    f    14.306       9  net: u_conv2_layer/u_conv2/conv_out[14],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.306               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.578               
+
+Slack               : 5.618ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[15]_syn_4.c[0] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.266ns (cell 9.666ns (67%), net 4.600ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 9 ( ADDER=8  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          0.836    f     7.019       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fco
+net (fo=1)                              0.000          7.019          net: u_conv2_layer/u_conv2/add13_syn_1228,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2849.fci
+ADDER               x015y011z3          0.132    f     7.151          pin: u_conv2_layer/u_conv2/add13_syn_2849.fco
+net (fo=1)                              0.000          7.151          net: u_conv2_layer/u_conv2/add13_syn_1232,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2850.fci
+ADDER               x015y012z2          0.387    f     7.538       2  pin: u_conv2_layer/u_conv2/add13_syn_2850.fx[0]
+net (fo=1)                              0.350          7.888          net: u_conv2_layer/u_conv2/add13_syn_144[8],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2880.e[0]
+ADDER               x017y015z2          1.102    f     8.990       3  pin: u_conv2_layer/u_conv2/add13_syn_2880.fx[1]
+net (fo=1)                              0.300          9.290          net: u_conv2_layer/u_conv2/add13_syn_264[10],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2910.b[1]
+ADDER               x014y014z2          0.770    f    10.060       4  pin: u_conv2_layer/u_conv2/add13_syn_2910.fco
+net (fo=1)                              0.000         10.060          net: u_conv2_layer/u_conv2/add13_syn_2417,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2911.fci
+ADDER               x014y014z3          0.387    f    10.447       5  pin: u_conv2_layer/u_conv2/add13_syn_2911.fx[0]
+net (fo=1)                              0.800         11.247          net: u_conv2_layer/u_conv2/add13_syn_384[12],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2926.b[0]
+ADDER               x015y027z3          1.157    f    12.404       6  pin: u_conv2_layer/u_conv2/add13_syn_2926.fx[1]
+net (fo=1)                              0.250         12.654          net: u_conv2_layer/u_conv2/add13_syn_444[14],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2931.e[1]
+ADDER               x013y028z3          0.715    f    13.369       7  pin: u_conv2_layer/u_conv2/add13_syn_2931.fco
+net (fo=1)                              0.000         13.369          net: u_conv2_layer/u_conv2/add13_syn_2813,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2932.fci
+ADDER               x013y029z2          0.387    f    13.756       8  pin: u_conv2_layer/u_conv2/add13_syn_2932.fx[0]
+net (fo=1)                              0.150         13.906          net: u_conv2_layer/u_conv2/conv_out_b4[16],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[15]_syn_4.c[0]
+LUT2 (reg)          x012y029z0          0.360    r    14.266       9  net: u_conv2_layer/u_conv2/conv_out[16],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.266               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.618               
+
+Slack               : 5.660ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[10]_syn_4.c[1] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.224ns (cell 9.574ns (67%), net 4.650ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 8 ( ADDER=7  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          1.157    f     7.340       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fx[1]
+net (fo=1)                              0.350          7.690          net: u_conv2_layer/u_conv2/add13_syn_144[2],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2878.e[1]
+ADDER               x017y014z2          0.715    f     8.405       2  pin: u_conv2_layer/u_conv2/add13_syn_2878.fco
+net (fo=1)                              0.000          8.405          net: u_conv2_layer/u_conv2/add13_syn_1821,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2879.fci
+ADDER               x017y014z3          0.387    f     8.792       3  pin: u_conv2_layer/u_conv2/add13_syn_2879.fx[0]
+net (fo=1)                              0.300          9.092          net: u_conv2_layer/u_conv2/add13_syn_264[4],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2909.b[0]
+ADDER               x014y013z3          1.157    f    10.249       4  pin: u_conv2_layer/u_conv2/add13_syn_2909.fx[1]
+net (fo=1)                              0.800         11.049          net: u_conv2_layer/u_conv2/add13_syn_384[6],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2924.b[1]
+ADDER               x015y026z3          0.770    f    11.819       5  pin: u_conv2_layer/u_conv2/add13_syn_2924.fco
+net (fo=1)                              0.000         11.819          net: u_conv2_layer/u_conv2/add13_syn_2707,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2925.fci
+ADDER               x015y027z2          0.387    f    12.206       6  pin: u_conv2_layer/u_conv2/add13_syn_2925.fx[0]
+net (fo=1)                              0.250         12.456          net: u_conv2_layer/u_conv2/add13_syn_444[8],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2930.e[0]
+ADDER               x013y028z2          1.102    f    13.558       7  pin: u_conv2_layer/u_conv2/add13_syn_2930.fx[1]
+net (fo=1)                              0.200         13.758          net: u_conv2_layer/u_conv2/conv_out_b4[10],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[10]_syn_4.c[1]
+LUT2 (reg)          x011y028z3          0.466    f    14.224       8  net: u_conv2_layer/u_conv2/conv_out[10],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.224               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.660               
+
+Slack               : 5.691ns
+Begin Point         : u_conv2_layer/u_conv2/mult10_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_conv2_layer/u_conv2/conv_out_reg[17]_syn_4.c[1] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { DeriveClock rising@20.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 14.193ns (cell 9.543ns (67%), net 4.650ns (33%))
+Clock Skew          : 0.000ns
+Logic Level         : 10 ( ADDER=9  LUT2=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+MULT18 (clk2q)      x016y063            3.433    r     3.433          pin: u_conv2_layer/u_conv2/mult10_syn_3.p[0]
+net (fo=1)                              2.750          6.183          net: u_conv2_layer/u_conv2/conv_out_b37[0],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2848.b[0]
+ADDER               x015y011z2          1.157    f     7.340       1  pin: u_conv2_layer/u_conv2/add13_syn_2848.fx[1]
+net (fo=1)                              0.350          7.690          net: u_conv2_layer/u_conv2/add13_syn_144[2],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2878.e[1]
+ADDER               x017y014z2          0.715    f     8.405       2  pin: u_conv2_layer/u_conv2/add13_syn_2878.fco
+net (fo=1)                              0.000          8.405          net: u_conv2_layer/u_conv2/add13_syn_1821,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2879.fci
+ADDER               x017y014z3          0.387    f     8.792       3  pin: u_conv2_layer/u_conv2/add13_syn_2879.fx[0]
+net (fo=1)                              0.300          9.092          net: u_conv2_layer/u_conv2/add13_syn_264[4],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2909.b[0]
+ADDER               x014y013z3          0.836    f     9.928       4  pin: u_conv2_layer/u_conv2/add13_syn_2909.fco
+net (fo=1)                              0.000          9.928          net: u_conv2_layer/u_conv2/add13_syn_2413,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2910.fci
+ADDER               x014y014z2          0.387    f    10.315       5  pin: u_conv2_layer/u_conv2/add13_syn_2910.fx[0]
+net (fo=1)                              0.800         11.115          net: u_conv2_layer/u_conv2/add13_syn_384[8],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2925.b[0]
+ADDER               x015y027z2          0.836    f    11.951       6  pin: u_conv2_layer/u_conv2/add13_syn_2925.fco
+net (fo=1)                              0.000         11.951          net: u_conv2_layer/u_conv2/add13_syn_2711,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2926.fci
+ADDER               x015y027z3          0.387    f    12.338       7  pin: u_conv2_layer/u_conv2/add13_syn_2926.fx[0]
+net (fo=1)                              0.250         12.588          net: u_conv2_layer/u_conv2/add13_syn_444[12],  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2931.e[0]
+ADDER               x013y028z3          0.781    f    13.369       8  pin: u_conv2_layer/u_conv2/add13_syn_2931.fco
+net (fo=1)                              0.000         13.369          net: u_conv2_layer/u_conv2/add13_syn_2813,  ../../conv2.v(353)
+                                                                      pin: u_conv2_layer/u_conv2/add13_syn_2932.fci
+ADDER               x013y029z2          0.264    r    13.633       9  pin: u_conv2_layer/u_conv2/add13_syn_2932.f[1]
+net (fo=1)                              0.200         13.833          net: u_conv2_layer/u_conv2/conv_out_b4[17],  NOFILE(0)
+                                                                      pin: u_conv2_layer/u_conv2/conv_out_reg[17]_syn_4.c[1]
+LUT2 (reg)          x012y030z0          0.360    r    14.193      10  net: u_conv2_layer/u_conv2/conv_out[17],  ../../conv2.v(72)
+--------------------------------------------------------------------  ---------------
+Arrival                                               14.193               
+
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116         19.884               
+clock uncertainty                       0.000         19.884               
+clock pessimism                         0.000         19.884               
+--------------------------------------------------------------------  ---------------
+Required                                              19.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.691               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.059ns
+Begin Point         : CNN_READ_C2_1/ram_waddr_reg[10]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_C2/inst_syn_1.addra[12] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 5
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x025y009z0          0.109    f     0.109          pin: CNN_READ_C2_1/ram_waddr_reg[10]_syn_4.q[1]
+net (fo=5)                              0.150          0.259          net: CNN_READ_C2_1/ram_waddr[10],  ../../CNN_READ_C2.v(12)
+                                                                      pin: RAM_02_C2/inst_syn_1.addra[12]
+EMB (reg)           x024y009            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.059ns
+Begin Point         : CNN_READ_C2_1/ram_waddr_reg[10]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_C2/inst_syn_6.addra[12] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 5
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x025y009z0          0.109    f     0.109          pin: CNN_READ_C2_1/ram_waddr_reg[10]_syn_4.q[1]
+net (fo=5)                              0.150          0.259          net: CNN_READ_C2_1/ram_waddr[10],  ../../CNN_READ_C2.v(12)
+                                                                      pin: RAM_02_C2/inst_syn_6.addra[12]
+EMB (reg)           x024y009            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.059ns
+Begin Point         : u_conv1_layer/u_conv1/mult10_syn_811.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_P1/inst_syn_6.dia[2] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+ADDER (clk2q)       x025y027z0          0.109    f     0.109          pin: u_conv1_layer/u_conv1/mult10_syn_811.q[1]
+net (fo=1)                              0.150          0.259          net: RAM_02_P1/dia[6],  ../../../al_ip/02.v(34)
+                                                                      pin: RAM_02_P1/inst_syn_6.dia[2]
+EMB (reg)           x024y027            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.059ns
+Begin Point         : POOL_READ_P1_1/ram_waddr_reg[7]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_P1/inst_syn_11.addra[10] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 5
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x023y018z3          0.109    f     0.109          pin: POOL_READ_P1_1/ram_waddr_reg[7]_syn_4.q[0]
+net (fo=5)                              0.150          0.259          net: POOL_READ_P1_1/ram_waddr[8],  ../../POOL_READ_P1.v(12)
+                                                                      pin: RAM_02_P1/inst_syn_11.addra[10]
+EMB (reg)           x024y018            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.059ns
+Begin Point         : POOL_READ_P1_1/ram_waddr_reg[7]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_P1/inst_syn_16.addra[10] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 5
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x023y018z3          0.109    f     0.109          pin: POOL_READ_P1_1/ram_waddr_reg[7]_syn_4.q[0]
+net (fo=5)                              0.150          0.259          net: POOL_READ_P1_1/ram_waddr[8],  ../../POOL_READ_P1.v(12)
+                                                                      pin: RAM_02_P1/inst_syn_16.addra[10]
+EMB (reg)           x024y018            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.059ns
+Begin Point         : CNN_READ_C2_1/mux3_syn_144.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_P2/inst_syn_1.dib[6] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.259ns (cell 0.109ns (42%), net 0.150ns (58%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x025y009z2          0.109    f     0.109          pin: CNN_READ_C2_1/mux3_syn_144.q[0]
+net (fo=1)                              0.150          0.259          net: RAM_02_P2/dia[15],  ../../../al_ip/RAM03_512.v(34)
+                                                                      pin: RAM_02_P2/inst_syn_1.dib[6]
+EMB (reg)           x024y009            0.000    f     0.259       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.259               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.059               
+
+Slack               : 0.109ns
+Begin Point         : RAM_02_C2/addrb[9]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_C2/inst_syn_11.dia[3] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.309ns (cell 0.109ns (35%), net 0.200ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x026y018z1          0.109    f     0.109          pin: RAM_02_C2/addrb[9]_syn_4.q[0]
+net (fo=1)                              0.200          0.309          net: RAM_02_C2/dia[11],  ../../../al_ip/02.v(34)
+                                                                      pin: RAM_02_C2/inst_syn_11.dia[3]
+EMB (reg)           x024y018            0.000    f     0.309       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.309               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.109               
+
+Slack               : 0.109ns
+Begin Point         : P2/data_out_reg[6]_syn_3.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : RAM_02_P2/inst_syn_1.dia[8] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.309ns (cell 0.109ns (35%), net 0.200ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x026y009z1          0.109    f     0.109          pin: P2/data_out_reg[6]_syn_3.q[0]
+net (fo=1)                              0.200          0.309          net: RAM_02_P2/dia[8],  ../../../al_ip/RAM03_512.v(34)
+                                                                      pin: RAM_02_P2/inst_syn_1.dia[8]
+EMB (reg)           x024y009            0.000    f     0.309       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.309               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.109               
+
+Slack               : 0.109ns
+Begin Point         : u_conv1_layer/u_conv1/raddr_reg[1]_syn_4.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : U_PRE_LAYER/RAM_Y_784/inst_syn_1.addrb[5] (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.309ns (cell 0.109ns (35%), net 0.200ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( EMB=1 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+clk2q               x031y028z1          0.109    f     0.109          pin: u_conv1_layer/u_conv1/raddr_reg[1]_syn_4.q[0]
+net (fo=4)                              0.200          0.309          net: u_conv1_layer/u_conv1/raddr[2],  ../../conv1.v(26)
+                                                                      pin: U_PRE_LAYER/RAM_Y_784/inst_syn_1.addrb[5]
+EMB (reg)           x032y027            0.000    f     0.309       1       
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.309               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.200          0.200               
+clock uncertainty                       0.000          0.200               
+clock pessimism                         0.000          0.200               
+--------------------------------------------------------------------  ---------------
+Required                                               0.200               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.109               
+
+Slack               : 0.201ns
+Begin Point         : C1/CNN_L1_221009_R/mult0_syn_394.clk (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : U_PRE_LAYER/U_RGB2GRAY/B_reg[6]_syn_3.ce (rising edge triggered by clock DeriveClock  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast
+Budget              : 0.000ns { DeriveClock rising@0.000ns - DeriveClock rising@0.000ns }
+Data Path Delay     : 0.262ns (cell 0.162ns (61%), net 0.100ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 11
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+ADDER (clk2q)       x025y004z0          0.109    f     0.109          pin: C1/CNN_L1_221009_R/mult0_syn_394.q[0]
+net (fo=11)                             0.100          0.209          net: U_PRE_LAYER/U_RGB2GRAY/start_fft1,  ../../RGB2GRAY.v(42)
+                                                                      pin: U_PRE_LAYER/U_RGB2GRAY/B_reg[6]_syn_3.ce
+reg                 x025y004z3          0.053    f     0.262               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.262               
+
+capture edge                            0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+hold                                    0.061          0.061               
+clock uncertainty                       0.000          0.061               
+clock pessimism                         0.000          0.061               
+--------------------------------------------------------------------  ---------------
+Required                                               0.061               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.201               
+
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------
