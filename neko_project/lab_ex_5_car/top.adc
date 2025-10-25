@@ -1,0 +1,52 @@
+set_pin_assignment { HDMI_CLK_P }   { LOCATION = K1;  IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D0_P }    { LOCATION = F5;  IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D1_P }    { LOCATION = E3;  IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D2_P }    { LOCATION = B3;  IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[0] }  { LOCATION = P16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[1] }  { LOCATION = N14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[2] }  { LOCATION = N16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[3] }  { LOCATION = L16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[4] }  { LOCATION = M15; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[5] }  { LOCATION = M16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[6] }  { LOCATION = K16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_data[7] }  { LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_href }     { LOCATION = R15; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_pclk }     { LOCATION = H15; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { cam_pwdn }     { LOCATION = K15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_rst_n }    { LOCATION = P15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_scl }      { LOCATION = T15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_sda }      { LOCATION = R16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_vsync }    { LOCATION = R14; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { clk }          { LOCATION = R7;  IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { rst_n }        { LOCATION = A2;  IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[0] }  { LOCATION = F6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[1] }  { LOCATION = E6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[2] }  { LOCATION = D6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[3] }  { LOCATION = D5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[4] }  { LOCATION = T5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[5] }  { LOCATION = P5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[6] }  { LOCATION = N5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[7] }  { LOCATION = N6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[8] }  { LOCATION = R5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[9] }  { LOCATION = L7;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[10] } { LOCATION = L8;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_data[11] } { LOCATION = E13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_out_hs }   { LOCATION = E7;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { vga_out_vs }   { LOCATION = F7;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { slect_aw[0] }  { LOCATION = F16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { slect_aw[1] }  { LOCATION = E16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { slect_aw[2] }  { LOCATION = E12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { slect_aw[3] }  { LOCATION = E10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[0] } { LOCATION = C15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[1] } { LOCATION = C16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[2] } { LOCATION = B6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[3] } { LOCATION = A5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[4] } { LOCATION = B5;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[5] } { LOCATION = A8;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[6] } { LOCATION = A7;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { a_data_outw[7] } { LOCATION = A6;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+set_pin_assignment { key_inc }      { LOCATION = C1;   IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { key_dec }      { LOCATION = B1;   IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { switch_param } { LOCATION = C5;   IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { switch_step }  { LOCATION = C6;   IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
