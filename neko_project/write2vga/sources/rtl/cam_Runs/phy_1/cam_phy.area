@@ -1,0 +1,177 @@
+standard
+***Report Model: test_camera Device: EG4S20BG256***
+
+IO Statistics
+#IO                        45   out of    188   23.94%
+  #input                   13
+  #output                  31
+  #inout                    1
+
+Utilization Statistics
+#lut                    15334   out of  19600   78.23%
+#reg                     3747   out of  19600   19.12%
+#le                     15360
+  #lut only             11613   out of  15360   75.61%
+  #reg only                26   out of  15360    0.17%
+  #lut&reg               3721   out of  15360   24.23%
+#bram                      21   out of     64   32.81%
+  #bram9k                  21
+  #fifo9k                   0
+#bram32k                   12   out of     16   75.00%
+#dsp                       29   out of     29  100.00%
+#pad                       45   out of    188   23.94%
+  #ireg                     9
+  #oreg                     2
+  #treg                     1
+#pll                        1   out of      4   25.00%
+#gclk                      11   out of     16   68.75%
+
+
+Detailed IO Report
+
+     Name        Direction    Location    IOStandard    IOType    DriveStrength    PullType     PackReg   
+  cam_data[7]      INPUT        H13        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[6]      INPUT        G16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[5]      INPUT        H16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[4]      INPUT        G14        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[3]      INPUT        K15        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[2]      INPUT        K16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[1]      INPUT        J16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cam_data[0]      INPUT        H15        LVCMOS33      PAD           N/A          PULLUP       IREG     
+   cam_href        INPUT        F15        LVCMOS33      PAD           N/A          PULLUP       IREG     
+   cam_pclk        INPUT        K12        LVCMOS33      PAD           N/A          PULLUP       NONE     
+   cam_vsync       INPUT        E15        LVCMOS33      PAD           N/A          PULLUP       NONE     
+    clk_24m        INPUT        K14        LVCMOS33      PAD           N/A          PULLUP       NONE     
+     rst_n         INPUT        G11        LVCMOS33      PAD           N/A          PULLUP       NONE     
+   cam_pwdn       OUTPUT        F14        LVCMOS33      PAD            8            NONE        NONE     
+    cam_rst       OUTPUT        F13        LVCMOS33      PAD            8            NONE        NONE     
+   cam_soic       OUTPUT        D16        LVCMOS33      PAD            8           PULLUP       OREG     
+   cam_xclk       OUTPUT        J12        LVCMOS33      PAD            8            NONE        NONE     
+   vga_b[7]       OUTPUT         C1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[6]       OUTPUT         D1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[5]       OUTPUT         E2        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[4]       OUTPUT         G3        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[3]       OUTPUT         E1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[2]       OUTPUT         F2        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[1]       OUTPUT         F1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_b[0]       OUTPUT         G1        LVCMOS25      PAD            8            NONE        NONE     
+    vga_clk       OUTPUT         H2        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[7]       OUTPUT         H5        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[6]       OUTPUT         H1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[5]       OUTPUT         J6        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[4]       OUTPUT         H3        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[3]       OUTPUT         J1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[2]       OUTPUT         K1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[1]       OUTPUT         K2        LVCMOS25      PAD            8            NONE        NONE     
+   vga_g[0]       OUTPUT         L1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_hsync      OUTPUT         J3        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[7]       OUTPUT         K6        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[6]       OUTPUT         K3        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[5]       OUTPUT         K5        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[4]       OUTPUT         L4        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[3]       OUTPUT         M1        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[2]       OUTPUT         M2        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[1]       OUTPUT         L3        LVCMOS25      PAD            8            NONE        NONE     
+   vga_r[0]       OUTPUT         L5        LVCMOS25      PAD            8            NONE        NONE     
+   vga_vsync      OUTPUT         J4        LVCMOS25      PAD            8            NONE        NONE     
+   cam_soid        INOUT        D14        LVCMOS33      PAD            8           PULLUP     OREG;TREG  
+
+Report Clock Domain Luts:
+
+------------------------------------------------------------------------------------------------------------------
+  Index   |  Name         |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+------------------------------------------------------------------------------------------------------------------
+  #1      |  DeriveClock  |  50MHz       |  7320           |  0                |  0             |  33     |  29
+------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet                             Type               DriverType         Driver                                                 Fanout
+#1        u_pll/clk0_buf                       Global             pll                u_pll/pll_inst.clkc0                                   2778
+#2        cam_pclk_dup_1                       Global             io                 cam_pclk_syn_2.di                                      45
+#3        u_camera_init/divider2[7]            Global             mslice             u_camera_init/divider2_reg[8]_syn_4.q0                 27
+#4        u_camera_init/clk_div                Global             mslice             u_camera_init/divider2_reg[8]_syn_4.q1                 26
+#5        u_camera_init/u_i2c_write/clk        Global             pll                u_pll/pll_inst.clkc2                                   20
+#6        u_camera_reader/wrreq                Global             lslice             u_camera_reader/wraddr[12]_syn_47.f1                   13
+#7        C1/CNN_L1_221009_B/out_cnt           Global             mslice             U_PRE_LAYER/U_READ_RAMP2/start_raddr_reg_syn_11.q0     8
+#8        CNN3_C1/CNN_L1_221009_B/out_cnt      Global             lslice             u_conv2_layer/u_conv2/weight_con[0]_b[124]_syn_4.q0    8
+#9        P2/POOL_CORE_B/out_cnt               Global             mslice             P2/POOL_CORE_R/mux15_syn_25.q0                         8
+#10       P1/POOL_CORE_B/out_cnt               Global             lslice             u_conv1_layer/u_conv1/ramread0_syn_184084.q0           7
+#11       u_conv1_layer/POOL_CORE_R/out_cnt    Global             mslice             u_conv1_layer/POOL_CORE_R/mux15_syn_139.q0             6
+#12       u_conv2_layer/POOL_CORE_R/out_cnt    Global             lslice             u_conv2_layer/POOL_CORE_R/mux15_syn_145.q0             2
+#13       clk_24m_dup_1                        GeneralRouting     io                 clk_24m_syn_2.di                                       1
+#14       u_camera_reader/wrclk1               Global             lslice             u_camera_reader/wrclk1_reg_syn_5.q1                    1
+#15       u_camera_reader/clk                  Global             pll                u_pll/pll_inst.clkc1                                   0
+
+Report Hierarchy Area:
++-----------------------------------------------------------------------------------------+
+|Instance            |Module        |le      |lut     |ripple  |seq     |bram    |dsp     |
++-----------------------------------------------------------------------------------------+
+|top                 |test_camera   |15360   |13882   |1452    |3759    |33      |29      |
+|  C1                |CNN3          |215     |164     |51      |78      |0       |0       |
+|    CNN_L1_221009_B |CNN_L1_221009 |76      |59      |17      |27      |0       |0       |
+|    CNN_L1_221009_G |CNN_L1_221009 |70      |53      |17      |24      |0       |0       |
+|    CNN_L1_221009_R |CNN_L1_221009 |65      |48      |17      |23      |0       |0       |
+|  CNN3_C1           |CNN3          |248     |188     |60      |81      |0       |0       |
+|    CNN_L1_221009_B |CNN_L1_221009 |74      |54      |20      |20      |0       |0       |
+|    CNN_L1_221009_G |CNN_L1_221009 |78      |58      |20      |26      |0       |0       |
+|    CNN_L1_221009_R |CNN_L1_221009 |84      |64      |20      |23      |0       |0       |
+|  CNN_RAM_C1        |CNN_RAM1      |6       |6       |0       |2       |4       |0       |
+|  CNN_RAM_Y         |CNN_RAM1      |0       |0       |0       |0       |4       |0       |
+|  CNN_READ_C1       |CNN_READ      |151     |124     |27      |73      |0       |0       |
+|  CNN_READ_C2_1     |CNN_READ_C2   |164     |127     |37      |50      |0       |0       |
+|  P1                |POOL3         |62      |62      |0       |47      |0       |0       |
+|    POOL_CORE_B     |POOL_CORE     |18      |18      |0       |13      |0       |0       |
+|    POOL_CORE_R     |POOL_CORE     |18      |18      |0       |14      |0       |0       |
+|    POOL_CORE_G     |POOL_CORE     |20      |20      |0       |14      |0       |0       |
+|  P2                |POOL3         |66      |51      |0       |61      |0       |0       |
+|    POOL_CORE_B     |POOL_CORE     |16      |14      |0       |16      |0       |0       |
+|    POOL_CORE_R     |POOL_CORE     |17      |17      |0       |13      |0       |0       |
+|    POOL_CORE_G     |POOL_CORE     |18      |18      |0       |17      |0       |0       |
+|  POOL_READ_P1_1    |POOL_READ_P1  |138     |113     |25      |49      |0       |0       |
+|  POOL_READ_P2_1    |POOL_READ_P2  |121     |97      |24      |49      |0       |0       |
+|  RAM_02_C2         |RAM_02        |14      |14      |0       |6       |4       |0       |
+|  RAM_02_P1         |RAM_02        |15      |15      |0       |4       |4       |0       |
+|  RAM_02_P2         |RAM03_512     |0       |0       |0       |0       |1       |0       |
+|  U_PRE_LAYER       |PRE_LAYER     |250     |183     |64      |101     |2       |0       |
+|    RAM_2vga        |RAM04_1024    |8       |8       |0       |2       |1       |0       |
+|    RAM_Y_784       |RAM04_1024    |0       |0       |0       |0       |1       |0       |
+|    U_READ_RAMP2    |READ_RAMP2    |120     |87      |31      |55      |0       |0       |
+|    U_RGB2GRAY      |RGB2GRAY      |122     |88      |33      |44      |0       |0       |
+|  u_camera_init     |camera_init   |414     |399     |15      |112     |0       |0       |
+|    u_i2c_write     |i2c_module    |93      |93      |0       |70      |0       |0       |
+|  u_camera_reader   |camera_reader |86      |76      |10      |50      |0       |0       |
+|  u_conv1_layer     |conv1_layer1  |7555    |6719    |836     |1652    |4       |1       |
+|    POOL_CORE_R     |pool_core0    |54      |54      |0       |41      |0       |0       |
+|    RAM1            |RAM12_512     |0       |0       |0       |0       |1       |0       |
+|    u_conv1         |conv1         |7295    |6508    |787     |1543    |3       |1       |
+|      RAM1          |RAM12_1024    |0       |0       |0       |0       |3       |0       |
+|    u_pool1_layer   |pool1_layer   |109     |93      |16      |50      |0       |0       |
+|  u_conv2_layer     |conv2_layer2  |3170    |2993    |170     |1040    |6       |24      |
+|    POOL_CORE_R     |pool_core0    |56      |56      |0       |38      |0       |0       |
+|    RAM1            |RAM12_128     |2       |2       |0       |1       |1       |0       |
+|    u_conv2         |conv2         |3056    |2886    |170     |966     |5       |24      |
+|      RAM1          |RAM14_256     |0       |0       |0       |0       |1       |0       |
+|      RAMT1         |RAM20_191     |0       |0       |0       |0       |2       |0       |
+|      RAMT2         |RAM20_191     |0       |0       |0       |0       |2       |0       |
+|    u_pool2_layer   |pool1_layer   |35      |35      |0       |20      |0       |0       |
+|  u_full_layer      |full_layer    |334     |312     |22      |77      |0       |1       |
+|  u_img             |img_cache     |0       |0       |0       |0       |4       |0       |
+|  u_output_layer    |output_layer  |1730    |1730    |0       |55      |0       |0       |
+|  u_pll             |ip_pll        |0       |0       |0       |0       |0       |0       |
+|  u_vga_sync        |lcd_sync      |418     |306     |111     |130     |0       |3       |
++-----------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets   
+    #1          1       10347  
+    #2          2       3540   
+    #3          3       1957   
+    #4          4        670   
+    #5        5-10      1101   
+    #6        11-50      657   
+    #7       51-100      92    
+    #8       101-500      7    
+    #9        >500        1    
+  Average     3.03             

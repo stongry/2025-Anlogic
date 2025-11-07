@@ -1,0 +1,90 @@
+standard
+***Report Model: test_camera Device: EG4S20BG256***
+
+IO Statistics
+#IO                        45   out of    188   23.94%
+  #input                   13
+  #output                  31
+  #inout                    1
+
+LUT Statistics
+#Total_luts             11811
+  #lut4                 10349
+  #lut5                  1402
+  #lut6                    60
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                    14775   out of  19600   75.38%
+#reg                     3539   out of  19600   18.06%
+#bram                      21   out of     64   32.81%
+  #bram9k                  21
+  #fifo9k                   0
+#bram32k                   12   out of     16   75.00%
+#dsp                       29   out of     29  100.00%
+#pad                       45   out of    188   23.94%
+  #ireg                     9
+  #oreg                     2
+  #treg                     1
+#pll                        1   out of      4   25.00%
+#gclk                       1   out of     16    6.25%
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------------+
+|Instance            |Module        |lut     |ripple  |seq     |bram    |dsp     |
++--------------------------------------------------------------------------------+
+|top                 |test_camera   |13323   |1452    |3551    |33      |29      |
+|  C1                |CNN3          |163     |51      |92      |0       |0       |
+|    CNN_L1_221009_B |CNN_L1_221009 |57      |17      |30      |0       |0       |
+|    CNN_L1_221009_G |CNN_L1_221009 |51      |17      |24      |0       |0       |
+|    CNN_L1_221009_R |CNN_L1_221009 |55      |17      |22      |0       |0       |
+|  CNN3_C1           |CNN3          |177     |60      |92      |0       |0       |
+|    CNN_L1_221009_B |CNN_L1_221009 |61      |20      |30      |0       |0       |
+|    CNN_L1_221009_G |CNN_L1_221009 |56      |20      |24      |0       |0       |
+|    CNN_L1_221009_R |CNN_L1_221009 |60      |20      |22      |0       |0       |
+|  CNN_RAM_C1        |CNN_RAM1      |14      |0       |1       |4       |0       |
+|  CNN_RAM_Y         |CNN_RAM1      |0       |0       |0       |4       |0       |
+|  CNN_READ_C1       |CNN_READ      |121     |27      |69      |0       |0       |
+|  CNN_READ_C2_1     |CNN_READ_C2   |125     |37      |56      |0       |0       |
+|  P1                |POOL3         |52      |0       |70      |0       |0       |
+|    POOL_CORE_B     |POOL_CORE     |18      |0       |21      |0       |0       |
+|    POOL_CORE_G     |POOL_CORE     |18      |0       |18      |0       |0       |
+|    POOL_CORE_R     |POOL_CORE     |16      |0       |15      |0       |0       |
+|  P2                |POOL3         |51      |0       |70      |0       |0       |
+|    POOL_CORE_B     |POOL_CORE     |17      |0       |21      |0       |0       |
+|    POOL_CORE_G     |POOL_CORE     |18      |0       |18      |0       |0       |
+|    POOL_CORE_R     |POOL_CORE     |16      |0       |15      |0       |0       |
+|  POOL_READ_P1_1    |POOL_READ_P1  |113     |25      |56      |0       |0       |
+|  POOL_READ_P2_1    |POOL_READ_P2  |101     |24      |51      |0       |0       |
+|  RAM_02_C2         |RAM_02        |11      |0       |0       |4       |0       |
+|  RAM_02_P1         |RAM_02        |12      |0       |0       |4       |0       |
+|  RAM_02_P2         |RAM03_512     |0       |0       |0       |1       |0       |
+|  U_PRE_LAYER       |PRE_LAYER     |159     |64      |119     |2       |0       |
+|    RAM_2vga        |RAM04_1024    |10      |0       |0       |1       |0       |
+|    RAM_Y_784       |RAM04_1024    |0       |0       |0       |1       |0       |
+|    U_READ_RAMP2    |READ_RAMP2    |70      |31      |63      |0       |0       |
+|    U_RGB2GRAY      |RGB2GRAY      |79      |33      |56      |0       |0       |
+|  u_camera_init     |camera_init   |360     |15      |111     |0       |0       |
+|    u_i2c_write     |i2c_module    |90      |0       |68      |0       |0       |
+|  u_camera_reader   |camera_reader |48      |10      |67      |0       |0       |
+|  u_conv1_layer     |conv1_layer1  |6602    |836     |1495    |4       |1       |
+|    POOL_CORE_R     |pool_core0    |47      |0       |40      |0       |0       |
+|    RAM1            |RAM12_512     |0       |0       |0       |1       |0       |
+|    u_conv1         |conv1         |6408    |787     |1388    |3       |1       |
+|      RAM1          |RAM12_1024    |0       |0       |0       |3       |0       |
+|    u_pool1_layer   |pool1_layer   |88      |16      |45      |0       |0       |
+|  u_conv2_layer     |conv2_layer2  |2899    |170     |957     |6       |24      |
+|    POOL_CORE_R     |pool_core0    |47      |0       |40      |0       |0       |
+|    RAM1            |RAM12_128     |1       |0       |0       |1       |0       |
+|    u_conv2         |conv2         |2799    |170     |869     |5       |24      |
+|      RAM1          |RAM14_256     |0       |0       |0       |1       |0       |
+|      RAMT1         |RAM20_191     |1       |0       |0       |2       |0       |
+|      RAMT2         |RAM20_191     |1       |0       |0       |2       |0       |
+|    u_pool2_layer   |pool1_layer   |38      |0       |26      |0       |0       |
+|  u_full_layer      |full_layer    |283     |22      |77      |0       |1       |
+|  u_img             |img_cache     |0       |0       |0       |4       |0       |
+|  u_output_layer    |output_layer  |1560    |0       |6       |0       |0       |
+|  u_pll             |ip_pll        |0       |0       |0       |0       |0       |
+|  u_vga_sync        |lcd_sync      |285     |111     |146     |0       |3       |
++--------------------------------------------------------------------------------+

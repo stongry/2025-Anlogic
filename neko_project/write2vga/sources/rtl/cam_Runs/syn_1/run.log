@@ -1,0 +1,865 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     Neko
+   Run Date =   Tue Oct  7 01:39:28 2025
+
+   Run on =     NEKO_DESKTOP
+============================================================
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+RUN-1001 : Using default speed grade: NA
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "open_project cam.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../CNN_READ.v
+HDL-1007 : analyze verilog file ../../CNN_L1_221009.v
+HDL-1007 : analyze verilog file ../../POOL_CORE.v
+HDL-1007 : analyze verilog file ../../CNN3.v
+HDL-1007 : analyze verilog file ../../POOL3.v
+HDL-1007 : analyze verilog file ../../POOL_READ_P1.v
+HDL-1007 : analyze verilog file ../../CNN_READ_C2.v
+HDL-1007 : analyze verilog file ../../POOL_READ_P2.v
+HDL-1007 : analyze verilog file ../../RGB2GRAY.v
+HDL-1007 : analyze verilog file ../../PRE_LAYER.v
+HDL-1007 : analyze verilog file ../../READ_RAMP2.v
+HDL-1007 : analyze verilog file ../../conv1.v
+HDL-1007 : analyze verilog file ../../pool1_layer.v
+HDL-1007 : analyze verilog file ../../conv2.v
+HDL-1007 : analyze verilog file ../../full_layer.v
+HDL-1007 : analyze verilog file ../../conv1_layer1.v
+HDL-1007 : analyze verilog file ../../conv2_layer2.v
+HDL-1007 : analyze verilog file ../../pool_core0.v
+HDL-1007 : analyze verilog file ../../output_layer.v
+HDL-1007 : analyze verilog file ../../test_camera.v
+HDL-1007 : analyze verilog file ../../camera_init.v
+HDL-1007 : undeclared symbol 'clk_div', assumed default net type 'wire' in ../../camera_init.v(74)
+HDL-1007 : analyze verilog file ../../camera_reader.v
+HDL-1007 : analyze verilog file ../../i2c_module.v
+HDL-1007 : analyze verilog file ../../lcd_sync.v
+HDL-1007 : analyze verilog file ../../../al_ip/01.v
+HDL-1007 : analyze verilog file ../../../al_ip/02.v
+HDL-1007 : analyze verilog file ../../../al_ip/ip_pll_sim.v
+HDL-1007 : undeclared symbol 'open_n47', assumed default net type 'wire' in ../../../al_ip/ip_pll_sim.v(108)
+HDL-1007 : undeclared symbol 'open_n48', assumed default net type 'wire' in ../../../al_ip/ip_pll_sim.v(108)
+HDL-1007 : analyze verilog file ../../../al_ip/ip_ram.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM03_512.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM04_1024.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM12_128.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM12_512.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM12_1024.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM14_256.v
+HDL-1007 : analyze verilog file ../../../al_ip/RAM20_191.v
+PRJ-1401 : Successfully analyzed 35 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top test_camera"
+HDL-1007 : elaborate module test_camera in ../../test_camera.v(14)
+HDL-1007 : port 'jrstn' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jrti' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jshift' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jtck' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jtdi' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jupdate' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jscanen' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'jtms' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'done' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'highz' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'cclk' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'dna_dout' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(23)
+HDL-1007 : port 'extlock' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(29)
+HDL-1007 : port 'psdone' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(29)
+HDL-1007 : port 'do' remains unconnected for this instance in ../../../al_ip/ip_pll_sim.v(29)
+HDL-1007 : elaborate module ip_pll in ../../../al_ip/ip_pll_sim.v(5)
+HDL-1007 : elaborate module EG_PHY_GCLK in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(581)
+HDL-1007 : elaborate module EG_PHY_CONFIG in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(599)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="24.000",REFCLK_DIV=16,FBCLK_DIV=17,CLKC0_DIV=15,CLKC1_DIV=125,CLKC2_DIV=94,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=14,CLKC1_CPHASE=124,CLKC2_CPHASE=93,GMC_GAIN=6,ICP_CURRENT=3,KVCO=6,LPF_RESISTOR=2,PLLRST_ENA="DISABLE",SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-5317 WARNING: input port 'jtdo[1]' is not connected on this instance in ../../../al_ip/ip_pll_sim.v(28)
+HDL-5317 WARNING: input port 'load_reg' is not connected on this instance in ../../../al_ip/ip_pll_sim.v(94)
+HDL-1007 : elaborate module camera_init in ../../camera_init.v(14)
+HDL-1007 : elaborate module i2c_module in ../../i2c_module.v(2)
+HDL-1007 : elaborate module lcd_sync(IMG_X=100,IMG_Y=10) in ../../lcd_sync.v(14)
+HDL-1007 : elaborate module camera_reader in ../../camera_reader.v(14)
+HDL-1007 : elaborate module img_cache in ../../../al_ip/ip_ram.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=16,DATA_WIDTH_B=16,ADDR_WIDTH_A=13,ADDR_WIDTH_B=13,DATA_DEPTH_A=8100,DATA_DEPTH_B=8100,MODE="PDPW",IMPLEMENT="32K") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/ip_ram.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(201)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(207)
+HDL-1007 : elaborate module CNN_RAM1 in ../../../al_ip/01.v(14)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/01.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(298)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(302)
+HDL-1007 : elaborate module CNN_READ in ../../CNN_READ.v(38)
+HDL-1007 : elaborate module CNN3 in ../../CNN3.v(2)
+HDL-1007 : elaborate module CNN_L1_221009 in ../../CNN_L1_221009.v(27)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addra' in ../../test_camera.v(335)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 13 for port 'addrb' in ../../test_camera.v(339)
+HDL-1007 : elaborate module POOL_READ_P1 in ../../POOL_READ_P1.v(2)
+HDL-1007 : elaborate module POOL3 in ../../POOL3.v(1)
+HDL-1007 : elaborate module POOL_CORE in ../../POOL_CORE.v(2)
+HDL-1007 : elaborate module RAM_02 in ../../../al_ip/02.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=16,DATA_WIDTH_B=16,ADDR_WIDTH_A=11,ADDR_WIDTH_B=11,DATA_DEPTH_A=2048,DATA_DEPTH_B=2048,MODE="PDPW",WRITEMODE_A="WRITETHROUGH") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/02.v(73)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 11 for port 'addrb' in ../../test_camera.v(379)
+HDL-1007 : elaborate module CNN_READ_C2 in ../../CNN_READ_C2.v(2)
+HDL-5007 WARNING: actual bit length 11 differs from formal bit length 16 for port 'ram_waddr' in ../../test_camera.v(399)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 11 for port 'addrb' in ../../test_camera.v(419)
+HDL-1007 : elaborate module POOL_READ_P2 in ../../POOL_READ_P2.v(2)
+HDL-1007 : elaborate module RAM03_512 in ../../../al_ip/RAM03_512.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=16,DATA_WIDTH_B=16,ADDR_WIDTH_A=9,ADDR_WIDTH_B=9,DATA_DEPTH_A=512,DATA_DEPTH_B=512,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM03_512.v(73)
+HDL-5007 WARNING: actual bit length 11 differs from formal bit length 9 for port 'addra' in ../../test_camera.v(460)
+HDL-1007 : elaborate module PRE_LAYER in ../../PRE_LAYER.v(16)
+HDL-1007 : elaborate module READ_RAMP2 in ../../READ_RAMP2.v(27)
+HDL-1007 : elaborate module RGB2GRAY in ../../RGB2GRAY.v(32)
+HDL-1007 : elaborate module RAM04_1024 in ../../../al_ip/RAM04_1024.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=8,DATA_WIDTH_B=8,ADDR_WIDTH_B=10,DATA_DEPTH_A=1024,DATA_DEPTH_B=1024,MODE="PDPW",FILL_ALL="00000000") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM04_1024.v(73)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'ceb' in ../../PRE_LAYER.v(78)
+HDL-5007 WARNING: actual bit length 16 differs from formal bit length 10 for port 'addrb_vga' in ../../test_camera.v(484)
+HDL-1007 : elaborate module conv1_layer1 in ../../conv1_layer1.v(10)
+HDL-1007 : elaborate module conv1 in ../../conv1.v(19)
+HDL-1007 : extracting RAM for identifier 'buffer' in ../../conv1.v(38)
+HDL-1007 : readmemh: reading from file '../../data/conv1_weight_1.txt' in ../../conv1.v(60)
+HDL-1007 : readmemh: reading from file '../../data/conv1_weight_2.txt' in ../../conv1.v(61)
+HDL-1007 : readmemh: reading from file '../../data/conv1_weight_3.txt' in ../../conv1.v(62)
+HDL-1007 : readmemh: reading from file '../../data/conv1_bias.txt' in ../../conv1.v(63)
+HDL-5007 WARNING: using initial value of 'weight_1' since it is never assigned in ../../conv1.v(59)
+HDL-1007 : elaborate module RAM12_1024 in ../../../al_ip/RAM12_1024.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=12,DATA_WIDTH_B=12,ADDR_WIDTH_A=11,ADDR_WIDTH_B=11,DATA_DEPTH_A=2048,DATA_DEPTH_B=2048,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM12_1024.v(73)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 11 for port 'ram_addrb' in ../../conv1_layer1.v(44)
+HDL-1007 : elaborate module pool1_layer in ../../pool1_layer.v(7)
+HDL-1007 : elaborate module pool_core0(bits=12) in ../../pool_core0.v(2)
+HDL-1007 : elaborate module RAM12_512 in ../../../al_ip/RAM12_512.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=12,DATA_WIDTH_B=12,ADDR_WIDTH_A=9,ADDR_WIDTH_B=9,DATA_DEPTH_A=512,DATA_DEPTH_B=512,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 1 for port 'beb' in ../../../al_ip/RAM12_512.v(73)
+HDL-5007 Similar messages will be suppressed.
+HDL-1007 : elaborate module conv2_layer2 in ../../conv2_layer2.v(10)
+HDL-1007 : elaborate module conv2 in ../../conv2.v(24)
+HDL-1007 : extracting RAM for identifier 'buffer' in ../../conv2.v(48)
+HDL-1007 : readmemh: reading from file '../../data/conv2_bias.txt' in ../../conv2.v(87)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_11.txt' in ../../conv2.v(89)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_12.txt' in ../../conv2.v(90)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_13.txt' in ../../conv2.v(91)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_21.txt' in ../../conv2.v(93)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_22.txt' in ../../conv2.v(94)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_23.txt' in ../../conv2.v(95)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_31.txt' in ../../conv2.v(97)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_32.txt' in ../../conv2.v(98)
+HDL-1007 : readmemh: reading from file '../../data/conv2_weight_33.txt' in ../../conv2.v(99)
+HDL-5007 WARNING: using initial value of 'bias' since it is never assigned in ../../conv2.v(85)
+HDL-1007 : elaborate module RAM20_191 in ../../../al_ip/RAM20_191.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=20,DATA_WIDTH_B=20,ADDR_WIDTH_A=8,ADDR_WIDTH_B=8,DATA_DEPTH_A=256,DATA_DEPTH_B=256,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module RAM14_256 in ../../../al_ip/RAM14_256.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=12,DATA_WIDTH_B=12,ADDR_WIDTH_A=8,ADDR_WIDTH_B=8,DATA_DEPTH_A=256,DATA_DEPTH_B=256,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module pool1_layer(HALF_WIDTH=4,HALF_HEIGHT=4) in ../../pool1_layer.v(7)
+HDL-1007 : elaborate module RAM12_128 in ../../../al_ip/RAM12_128.v(14)
+HDL-1007 : elaborate module EG_LOGIC_BRAM(DATA_WIDTH_A=12,DATA_WIDTH_B=12,ADDR_WIDTH_A=7,ADDR_WIDTH_B=7,DATA_DEPTH_A=128,DATA_DEPTH_B=128,MODE="PDPW") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(986)
+HDL-1007 : elaborate module full_layer in ../../full_layer.v(7)
+HDL-1007 : extracting RAM for identifier 'weight' in ../../full_layer.v(27)
+HDL-1007 : extracting RAM for identifier 'bias' in ../../full_layer.v(28)
+HDL-1007 : readmemh: reading from file '../../data/fc_weight.txt' in ../../full_layer.v(34)
+HDL-1007 : readmemh: reading from file '../../data/fc_bias.txt' in ../../full_layer.v(35)
+HDL-5314 WARNING: net 'weight' does not have a driver in ../../full_layer.v(27)
+HDL-5314 WARNING: net 'bias' does not have a driver in ../../full_layer.v(28)
+HDL-1007 : elaborate module output_layer in ../../output_layer.v(2)
+HDL-1007 : extracting RAM for identifier 'T0' in ../../output_layer.v(10)
+HDL-1007 : extracting RAM for identifier 'T1' in ../../output_layer.v(11)
+HDL-1007 : extracting RAM for identifier 'T2' in ../../output_layer.v(12)
+HDL-1007 : extracting RAM for identifier 'T3' in ../../output_layer.v(13)
+HDL-1007 : extracting RAM for identifier 'T4' in ../../output_layer.v(14)
+HDL-1007 : extracting RAM for identifier 'T5' in ../../output_layer.v(15)
+HDL-1007 : extracting RAM for identifier 'T6' in ../../output_layer.v(16)
+HDL-1007 : extracting RAM for identifier 'T7' in ../../output_layer.v(17)
+HDL-1007 : extracting RAM for identifier 'T8' in ../../output_layer.v(18)
+HDL-1007 : extracting RAM for identifier 'T9' in ../../output_layer.v(19)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_20.txt' in ../../output_layer.v(21)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_21.txt' in ../../output_layer.v(22)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_22.txt' in ../../output_layer.v(23)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_23.txt' in ../../output_layer.v(24)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_24.txt' in ../../output_layer.v(25)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_25.txt' in ../../output_layer.v(26)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_26.txt' in ../../output_layer.v(27)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_27.txt' in ../../output_layer.v(28)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_28.txt' in ../../output_layer.v(29)
+HDL-1007 : readmemh: reading from file '../../data/mnist_input/0_29.txt' in ../../output_layer.v(30)
+HDL-5314 WARNING: net 'T0' does not have a driver in ../../output_layer.v(10)
+HDL-5314 WARNING: net 'T1' does not have a driver in ../../output_layer.v(11)
+HDL-5314 WARNING: net 'T2' does not have a driver in ../../output_layer.v(12)
+HDL-5314 WARNING: net 'T3' does not have a driver in ../../output_layer.v(13)
+HDL-5314 WARNING: net 'T4' does not have a driver in ../../output_layer.v(14)
+HDL-5314 WARNING: net 'T5' does not have a driver in ../../output_layer.v(15)
+HDL-5314 WARNING: net 'T6' does not have a driver in ../../output_layer.v(16)
+HDL-5314 WARNING: net 'T7' does not have a driver in ../../output_layer.v(17)
+HDL-5314 WARNING: net 'T8' does not have a driver in ../../output_layer.v(18)
+HDL-5314 WARNING: net 'T9' does not have a driver in ../../output_layer.v(19)
+HDL-1200 : Current top model is test_camera
+HDL-1100 : Inferred 14 RAMs.
+RUN-1002 : start command "read_adc ../../../sdc/SparkRoad.adc"
+RUN-1002 : start command "set_pin_assignment clk_24m  LOCATION = K14;  "
+RUN-1002 : start command "set_pin_assignment cam_data[0]  LOCATION = H15; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[1]  LOCATION = J16; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[2]  LOCATION = K16; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[3]  LOCATION = K15; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[4]  LOCATION = G14; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[5]  LOCATION = H16; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[6]  LOCATION = G16; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_data[7]  LOCATION = H13; IOSTANDARD = LVCMOS33;  "
+RUN-1002 : start command "set_pin_assignment cam_href  LOCATION = F15;  "
+RUN-1002 : start command "set_pin_assignment cam_pclk  LOCATION = K12;  "
+RUN-1002 : start command "set_pin_assignment cam_pwdn  LOCATION = F14;  "
+RUN-1002 : start command "set_pin_assignment cam_rst  LOCATION = F13;  "
+RUN-1002 : start command "set_pin_assignment cam_soic  LOCATION = D16; PULLTYPE = PULLUP;  "
+RUN-1002 : start command "set_pin_assignment cam_soid  LOCATION = D14;  "
+RUN-1002 : start command "set_pin_assignment cam_vsync  LOCATION = E15;  "
+RUN-1002 : start command "set_pin_assignment cam_xclk  LOCATION = J12;  "
+RUN-1002 : start command "set_pin_assignment rst_n  LOCATION = G11;  "
+RUN-1002 : start command "set_pin_assignment vga_clk  LOCATION = H2;  "
+RUN-1002 : start command "set_pin_assignment vga_hsync  LOCATION = J3;  "
+RUN-1002 : start command "set_pin_assignment vga_vsync  LOCATION = J4;  "
+RUN-1002 : start command "set_pin_assignment vga_r[0]  LOCATION = L5;  "
+RUN-1002 : start command "set_pin_assignment vga_r[1]  LOCATION = L3;  "
+RUN-1002 : start command "set_pin_assignment vga_r[2]  LOCATION = M2;  "
+RUN-1002 : start command "set_pin_assignment vga_r[3]  LOCATION = M1;  "
+RUN-1002 : start command "set_pin_assignment vga_r[4]  LOCATION = L4;  "
+RUN-1002 : start command "set_pin_assignment vga_r[5]  LOCATION = K5;  "
+RUN-1002 : start command "set_pin_assignment vga_r[6]  LOCATION = K3;  "
+RUN-1002 : start command "set_pin_assignment vga_r[7]  LOCATION = K6;  "
+RUN-1002 : start command "set_pin_assignment vga_g[0]  LOCATION = L1;  "
+RUN-1002 : start command "set_pin_assignment vga_g[1]  LOCATION = K2;  "
+RUN-1002 : start command "set_pin_assignment vga_g[2]  LOCATION = K1;  "
+RUN-1002 : start command "set_pin_assignment vga_g[3]  LOCATION = J1;  "
+RUN-1002 : start command "set_pin_assignment vga_g[4]  LOCATION = H3;  "
+RUN-1002 : start command "set_pin_assignment vga_g[5]  LOCATION = J6;  "
+RUN-1002 : start command "set_pin_assignment vga_g[6]  LOCATION = H1;  "
+RUN-1002 : start command "set_pin_assignment vga_g[7]  LOCATION = H5;  "
+RUN-1002 : start command "set_pin_assignment vga_b[0]  LOCATION = G1;   "
+RUN-1002 : start command "set_pin_assignment vga_b[1]  LOCATION = F1;   "
+RUN-1002 : start command "set_pin_assignment vga_b[2]  LOCATION = F2;   "
+RUN-1002 : start command "set_pin_assignment vga_b[3]  LOCATION = E1;   "
+RUN-1002 : start command "set_pin_assignment vga_b[4]  LOCATION = G3;   "
+RUN-1002 : start command "set_pin_assignment vga_b[5]  LOCATION = E2;   "
+RUN-1002 : start command "set_pin_assignment vga_b[6]  LOCATION = D1;   "
+RUN-1002 : start command "set_pin_assignment vga_b[7]  LOCATION = C1;   "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+RUN-1002 : start command "export_db cam_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_gsr         |    off     |       off        |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     8      |        8         |        
+RUN-1001 :       min_ripple_len      |    auto    |       auto       |        
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "insert_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.003073s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 154, reserved = 272, peak = 154;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 11203, Total nets: 30574.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.566550s wall, 0.562500s user + 0.000000s system = 0.562500s CPU (99.3%); Memory(MB): used = 154, reserved = 272, peak = 154;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 2369, Total nets: 21425.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model test_camera
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.107676s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (101.6%); Memory(MB): used = 155, reserved = 272, peak = 155;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 2992, Total nets: 23120.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.019082s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (163.8%); Memory(MB): used = 146, reserved = 146, peak = 155;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 2985, Total nets: 23111.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1066 : Inferred FSM for state register 'u_camera_init/state_next_reg' in module 'test_camera'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+              00001011         00000001
+              00001100         00000010
+              00001101         00000100
+              00001110         00001000
+              00010001         00010000
+              00001111         00100000
+              00010010         01000000
+              00010000         10000000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_camera_init/state_next_reg' using encoding 'one_hot' in model 'test_camera'
+SYN-1066 : Inferred FSM for state register 'u_camera_init/u_i2c_write/state_next_reg' in module 'test_camera'
+-------------------------------------------------------------------
+     Previous Encoding                            New Encoding
+-------------------------------------------------------------------
+              00000000     00000000000000000000000000000000001
+              00000001     00000000000000000000000000000000010
+              01101111     00000000000000000000000000000000100
+              01110000     00000000000000000000000000000001000
+              00000010     00000000000000000000000000000010000
+              00000011     00000000000000000000000000000100000
+              00000100     00000000000000000000000000001000000
+              00000101     00000000000000000000000000010000000
+              00000110     00000000000000000000000000100000000
+              00000111     00000000000000000000000001000000000
+              00001000     00000000000000000000000010000000000
+              00001001     00000000000000000000000100000000000
+              00001010     00000000000000000000001000000000000
+              01100110     00000000000000000000010000000000000
+              00001011     00000000000000000000100000000000000
+              00001100     00000000000000000001000000000000000
+              00001101     00000000000000000010000000000000000
+              00001110     00000000000000000100000000000000000
+              00001111     00000000000000001000000000000000000
+              00010000     00000000000000010000000000000000000
+              00010001     00000000000000100000000000000000000
+              00010010     00000000000001000000000000000000000
+              00010011     00000000000010000000000000000000000
+              11000000     00000000000100000000000000000000000
+              00010100     00000000001000000000000000000000000
+              00010101     00000000010000000000000000000000000
+              00010110     00000000100000000000000000000000000
+              00010111     00000001000000000000000000000000000
+              00011000     00000010000000000000000000000000000
+              00011001     00000100000000000000000000000000000
+              00011010     00001000000000000000000000000000000
+              00011011     00010000000000000000000000000000000
+              00011100     00100000000000000000000000000000000
+              00011101     01000000000000000000000000000000000
+              00011110     10000000000000000000000000000000000
+-------------------------------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_camera_init/u_i2c_write/state_next_reg' using encoding 'one_hot' in model 'test_camera'
+SYN-1057 : Inferred 2 FSM(s)
+SYN-1001 : Optimize 3 less-than instances
+SYN-1032 : 24138/36 useful/useless nets, 2936/0 useful/useless insts
+SYN-1001 : Bypass 3 mux instances
+SYN-1021 : Optimized 4 onehot mux instances.
+SYN-1068 : Optimized 4 binary mux instances.
+SYN-1019 : Optimized 9 mux instances.
+SYN-1021 : Optimized 7 onehot mux instances.
+SYN-1021 : Optimized 2 onehot mux instances.
+SYN-1001 : Optimize 4 less-than instances
+SYN-1016 : Merged 490 instances.
+SYN-1025 : Merged 2 RAM ports.
+SYN-1025 : Merged 2 RAM ports.
+SYN-1016 : Merged 373 instances.
+SYN-1001 : Optimize 1 decoder instances
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 4.245859s wall, 4.187500s user + 0.031250s system = 4.218750s CPU (99.4%); Memory(MB): used = 311, reserved = 300, peak = 311;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 16905, Total nets: 20599.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1019 : Optimized 288 mux instances.
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 4 inv instances.
+SYN-1017 : Remove 29 const input seq instances
+SYN-1018 : Transformed 28 mux instances.
+SYN-1019 : Optimized 36 mux instances.
+SYN-1020 : Optimized 464 distributor mux.
+SYN-1001 : Optimize 20 less-than instances
+SYN-1019 : Optimized 191 mux instances.
+SYN-2593 : bram inst: U_PRE_LAYER/RAM_2vga/inst will be optimized to a new one with A-width 6 due to unused data out
+SYN-2593 : bram inst: u_conv2_layer/u_conv2/RAMT1/inst will be optimized to a new one with A-width 19 due to unused data out
+SYN-2593 : bram inst: u_conv2_layer/u_conv2/RAMT2/inst will be optimized to a new one with A-width 19 due to unused data out
+SYN-1016 : Merged 631 instances.
+SYN-1015 : Optimize round 1, 5836 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 19 inv instances.
+SYN-1017 : Remove 1 const input seq instances
+SYN-1019 : Optimized 208 mux instances.
+SYN-1020 : Optimized 1 distributor mux.
+SYN-1016 : Merged 32 instances.
+SYN-1015 : Optimize round 2, 576 better
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "U_PRE_LAYER/RAM_2vga/inst" in ../../../al_ip/RAM04_1024.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "U_PRE_LAYER/RAM_2vga/inst" in ../../../al_ip/RAM04_1024.v(59) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT1/inst" in ../../../al_ip/RAM20_191.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT1/inst" in ../../../al_ip/RAM20_191.v(59) / pin "beb[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT2/inst" in ../../../al_ip/RAM20_191.v(59) / pin "bea[0]"
+SYN-5011 WARNING: Undriven pin: model "test_camera" / inst "u_conv2_layer/u_conv2/RAMT2/inst" in ../../../al_ip/RAM20_191.v(59) / pin "beb[0]"
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-3010 : Optimized 31 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 4 const input seq instances
+SYN-1020 : Optimized 2 distributor mux.
+SYN-1001 : Optimize constant input of 2 erams.
+SYN-1016 : Merged 6 instances.
+SYN-1015 : Optimize round 1, 53 better
+SYN-1014 : Optimize round 2
+SYN-1017 : Remove 8 const input seq instances
+SYN-2593 : bram inst: u_conv1_layer/RAM1/inst will be optimized to a new one with A-width 11 due to unused data out
+SYN-2593 : bram inst: u_conv2_layer/RAM1/inst will be optimized to a new one with A-width 11 due to unused data out
+SYN-1015 : Optimize round 2, 12 better
+SYN-1014 : Optimize round 3
+SYN-1015 : Optimize round 3, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 9.487238s wall, 9.250000s user + 0.125000s system = 9.375000s CPU (98.8%); Memory(MB): used = 382, reserved = 381, peak = 400;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 16090, Total nets: 19448.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.004565s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (342.3%); Memory(MB): used = 383, reserved = 381, peak = 400;
+
+SYN-1079 : finish stage Check Design. Total instances: 16090, Total nets: 19448.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 14.434884s wall, 14.156250s user + 0.156250s system = 14.312500s CPU (99.2%); Memory(MB): used = 383, reserved = 381, peak = 400;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 16090, Total nets: 19448.
+
+RUN-1003 : finish command "optimize_rtl" in  14.446456s wall, 14.171875s user + 0.156250s system = 14.328125s CPU (99.2%)
+
+RUN-1004 : used memory is 383 MB, reserved memory is 381 MB, peak memory is 400 MB
+RUN-1002 : start command "report_area -file cam_rtl.area"
+RUN-1001 : standard
+***Report Model: test_camera Device: EG4S20BG256***
+
+IO Statistics
+#IO                        45
+  #input                   13
+  #output                  31
+  #inout                    1
+
+Gate Statistics
+#Basic gates            12613
+  #and                    427
+  #nand                     0
+  #or                     251
+  #nor                      0
+  #xor                      2
+  #xnor                     0
+  #buf                      0
+  #not                    436
+  #bufif1                   1
+  #MX21                  7505
+  #FADD                     0
+  #DFF                   3991
+  #LATCH                    0
+#MACRO_ADD                262
+#MACRO_EQ                 115
+#MACRO_MULT                69
+#MACRO_MUX               3008
+#MACRO_OTHERS              14
+
+RUN-1002 : start command "export_db cam_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1002 : start command "set_param gate opt_timing medium"
+RUN-1001 : Print Gate Property
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     eram_init     |    off     |       off        |        
+RUN-1001 :      map_mode     |    auto    |       auto       |        
+RUN-1001 :    pack_effort    |   medium   |      medium      |        
+RUN-1001 :   pack_seq_in_io  |    auto    |       auto       |        
+RUN-1001 :       report      |  standard  |     standard     |        
+RUN-1001 : -----------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea cam_gate.area"
+RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.404808s wall, 0.406250s user + 0.000000s system = 0.406250s CPU (100.4%); Memory(MB): used = 410, reserved = 517, peak = 418;
+
+SYN-1079 : finish stage Map Reg. Total instances: 16090, Total nets: 19448.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 45 IOs to PADs of model 'test_camera'
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.131301s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (95.2%); Memory(MB): used = 412, reserved = 518, peak = 418;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module test_camera"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-6562 WARNING: The init value of "CNN_RAM_C1/inst(../../../al_ip/01.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "CNN_RAM_Y/inst(../../../al_ip/01.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_C2/inst(../../../al_ip/02.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_P1/inst(../../../al_ip/02.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "RAM_02_P2/inst(../../../al_ip/RAM03_512.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv1_layer/RAM1/inst(../../../al_ip/RAM12_512.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv1_layer/u_conv1/RAM1/inst(../../../al_ip/RAM12_1024.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/RAM1/inst(../../../al_ip/RAM12_128.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/u_conv2/RAM1/inst(../../../al_ip/RAM14_256.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_conv2_layer/u_conv2/RAMT1/inst(../../../al_ip/RAM20_191.v(59))" will be ignored since gate eram_init is set to off
+SYN-6562 Similar messages will be suppressed.
+SYN-2571 : Map 69 macro multiplier
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1016 : Merged 22 instances.
+SYN-2571 : Optimize after map_dsp, round 1, 22 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-2561 : Map multiplier C1/CNN_L1_221009_B/mult0 into carry-chain logic
+SYN-2561 : Map multiplier C1/CNN_L1_221009_G/mult0 into carry-chain logic
+SYN-2561 : Map multiplier C1/CNN_L1_221009_R/mult0 into carry-chain logic
+SYN-2561 : Map multiplier CNN3_C1/CNN_L1_221009_B/mult0 into carry-chain logic
+SYN-2561 : Map multiplier CNN3_C1/CNN_L1_221009_G/mult0 into carry-chain logic
+SYN-2561 : Map multiplier CNN3_C1/CNN_L1_221009_R/mult0 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult0 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult1 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult10 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult11 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult12 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult15 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult16 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult17 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult18 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult19 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult2 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult20 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult21 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult22 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult23 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult24 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult3 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult4 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult5 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult6 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult7 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult8 into carry-chain logic
+SYN-2561 : Map multiplier u_conv1_layer/u_conv1/mult9 into carry-chain logic
+SYN-2561 : Map multiplier u_conv2_layer/u_conv2/mult24 into carry-chain logic
+SYN-1001 : Throwback 272 control mux instances
+SYN-1001 : Generate 51 bigger adders
+SYN-1001 : Optimize 86 adders
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 510 instances.
+SYN-2501 : Optimize round 1, 1704 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-1017 : Remove 4 const input seq instances
+SYN-1016 : Merged 3 instances.
+SYN-2501 : Optimize round 1, 32 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 12 better
+SYN-2501 : Optimize round 3
+SYN-2501 : Optimize round 3, 1 better
+SYN-2501 : Optimize round 4
+SYN-2501 : Optimize round 4, 0 better
+SYN-2501 : Map 444 macro adder(s)
+SYN-2501 : Inferred 8 ROM instances
+SYN-1019 : Optimized 982 mux instances.
+SYN-1016 : Merged 10848 instances.
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 14.918351s wall, 14.359375s user + 0.359375s system = 14.718750s CPU (98.7%); Memory(MB): used = 427, reserved = 415, peak = 432;
+
+SYN-1079 : finish stage Map Macro. Total instances: 27839, Total nets: 31734.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-2581 : Mapping with K=5, #lut = 11952 (3.40), #lev = 9 (4.38), #crit_level = 0
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 11751 (3.39), #lev = 9 (4.36), #crit_level = 0
+SYN-3001 : Logic optimization opt = 2.85 sec, map = 2.03 sec, post map opt = 7.79 sec.
+SYN-3001 : Mapper removed 22 lut buffers
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 14.275701s wall, 14.109375s user + 0.078125s system = 14.187500s CPU (99.4%); Memory(MB): used = 469, reserved = 457, peak = 473;
+
+SYN-1001 : Packing model "test_camera" ...
+SYN-4010 : Pack lib has 59 rtl pack models with 26 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 3539 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 102 carry chain into lslice
+SYN-4007 : Packing 1824 adder to BLE ...
+SYN-4008 : Packed 1824 adder and 50 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         2476                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+|     Hold WNS              |          471                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         3489                |
+|     #luts                 |        11811                |
+|     #lut1                 |           49                |
+|     #lut1(~A)             |           49                |
+|     #slices               |         1452                |
+|     slices percentage     |       14.82%                |
+|     #RAMs                 |           33                |
+|     #DSPs                 |           29                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |          298                |
+|     #insts in MACRO       |         1452                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |            0                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        78.28                |
+| dff(single fanout)->dff   |          144                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total                 |            0                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock        |  Period            |  0    |  1    |  2    |  3    |  4    |  5    |  6    |  7     |  8     |  9    |  10  |  11  |  12  |  13  |  14  |  15  |  16  |  17
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  DeriveClock  |  20.000ns (50MHz)  |  727  |  893  |  668  |  306  |  194  |  401  |  523  |  1662  |  1523  |  125  |  46  |  9   |  5   |  5   |  6   |  4   |  4   |  1
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(7102 paths analyzed)
+
+Hierarchical Rent Exponent Report
++-------------------------------------------------------------------------+
+|Inst             |Model           |Rent     |Cell     |Pin     |Term     |
++-------------------------------------------------------------------------+
+|top              |test_camera     |0.13     |16861    |77068   |17       |
+|  u_conv1_layer  |conv1_layer1_17 |0.35     |8102     |35742   |105      |
+|  u_conv2_layer  |conv2_layer2_18 |0.27     |3874     |18616   |44       |
+|  u_output_layer |output_layer_21 |0.23     |1566     |7645    |27       |
++-------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  2.110941s wall, 2.093750s user + 0.015625s system = 2.109375s CPU (99.9%)
+
+RUN-1004 : used memory is 472 MB, reserved memory is 459 MB, peak memory is 473 MB
+RUN-1002 : start command "report_area -file cam_gate.area"
+RUN-1001 : standard
+***Report Model: test_camera Device: EG4S20BG256***
+
+IO Statistics
+#IO                        45   out of    188   23.94%
+  #input                   13
+  #output                  31
+  #inout                    1
+
+LUT Statistics
+#Total_luts             11811
+  #lut4                 10349
+  #lut5                  1402
+  #lut6                    60
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                    14775   out of  19600   75.38%
+#reg                     3539   out of  19600   18.06%
+#bram                      21   out of     64   32.81%
+  #bram9k                  21
+  #fifo9k                   0
+#bram32k                   12   out of     16   75.00%
+#dsp                       29   out of     29  100.00%
+#pad                       45   out of    188   23.94%
+  #ireg                     9
+  #oreg                     2
+  #treg                     1
+#pll                        1   out of      4   25.00%
+#gclk                       1   out of     16    6.25%
+
+RUN-1003 : finish command "report_area -file cam_gate.area" in  1.879281s wall, 1.843750s user + 0.000000s system = 1.843750s CPU (98.1%)
+
+RUN-1004 : used memory is 472 MB, reserved memory is 459 MB, peak memory is 473 MB
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 34.148414s wall, 33.265625s user + 0.562500s system = 33.828125s CPU (99.1%); Memory(MB): used = 472, reserved = 459, peak = 473;
+
+RUN-1003 : finish command "optimize_gate -packarea cam_gate.area" in  34.160167s wall, 33.281250s user + 0.562500s system = 33.843750s CPU (99.1%)
+
+RUN-1004 : used memory is 472 MB, reserved memory is 459 MB, peak memory is 473 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model test_camera
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.061690s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (101.3%); Memory(MB): used = 472, reserved = 459, peak = 473;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "update_timing" in  1.298680s wall, 1.265625s user + 0.015625s system = 1.281250s CPU (98.7%)
+
+RUN-1004 : used memory is 472 MB, reserved memory is 459 MB, peak memory is 473 MB
+RUN-1002 : start command "report_timing_status -file cam_gate.ts"
+RUN-1002 : start command "report_timing_summary -file cam_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : C:\Users\Neko\Documents\FPGA\t\write2vga\sources\rtl\cam_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : test_camera
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS  2476ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  34s(70%)   |    33(70%)    |        472        |        473        
+RUN-1001 :   optimize_rtl   |    1     |  14s(29%)   |    14(29%)    |        383        |        400        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        145        |        145        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     48s     |      47       |        472        |        473        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db cam_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : C:\Users\Neko\Documents\FPGA\t\write2vga\sources\rtl\cam_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : test_camera
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS  2476ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  34s(70%)   |    33(70%)    |        472        |        473        
+RUN-1001 :   optimize_rtl   |    1     |  14s(29%)   |    14(29%)    |        383        |        400        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        145        |        145        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     48s     |      47       |        472        |        473        
+RUN-1001 : --------------------------------------------------------------------------------------------------

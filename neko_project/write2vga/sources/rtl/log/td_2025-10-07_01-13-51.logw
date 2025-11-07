@@ -1,0 +1,90 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/td.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     Neko
+   Run Date =   Tue Oct  7 01:13:51 2025
+
+   Run on =     NEKO_DESKTOP
+============================================================
+HDL-5007 WARNING: /* is inside a comment in test_ram_read.v(123)
+PRJ-5303 WARNING: Run syn_1 failed.
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_L1_221009.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_L1_221009.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_READ.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_READ.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_READ_C2.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN_READ_C2.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN3.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/CNN3.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv1.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv1.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv1_layer1.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv1_layer1.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv2.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv2.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv2_layer2.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/conv2_layer2.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/full_layer.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/full_layer.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/output_layer.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/output_layer.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_CORE.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_CORE.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/pool_core0.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/pool_core0.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_READ_P1.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_READ_P1.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_READ_P2.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL_READ_P2.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/pool1_layer.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/pool1_layer.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL3.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/POOL3.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/PRE_LAYER.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/PRE_LAYER.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/READ_RAMP2.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/READ_RAMP2.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/RGB2GRAY.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/RGB2GRAY.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/test_camera.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/test_camera.v
+PRJ-8403 ERROR: File(C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/test_ram_read.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: C:/Users/Neko/Documents/FPGA/t/write2vga/sources/rtl/test_ram_read.v
+HDL-5007 WARNING: /* is inside a comment in test_ram_read.v(123)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_fifo' in ../al_ip/ip_fifo_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_fifo' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_fifo.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'ip_pll' in ../al_ip/ip_pll_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'ip_pll' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_pll.v(24)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_cache' in ../al_ip/ip_ram_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_cache' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_ram.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img' in ../al_ip/ip_rom_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_rom.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'reg_sr_as_w1' in ../al_ip/ip_rom_sim.v(2078)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'reg_sr_as_w1' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_ram_sim.v(14701)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'AL_MUX' in ../al_ip/ip_rom_sim.v(2117)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'AL_MUX' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_ram_sim.v(14743)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'AL_DFF' in ../al_ip/ip_rom_sim.v(2133)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'AL_DFF' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_ram_sim.v(14759)
+HDL-8007 ERROR: 'glbl' is not declared in ../al_ip/ip_rom_sim.v(2144)
+HDL-5007 WARNING: /* is inside a comment in test_ram_read.v(123)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_fifo' in ../al_ip/ip_fifo_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_fifo' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_fifo.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'ip_pll' in ../al_ip/ip_pll_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'ip_pll' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_pll.v(24)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_cache' in ../al_ip/ip_ram_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_cache' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_ram.v(14)
+HDL-8007 ERROR: 'glbl' is not declared in ../al_ip/ip_ram_sim.v(14770)
+HDL-5007 WARNING: /* is inside a comment in test_ram_read.v(123)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_fifo' in ../al_ip/ip_fifo_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_fifo' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_fifo.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'ip_pll' in ../al_ip/ip_pll_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'ip_pll' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_pll.v(24)
+PRJ-5303 WARNING: Run syn_1 failed.
+HDL-5007 WARNING: /* is inside a comment in test_ram_read.v(123)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'img_fifo' in ../al_ip/ip_fifo_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'img_fifo' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_fifo.v(14)
+HDL-7201 CRITICAL-WARNING: overwrite current module 'ip_pll' in ../al_ip/ip_pll_sim.v(5)
+HDL-7307 CRITICAL-WARNING: previous definition of design element module 'ip_pll' is here. This is because multiple modules(values) with the same name are defined. Please consider rewriting code in ../al_ip/ip_pll.v(24)
+PRJ-5303 WARNING: Run phy_1 failed.
