@@ -1,0 +1,15 @@
+# FPGA以太网UDP控制GUI - Python依赖包
+# 用于打包exe文件前安装依赖
+
+# GUI框架（tkinter是Python内置的，不需要单独安装）
+
+# 图像处理
+numpy>=1.21.0
+Pillow>=9.0.0
+opencv-python>=4.5.0
+
+# 串口通信
+pyserial>=3.5
+
+# 打包工具
+pyinstaller>=5.0

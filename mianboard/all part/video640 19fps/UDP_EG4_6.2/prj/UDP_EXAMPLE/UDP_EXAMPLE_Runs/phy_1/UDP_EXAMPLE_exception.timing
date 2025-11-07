@@ -1,0 +1,651 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Fri Oct 31 17:52:59 2025
+
+Top Model           : UDP_Example_Top
+Device              : EG4S20BG256
+Speed               : NA
+STA coverage        : 95.41%
+Constraint File     : D:/Anlu/video640 19fps/UDP_EG4_6.2/source_code/constraints/UDP.sdc;
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+		        24           24            0            0   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 7.700
+		        88            0            0           88   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+		        24            0            0           24   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+		         2            0            0            2   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+		         2            0            0            2   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+		         7            0            0            7   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+Status of timing exceptions
+--------------------------------------------------
+
+MCP/SMD Details
+--------------------
+
+
+Constraint     :   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 7.700
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           24
+Dominated      :           24,        100.0%
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           88
+Dominated      :            0,          0.0%
+Ignored        :           88,        100.0%
+               :           88, by set_clock_groups
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           24
+Dominated      :            0,          0.0%
+Ignored        :           24,        100.0%
+               :           24, by set_clock_groups
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            2
+Dominated      :            0,          0.0%
+Ignored        :            2,        100.0%
+               :            2, by set_clock_groups
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            2
+Dominated      :            0,          0.0%
+Ignored        :            2,        100.0%
+               :            2, by set_clock_groups
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            7
+Dominated      :            0,          0.0%
+Ignored        :            7,        100.0%
+               :            7, by set_clock_groups
+
+
+Details on timing exceptions
+--------------------------------------------------
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Ignored)
+Constr         :     set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+
+Statistics:
+	Setup Check    :             88   end points,              88   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[26]_syn_4.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[26]_syn_4.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x012y055z1                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[26]_syn_4.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[26],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[26]_syn_4.mi[0]
+reg                 x013y055z3                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[26],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[60]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[60]_syn_3.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y060z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[60]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[62],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[60]_syn_3.mi[0]
+reg                 x022y061z3                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[62],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[60]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[60]_syn_3.mi[1](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y060z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[60]_syn_3.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[60],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[60]_syn_3.mi[1]
+reg                 x022y061z3                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[60],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[22]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[2]$BUS_DETECTOR$U_cwc_bus_det/lt0_syn_33.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y058z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[22]_syn_3.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[22],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[2]$BUS_DETECTOR$U_cwc_bus_det/lt0_syn_33.mi[0]
+ADDER (reg)         x012y056z0                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[22],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[91]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[93]_syn_3.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x012y068z2                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[91]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[95],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[93]_syn_3.mi[0]
+reg                 x013y067z1                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[95],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[93]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[93]_syn_3.mi[1](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y068z2                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[93]_syn_3.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[93],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[93]_syn_3.mi[1]
+reg                 x013y067z1                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[93],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[29]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[27]_syn_3.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y052z1                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[29]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[29],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[27]_syn_3.mi[0]
+reg                 x013y053z1                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[29],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[61]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[61]_syn_3.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x020y060z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[61]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[63],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[61]_syn_3.mi[0]
+reg                 x020y061z3                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[63],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[27]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[27]_syn_3.mi[1](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y054z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[27]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[27],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[27]_syn_3.mi[1]
+reg                 x013y053z1                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[27],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[61]_syn_3.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[61]_syn_3.mi[1](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x020y060z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[61]_syn_3.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[61],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[61]_syn_3.mi[1]
+reg                 x020y061z3                                        net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[61],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Ignored)
+Constr         :     set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+
+Statistics:
+	Setup Check    :             24   end points,              24   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[16]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[17]_syn_4.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x004y056z3                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[16]_syn_4.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[17],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[17]_syn_4.mi[0]
+reg                 x002y056z0                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[17],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[5]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[6]_syn_4.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x005y058z2                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[5]_syn_4.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[5],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[6]_syn_4.mi[0]
+reg                 x004y057z3                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[5],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[4]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[6]_syn_4.mi[1](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x006y057z1                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[4]_syn_4.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[6],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[6]_syn_4.mi[1]
+reg                 x004y057z3                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[6],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y060z2                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[19],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[0]
+reg                 x001y058z2                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[19],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[1](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x003y056z0                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_4.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[18],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[1]
+reg                 x001y058z2                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[18],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : u_ov5640_dri/u_i2c_dr/sda_dir_reg_syn_90.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[10]_syn_3.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x003y056z1                                        pin: u_ov5640_dri/u_i2c_dr/sda_dir_reg_syn_90.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[9],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[10]_syn_3.mi[0]
+reg                 x001y056z2                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[9],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[10]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[10]_syn_3.mi[1](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x003y056z3                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[10]_syn_4.q[1]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[10],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[10]_syn_3.mi[1]
+reg                 x001y056z2                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[10],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[21]_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[20]_syn_3.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x002y059z0                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[21]_syn_4.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[21],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[20]_syn_3.mi[0]
+reg                 x001y059z3                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[21],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[20]_syn_3.mi[1](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y060z2                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[20],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[20]_syn_3.mi[1]
+reg                 x001y059z3                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[20],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[8]_syn_3.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[11]_syn_3.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y057z2                                        pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[8]_syn_3.q[0]
+net (fo=1)                                                            net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[8],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[11]_syn_3.mi[0]
+reg                 x002y054z1                                        net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[8],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Ignored)
+Constr         :     set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+
+Statistics:
+	Setup Check    :              2   end points,               2   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_aclk_reg_syn_10.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_register/stat_preamble_reg_syn_24.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y066z0                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_aclk_reg_syn_10.q[0]
+net (fo=3)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_register/stat_preamble_reg_syn_24.mi[0]
+reg                 x001y065z2                                        net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_sync1_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk_reg_syn_13.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync2_bclk_reg_syn_4.mi[0](triggered by clock phy1_rgmii_rx_clk)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y061z1                                        pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk_reg_syn_13.q[0]
+net (fo=3)                                                            net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync2_bclk_reg_syn_4.mi[0]
+reg                 x001y061z2                                        net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync1_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Ignored)
+Constr         :     set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+
+Statistics:
+	Setup Check    :              2   end points,               2   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk_reg_syn_6.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync2_aclk_reg_syn_4.mi[0](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x002y068z3                                        pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk_reg_syn_6.q[0]
+net (fo=2)                                                            net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync2_aclk_reg_syn_4.mi[0]
+reg                 x001y068z0                                        net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync1_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync_bclk_reg_syn_4.clk(triggered by clock phy1_rgmii_rx_clk)
+End Point           : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[1](triggered by clock config_inst.jtck)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x001y060z3                                        pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync_bclk_reg_syn_4.q[0]
+net (fo=2)                                                            net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[1]
+reg                 x001y059z0                                        net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Ignored)
+Constr         :     set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+
+Statistics:
+	Setup Check    :              7   end points,               7   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_10.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_14.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x011y067z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_10.q[0]
+net (fo=68)                                                           net: debug_hub_top/U_0_register/rst,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_14.sr
+reg                 x012y063z3                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_10.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_16.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x011y067z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_10.q[0]
+net (fo=68)                                                           net: debug_hub_top/U_0_register/rst,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_16.sr
+reg                 x018y064z3                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_7.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync1_reg_syn_4.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x007y061z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_7.q[0]
+net (fo=87)                                                           net: debug_hub_top/U_0_register/rst_dup_4,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync1_reg_syn_4.sr
+reg                 x011y051z3                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_7.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_18.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x007y061z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_7.q[0]
+net (fo=87)                                                           net: debug_hub_top/U_0_register/rst_dup_4,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_18.sr
+reg                 x014y054z3                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_7.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_10.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x007y061z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_7.q[0]
+net (fo=87)                                                           net: debug_hub_top/U_0_register/rst_dup_4,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_10.sr
+reg                 x006y056z1                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_7.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_20.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x007y061z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_7.q[0]
+net (fo=87)                                                           net: debug_hub_top/U_0_register/rst_dup_4,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_20.sr
+reg                 x007y065z1                                             
+
+
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_7.clk(triggered by clock config_inst.jtck)
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_12.sr(triggered by clock phy1_rgmii_rx_clk)
+Check Type          : recovery
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x007y061z3                                        pin: debug_hub_top/U_tap/rst_reg_syn_7.q[0]
+net (fo=87)                                                           net: debug_hub_top/U_0_register/rst_dup_4,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_12.sr
+reg                 x005y051z1                                             
+
+
+
+
+
+
+

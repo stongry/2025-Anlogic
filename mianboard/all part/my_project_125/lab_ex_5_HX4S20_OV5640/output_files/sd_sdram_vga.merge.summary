@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Fri Dec 08 17:34:48 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : sd_sdram_vga
+Top-level Entity Name : top
+Family : Cyclone 10 LP
+Total logic elements : 3,920
+    Total combinational functions : 2,920
+    Dedicated logic registers : 2,594
+Total registers : 2594
+Total pins : 86
+Total virtual pins : 0
+Total memory bits : 100,352
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 2

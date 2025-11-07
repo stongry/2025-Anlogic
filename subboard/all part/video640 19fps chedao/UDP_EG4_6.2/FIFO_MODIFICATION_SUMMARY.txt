@@ -1,0 +1,160 @@
+================================================================================
+SDRAM读FIFO架构修改总结
+Modification Date: $(date)
+================================================================================
+
+问题背景：
+-----------
+- 原始帧率：0.9fps（极慢）
+- 原因分析：50000周期延迟（1ms@50MHz）在SDRAM写完成后才能开始读取
+- 核心限制：SDRAM控制器不支持同时读写，必须独占运行
+
+解决方案：
+-----------
+参考Anlogic官方lab_ex_5_HX4S20_OV5640工程的双FIFO架构：
+- 写FIFO：Camera → FIFO → SDRAM（已存在）
+- 读FIFO：SDRAM → FIFO → UDP（本次新增）⭐
+
+关键设计：
+-----------
+1. 使用Sdr_rd_en作为FIFO写使能 → 自动解决时序对齐问题
+2. 跨时钟域：sdr_clk(50MHz) → udp_clk(125MHz)
+3. 减小延迟：50000周期 → 1000周期（50倍提升）
+4. FIFO深度：4096 words (24-bit)
+
+预期效果：
+-----------
+- 帧率提升：0.9fps → 26-30fps
+- 时序自动对齐：无需手动延迟调整
+- 解决画面撕裂问题
+
+================================================================================
+文件修改详情
+================================================================================
+
+1. /home/ysara/Desktop/video1/UDP_EG4_6.2/source_code/rtl/sdr/rtl/app_wrrd.v
+   ---------------------------------------------------------------------------
+   [新增] 模块端口（6个）：
+   - input  udp_clk           : UDP时钟域
+   - input  fifo_rd_en        : UDP模块读使能
+   - output [23:0] fifo_rd_data    : FIFO读数据
+   - output fifo_rd_valid     : FIFO读数据有效
+   - output fifo_empty        : FIFO空标志
+   - output [11:0] fifo_rdusedw    : FIFO可读数据量
+
+   [修改] sdr_rd_delay逻辑（行183-199）：
+   - reg [19:0] → reg [15:0]
+   - 延迟阈值：20'd50000 → 16'd1000
+
+   [修改] SDRAM读使能条件（行257,262,267,271）：
+   - 添加FIFO空间检查：(sdram_rd_fifo_wrusedw < 12'd4000)
+   - 修改延迟判断：20'd50000 → 16'd1000
+
+   [新增] FIFO实例（行453-468）：
+   ```verilog
+   fifo_sdr_data_2 u_sdram_read_fifo (
+       .rst    (~rst_n),
+       .clkw   (clk),              // SDRAM clock
+       .clkr   (udp_clk),          // UDP clock
+       .we     (Sdr_rd_en),        // ⭐ 关键：SDRAM读有效
+       .di     (Sdr_rd_dout),      // ⭐ 关键：SDRAM读数据
+       .re     (fifo_rd_en),
+       .dout   (fifo_rd_data),
+       ...
+   );
+   ```
+
+2. /home/ysara/Desktop/video1/UDP_EG4_6.2/source_code/rtl/sdr/rtl/sdram_top.v
+   ---------------------------------------------------------------------------
+   [新增] 模块端口（6个，行29-35）：
+   - input  udp_clk
+   - input  fifo_rd_en
+   - output [23:0] fifo_rd_data
+   - output fifo_rd_valid
+   - output fifo_empty
+   - output [11:0] fifo_rdusedw
+
+   [修改] app_wrrd实例化（行105-111）：
+   - 连接6个新增FIFO端口到app_wrrd模块
+
+3. /home/ysara/Desktop/video1/UDP_EG4_6.2/source_code/rtl/UDP_Example_Top.v
+   ---------------------------------------------------------------------------
+   [新增] 信号定义（行231-239）：
+   - wire sdram_fifo_rd_en/rd_data/rd_valid/empty/rdusedw
+   - assign sdram_fifo_rd_en = !sdram_fifo_empty;  // 持续读取
+
+   [修改] sdram_top实例化（行254-260）：
+   - 连接6个FIFO端口
+
+   [删除] 旧时序对齐代码（原行715-774）：
+   - 移除Sdr_rd_en_d1/d2/d3延迟链
+   - 移除Sdr_rd_dout_d1/d2/d3延迟链
+   - 移除image_data重组逻辑
+
+   [修改] udp_loopback实例化（行743,748-749）：
+   - .app_rx_clk: sdr_clk → udp_clk  ⭐ 重要
+   - .app_rx_data: image_data → sdram_fifo_rd_data
+   - .app_rx_data_valid: Sdr_rd_en_aligned → sdram_fifo_rd_valid
+
+================================================================================
+技术要点
+================================================================================
+
+1. 为什么使用Sdr_rd_en作为FIFO写使能？
+   - SDRAM有CAS Latency（2-3周期），Sdr_rd_en与Sdr_rd_dout自然对齐
+   - 参考PDF：读数据在读使能后10个时钟周期有效
+   - FIFO自动处理时序关系，无需手动猜测延迟
+
+2. 为什么延迟可以从50000减到1000？
+   - 50000是过度保守的安全余量
+   - 实际只需等待SDRAM写pipeline刷新（~10-20周期）
+   - 参考工程lab_ex_5验证1000足够
+
+3. FIFO读控制策略：
+   - 简单策略：!empty就读（udp_loopback内部FIFO做缓冲）
+   - 可选策略：添加流控 (rdusedw > threshold)
+
+4. 跨时钟域处理：
+   - FIFO自动处理CDC（Clock Domain Crossing）
+   - 写侧50MHz，读侧125MHz
+   - 无需额外同步逻辑
+
+================================================================================
+测试验证要点
+================================================================================
+
+1. 功能验证：
+   □ 编译通过
+   □ 图像能够正常显示
+   □ 帧率达到26-30fps
+   □ 无画面撕裂/错位
+
+2. 性能监控：
+   □ sdram_rd_fifo_wrusedw（写侧数据量）
+   □ fifo_rdusedw（读侧可读量）
+   □ FIFO不应长期满或空
+
+3. 边界条件：
+   □ 启动时序（Sdr_init_done）
+   □ 帧边界切换
+   □ FIFO overflow/underflow
+
+================================================================================
+备份文件
+================================================================================
+- app_wrrd.v.backup_20250101_XXXXXX
+- sdram_top.v.backup_20250101_XXXXXX
+- UDP_Example_Top.v.backup_20250101_XXXXXX
+
+================================================================================
+参考资料
+================================================================================
+1. /home/ysara/下载/APUG011_基于ERAM接口实现的高性能SDRAM读写v1.2.pdf
+   - 第2.3节：读写独占运行
+   - 第2.4节：突发长度建议
+
+2. /home/ysara/2025Anlogic/.../lab_ex_5_HX4S20_OV5640/
+   - src/frame_read_write.v：双FIFO架构参考
+   - src/frame_fifo_read.v：读控制状态机
+
+================================================================================

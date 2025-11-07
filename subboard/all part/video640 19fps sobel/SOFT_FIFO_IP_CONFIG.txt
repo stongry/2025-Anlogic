@@ -1,0 +1,99 @@
+=====================================================
+Anlogic Soft FIFO IP 配置参数文档
+用于修复视频噪点问题
+=====================================================
+
+【第一步】在TD软件中生成IP
+路径: Tools → IP Generator → Primitive IP → Memory → Soft_FIFO
+
+【配置参数 - Basic Tab】
+┌─────────────────────────────────────┐
+│ Component Name: soft_fifo_sdr_data  │
+│                                     │
+│ RAM Option:                         │
+│   ○ ERAM    ● (推荐用于时序)        │
+│   ○ DRAM                            │
+│   ○ ERAM_144K                       │
+│                                     │
+│ Implement Option:                   │
+│   ● EMB9K(Area Opt) 或 AUTO         │
+│                                     │
+│ Clock Mode:                         │
+│   ● ASYNC  (必须选异步)             │
+│   ○ SYNC                            │
+│                                     │
+│ Addr Domain Across Control: 2       │
+│   (跨时钟域同步级数)                │
+└─────────────────────────────────────┘
+
+【配置参数 - Local Ports Tab】
+┌─────────────────────────────────────┐
+│ Data Port Option:                   │
+│   Write Width:  24                  │
+│   Write Depth:  1024                │
+│   Read Width:   24                  │
+│   Read Depth:   1024                │
+│                                     │
+│ Show Ahead Option:                  │
+│   ○ Disable  (不使能提前输出)       │
+│                                     │
+│ Out Reg:                            │
+│   ○ Disable  (不使能输出寄存器)     │
+│                                     │
+│ Almost num:                         │
+│   Almost full num:   1000           │
+│   Almost empty num:  24             │
+│                                     │
+│ Reset Option:                       │
+│   Reset Type: ASYNC Reset           │
+│   Dout Reset Value(hex): 0          │
+└─────────────────────────────────────┘
+
+【第二步】生成后的文件
+点击OK后，TD会在项目al_ip目录生成：
+  ├─ soft_fifo_sdr_data.v         (主文件)
+  ├─ soft_fifo_sdr_data.xml       (配置记录)
+  ├─ soft_fifo_sdr_data.tcl       (时序约束)
+  └─ soft_fifo_xxx.v              (IP核心，xxx是随机数)
+
+【第三步】复制文件到工程
+将生成的文件复制到:
+/home/ysara/Desktop/video/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/
+
+【端口定义参考】
+module soft_fifo_sdr_data (
+    // 写侧 (摄像头时钟域 cam_pclk)
+    input         wrst,              // 写复位
+    input         clkw,              // 写时钟
+    input         we,                // 写使能
+    input  [23:0] di,                // 写数据 RGB
+
+    // 读侧 (SDRAM时钟域 clk_50m)
+    input         rrst,              // 读复位
+    input         clkr,              // 读时钟
+    input         re,                // 读使能
+    output [23:0] dout,              // 读数据
+    output        valid,             // 数据有效
+
+    // 状态标志
+    output        full_flag,         // 满标志
+    output        empty_flag,        // 空标志
+    output        afull,             // 将满 (1000)
+    output        aempty,            // 将空 (24)
+    output        overflow,          // 溢出
+    output        underflow,         // 下溢
+
+    // 数据计数
+    output [10:0] wrusedw,           // 已写数据量
+    output [10:0] rdusedw            // 可读数据量
+);
+
+【注意事项】
+1. 确保选择ASYNC模式（异步时钟）
+2. 深度1024是平衡值，如果资源充足可增加到2048
+3. Almost full num设为1000，留有24个buffer防止溢出
+4. 复位类型必须是ASYNC Reset
+5. 生成后务必将.tcl约束文件加入工程
+
+【下一步】
+生成IP后，告诉我文件已复制完成，我会继续指导修改代码。

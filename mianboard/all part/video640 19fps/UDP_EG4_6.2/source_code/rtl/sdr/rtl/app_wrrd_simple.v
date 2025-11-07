@@ -1,0 +1,227 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Simplified version for debugging SDRAM address issues
+// Uses direct sequential reading without complex batch logic
+//////////////////////////////////////////////////////////////////////////////////
+
+`define DEBUG
+`include "../include/global_def.v"
+
+module app_wrrd
+	(
+		input   clk,
+        input   rst_n,
+		input   sd_clk,
+		input			Sdr_init_done,
+		input			Sdr_init_ref_vld,
+		input   		full_flag_net,
+		input                sdr_data_valid,
+		input     [23:0]     sdr_data,
+		input 				 Sdr_busy,
+        output						App_wr_en,
+        output  [`ADDR_WIDTH-1:0]	App_wr_addr,
+		output	[`DM_WIDTH-1:0]		App_wr_dm,
+		output	[`DATA_WIDTH-1:0]	App_wr_din,
+
+		output						App_rd_en,
+		output	reg [`ADDR_WIDTH-1:0]	App_rd_addr,
+		input						Sdr_rd_en,
+		input	[`DATA_WIDTH-1:0]	Sdr_rd_dout,
+        output  full_flag,
+		output reg            wr_done,
+		input  [11:0 ] udp_wrusedw
+	);
+
+// ============ Write Side (Unchanged) ============
+reg [18:0]w_addr_cnt;
+wire wr_done_debug;
+assign wr_done_debug = wr_done;
+assign App_wr_dm = 4'b0;
+
+reg [8:0] wr_fifo_cnt;
+wire  [9:0] rdusedw;
+wire  [23:0] sdr_rd_data;
+reg wr_fifo_rd_en;
+wire empty_flag;
+wire overflow, underflow, wr_success, wr_rst_done, rd_rst_done;
+wire valid_flag;
+
+soft_fifo_sdr_data u_wr_fifo_sdr_data(
+   .wrst			   	(~rst_n		),
+   .rrst			   	(~rst_n		),
+   .clkw		   		(sd_clk		),
+   .clkr		   		(clk		),
+   .we			   		(sdr_data_valid),
+   .di			   		(sdr_data),
+   .re			   		(wr_fifo_rd_en),
+   .dout		    	(App_wr_din),
+   .valid		     	(valid_flag),
+   .full_flag	    	(full_flag),
+   .empty_flag	    	(empty_flag),
+   .afull		    	(afull),
+   .aempty		    	(aempty),
+   .overflow		    (overflow),
+   .underflow		    (underflow),
+   .wr_success		    (wr_success),
+   .wrusedw	  	    	(wrusedw),
+   .rdusedw 	    	(rdusedw),
+   .wr_rst_done		    (wr_rst_done),
+   .rd_rst_done		    (rd_rst_done)
+);
+
+assign App_wr_en = wr_fifo_rd_en;
+reg wr_fifo_rd_en_reg;
+
+reg [1:0] brust_rd_cnt;
+reg empty_flag_reg;
+
+always @(posedge clk) begin
+    empty_flag_reg <= empty_flag;
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        wr_fifo_rd_en <= 1'b0;
+    else if(!Sdr_busy & Sdr_init_ref_vld == 1'b0 & w_addr_cnt <= 19'd307199 & (rdusedw > 4))
+        wr_fifo_rd_en <= 1'b1;
+    else if(!Sdr_busy & Sdr_init_ref_vld == 1'b0 & w_addr_cnt == 19'd307196 & (rdusedw == 4))
+        wr_fifo_rd_en <= 1'b1;
+    else if(brust_rd_cnt == 3)
+        wr_fifo_rd_en <= 1'b0;
+    else
+        wr_fifo_rd_en <= wr_fifo_rd_en;
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        brust_rd_cnt <= 2'b0;
+    else if(wr_fifo_rd_en & (brust_rd_cnt < 3))
+        brust_rd_cnt <= brust_rd_cnt + 1;
+    else if(wr_fifo_rd_en & (brust_rd_cnt == 3))
+        brust_rd_cnt <= 2'b0;
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        wr_fifo_rd_en_reg <= 1'b0;
+    else
+        wr_fifo_rd_en_reg <= wr_fifo_rd_en;
+end
+
+// Write address counter
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        w_addr_cnt <= 19'b0;
+        wr_done <= 1'b0;
+    end
+    else if(App_wr_en & w_addr_cnt < 19'd307199)
+        w_addr_cnt <= w_addr_cnt + 1'b1;
+    else if(App_wr_en & w_addr_cnt == 19'd307199) begin
+        w_addr_cnt <= 19'b0;
+        wr_done <= 1'b1;
+    end
+    else begin
+        w_addr_cnt <= w_addr_cnt;
+        wr_done <= wr_done;
+    end
+end
+
+reg [15:0]sdr_rd_delay;
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        sdr_rd_delay <= 16'b0;
+    end
+    else if(wr_done & sdr_rd_delay < 16'd1000)
+        sdr_rd_delay <= sdr_rd_delay + 1'b1;
+    else
+        sdr_rd_delay <= sdr_rd_delay;
+end
+
+assign App_wr_addr = w_addr_cnt;
+
+// ============ SIMPLIFIED Read Side ============
+// Direct sequential reading with single address counter
+
+reg app_rd_en_reg;
+reg [1:0] burst_rd_cnt;
+reg rd_done;
+
+// Simple sequential read state machine
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        App_rd_addr <= 19'b0;
+        app_rd_en_reg <= 1'b0;
+        rd_done <= 1'b0;
+        burst_rd_cnt <= 2'b0;
+    end
+    else begin
+        // Wait for write to complete
+        if(sdr_rd_delay == 16'd1000 && !rd_done) begin
+            // Check if we can read
+            if(!Sdr_busy && Sdr_init_ref_vld == 1'b0 && udp_wrusedw < 12'd3000) begin
+                // Burst read control
+                if(burst_rd_cnt == 2'b0) begin
+                    // Start new burst
+                    if(App_rd_addr < 19'd307200) begin
+                        app_rd_en_reg <= 1'b1;
+                        burst_rd_cnt <= 2'b1;
+                    end
+                    else begin
+                        // Frame complete, restart
+                        App_rd_addr <= 19'b0;
+                        rd_done <= 1'b1;
+                    end
+                end
+                else if(burst_rd_cnt < 2'd3) begin
+                    // Continue burst
+                    burst_rd_cnt <= burst_rd_cnt + 1'b1;
+                    if(App_rd_addr < 19'd307199) begin
+                        App_rd_addr <= App_rd_addr + 1'b1;
+                    end
+                end
+                else begin
+                    // End burst
+                    burst_rd_cnt <= 2'b0;
+                    app_rd_en_reg <= 1'b0;
+                    if(App_rd_addr < 19'd307199) begin
+                        App_rd_addr <= App_rd_addr + 1'b1;
+                    end
+                end
+            end
+            else begin
+                // Can't read now (busy or FIFO full)
+                app_rd_en_reg <= 1'b0;
+            end
+        end
+        else if(rd_done) begin
+            // Reset for continuous reading
+            rd_done <= 1'b0;
+        end
+    end
+end
+
+assign App_rd_en = app_rd_en_reg;
+
+// Debug counters
+reg [18:0] sdr_rd_cnt;
+reg sdr_rd_done;
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        sdr_rd_cnt <= 19'b0;
+        sdr_rd_done <= 1'b0;
+    end
+    else if(Sdr_rd_en & !sdr_rd_done) begin
+        sdr_rd_cnt <= sdr_rd_cnt + 1'b1;
+        if(sdr_rd_cnt == 19'd307199) begin
+            sdr_rd_done <= 1'b1;
+        end
+    end
+    else if(sdr_rd_done) begin
+        sdr_rd_cnt <= 19'b0;
+        sdr_rd_done <= 1'b0;
+    end
+end
+
+endmodule

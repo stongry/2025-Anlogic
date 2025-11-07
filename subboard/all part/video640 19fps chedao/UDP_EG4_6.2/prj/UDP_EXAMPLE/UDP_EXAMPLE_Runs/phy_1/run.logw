@@ -1,0 +1,40 @@
+============================================================
+   Tang Dynasty, V6.2.175876
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = /home/ysara/Desktop/TD_6.2.1_Release_175876_NL/bin/td
+   Built by =   ysara
+   Built at =   /home/ysar, 9月26日 09:54
+   Run by =     ysara
+   Run Date =   Fri Nov  7 04:37:06 2025
+
+   Run on =     YsaraEntropy
+============================================================
+USR-6001 WARNING: No clocks matched 'get_clocks u_clk_gen/u_pll_0/pll_inst.clkc[3]'
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in /home/ysara/Desktop/ext/video640 19fps chedao/UDP_EG4_6.2/source_code/constraints/UDP.sdc(8) fails.
+KIT-5618 CRITICAL-WARNING: the bus debug_app_rx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_app_rx_data_valid is invalid in chipwatcher, ignored.
+KIT-5618 CRITICAL-WARNING: the bus debug_app_tx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_app_tx_data_valid is invalid in chipwatcher, ignored.
+KIT-5618 CRITICAL-WARNING: the bus debug_rx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_rx_valid is invalid in chipwatcher, ignored.
+KIT-5618 CRITICAL-WARNING: the bus debug_temac_rx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_temac_rx_valid is invalid in chipwatcher, ignored.
+KIT-5618 CRITICAL-WARNING: the bus debug_temac_tx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_temac_tx_valid is invalid in chipwatcher, ignored.
+KIT-5618 CRITICAL-WARNING: the bus debug_tx_data[7:0] is invalid in chipwatcher, ignored.
+KIT-5603 WARNING: Net debug_tx_valid is invalid in chipwatcher, ignored.
+USR-6001 WARNING: No clocks matched 'get_clocks u_clk_gen/u_pll_0/pll_inst.clkc[3]'
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in /home/ysara/Desktop/ext/video640 19fps chedao/UDP_EG4_6.2/source_code/constraints/UDP.sdc(8) fails.
+PHY-7002 CRITICAL-WARNING: Instance t3_sdram/sdram location (12, 12) is not honored. Cell's initial location is not legal at the beginning of ECO placement, and will be moved during placement. Please verify user location constraints through the adc file.
+PHY-7002 CRITICAL-WARNING: Instance t3_sdram/sdram location (164, 288) is not honored. Cell's initial location is not legal at the beginning of ECO placement, and will be moved during placement. Please verify user location constraints through the adc file.
+PHY-7002 CRITICAL-WARNING: Instance t3_sdram/sdram location (164, 288) is not honored. Cell's initial location is not legal at the beginning of ECO placement, and will be moved during placement. Please verify user location constraints through the adc file.
+
+USR-6001 WARNING: No clocks matched 'get_clocks u_clk_gen/u_pll_0/pll_inst.clkc[3]'
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in /home/ysara/Desktop/ext/video640 19fps chedao/UDP_EG4_6.2/source_code/constraints/UDP.sdc(8) fails.
+

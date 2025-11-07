@@ -1,0 +1,23 @@
+Location         : D:\Anlu\my_project_125\lab_ex_5_HX4S20_OV5640\pic_sdram_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS -5291ps  TNS  -442815ps  NUM_FEPS   451
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_rtl   |    1     |  22s(51%)   |    22(51%)    |        355        |        416        
+  optimize_gate  |    1     |  21s(48%)   |    21(48%)    |        421        |        428        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        83         |        83         
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        248        |        248        
+    read_sdc     |    4     |   0s(0%)    |     0(0%)     |        248        |        248        
+--------------------------------------------------------------------------------------------------
+      total      |    8     |     43s     |      43       |        421        |        428        
+--------------------------------------------------------------------------------------------------

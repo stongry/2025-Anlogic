@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Dec 08 17:34:59 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : sd_sdram_vga
+Top-level Entity Name : top
+Family : Cyclone 10 LP
+Device : 10CL006YU256C8G
+Timing Models : Final
+Total logic elements : 3,718 / 6,272 ( 59 % )
+    Total combinational functions : 2,925 / 6,272 ( 47 % )
+    Dedicated logic registers : 2,594 / 6,272 ( 41 % )
+Total registers : 2594
+Total pins : 86 / 177 ( 49 % )
+Total virtual pins : 0
+Total memory bits : 100,352 / 276,480 ( 36 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 2 / 2 ( 100 % )

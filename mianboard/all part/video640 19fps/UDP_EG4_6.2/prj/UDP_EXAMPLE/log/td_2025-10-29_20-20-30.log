@@ -1,0 +1,151 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/td.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     Administrator
+   Run Date =   Wed Oct 29 20:20:30 2025
+
+   Run on =     WIN-61TPHHLRMOG
+============================================================
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/TEMAC_CORE/RTL/mac_core_aead6cd6dadd.v
+HDL-1007 : analyze verilog file al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v
+HDL-5007 WARNING: column 1032 exceeds maximum value 1023 in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(30)
+HDL-1007 : back to file 'al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v' in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(86)
+HDL-5007 WARNING: event expressions must result in a singular type in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(3001)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(5050)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(5458)
+HDL-5007 WARNING: column 1035 exceeds maximum value 1023 in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(6001)
+HDL-1007 : back to file 'al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v' in al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(260)
+HDL-1007 : analyze verilog file al_ip/TEMAC_CORE/TEMAC_CORE.v
+HDL-1007 : analyze verilog file al_ip/clk_pll.v
+HDL-1007 : undeclared symbol 'clk_pll_open0', assumed default net type 'wire' in al_ip/clk_pll.v(85)
+HDL-1007 : undeclared symbol 'clk_pll_open8', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open7', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open6', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open5', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open4', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open3', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open2', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open1', assumed default net type 'wire' in al_ip/clk_pll.v(91)
+HDL-1007 : undeclared symbol 'clk_pll_open10', assumed default net type 'wire' in al_ip/clk_pll.v(93)
+HDL-1007 : undeclared symbol 'clk_pll_open9', assumed default net type 'wire' in al_ip/clk_pll.v(93)
+HDL-1007 : analyze verilog file al_ip/fifo_sdr_data_2.v
+HDL-1007 : analyze verilog file al_ip/pll_50.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in al_ip/pll_50.v(85)
+HDL-1007 : analyze verilog file al_ip/pll_gen.v
+HDL-1007 : undeclared symbol 'pll_gen_open0', assumed default net type 'wire' in al_ip/pll_gen.v(99)
+HDL-1007 : undeclared symbol 'pll_gen_open8', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open7', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open6', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open5', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open4', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open3', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open2', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open1', assumed default net type 'wire' in al_ip/pll_gen.v(105)
+HDL-1007 : analyze verilog file al_ip/rx_pll.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in al_ip/rx_pll.v(78)
+HDL-1007 : analyze verilog file al_ip/soft_fifo_sdr_data/RTL/soft_fifo_1ac9ed6c858a.v
+HDL-1007 : analyze verilog file al_ip/soft_fifo_sdr_data/RTL/soft_fifo_core_1ac9ed6c858a.v
+HDL-1007 : back to file 'al_ip/soft_fifo_sdr_data/RTL/soft_fifo_core_1ac9ed6c858a.v' in al_ip/soft_fifo_sdr_data/RTL/soft_fifo_core_1ac9ed6c858a.v(1)
+HDL-1007 : analyze verilog file al_ip/soft_fifo_sdr_data/soft_fifo_sdr_data.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/BUFGMUX.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/clk_gen_rst_gen.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/div_clk_gen.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/IDDR.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ODDR.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/RAMB16_S9_S9.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../source_code/rtl/RAMB16_S9_S9.v(109)
+HDL-1007 : analyze verilog file ../../source_code/rtl/rgmii_interface.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/rx_client_fifo.v
+HDL-5370 WARNING: parameter 'WAIT_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(49)
+HDL-5370 WARNING: parameter 'QUEUE1_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(50)
+HDL-5370 WARNING: parameter 'QUEUE2_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(51)
+HDL-5370 WARNING: parameter 'QUEUE3_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(52)
+HDL-5370 WARNING: parameter 'QUEUE_SOF_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(53)
+HDL-5370 WARNING: parameter 'SOF_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(54)
+HDL-5370 WARNING: parameter 'DATA_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(55)
+HDL-5370 WARNING: parameter 'EOF_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(56)
+HDL-5370 WARNING: parameter 'IDLE_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(62)
+HDL-5370 WARNING: parameter 'FRAME_s' becomes localparam in 'rx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/rx_client_fifo.v(63)
+HDL-5370 Similar messages will be suppressed.
+HDL-1007 : analyze verilog file ../../source_code/rtl/temac_block.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/temac_clk_gen.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/tx_client_fifo.v
+HDL-5370 WARNING: parameter 'IDLE_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(53)
+HDL-5370 WARNING: parameter 'QUEUE1_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(54)
+HDL-5370 WARNING: parameter 'QUEUE2_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(55)
+HDL-5370 WARNING: parameter 'QUEUE3_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(56)
+HDL-5370 WARNING: parameter 'QUEUE_ACK_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(57)
+HDL-5370 WARNING: parameter 'WAIT_ACK_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(58)
+HDL-5370 WARNING: parameter 'FRAME_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(59)
+HDL-5370 WARNING: parameter 'DROP_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(60)
+HDL-5370 WARNING: parameter 'RETRANSMIT_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(61)
+HDL-5370 WARNING: parameter 'WAIT_s' becomes localparam in 'tx_client_fifo' with formal parameter declaration list in ../../source_code/rtl/tx_client_fifo.v(67)
+HDL-5370 Similar messages will be suppressed.
+HDL-1007 : analyze verilog file ../../source_code/rtl/tx_clk_en_gen.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/udp_data_tpg.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/UDP_Example_Top.v
+HDL-1007 : undeclared symbol 'phy_reset', assumed default net type 'wire' in ../../source_code/rtl/UDP_Example_Top.v(323)
+HDL-5333 WARNING: data object 'rst_n' is already declared in ../../source_code/rtl/UDP_Example_Top.v(644)
+HDL-1007 : previous declaration of 'rst_n' is from here in ../../source_code/rtl/UDP_Example_Top.v(160)
+HDL-5007 WARNING: second declaration of 'rst_n' is ignored in ../../source_code/rtl/UDP_Example_Top.v(644)
+HDL-1007 : undeclared symbol 'tpg_data_done', assumed default net type 'wire' in ../../source_code/rtl/UDP_Example_Top.v(765)
+HDL-1007 : analyze verilog file ../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v
+HDL-1007 : back to file '../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v' in ../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v(56)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in ../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v(2638)
+HDL-1007 : back to file '../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v' in ../../source_code/rtl/udp_ip_protocol_stack_merge.enc.v(420)
+HDL-1007 : analyze verilog file ../../source_code/rtl/udp_loopback.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/sdr/rtl/app_wrrd.v
+HDL-1007 : analyze included file ../../source_code/rtl/sdr/rtl/../include/global_def.v in ../../source_code/rtl/sdr/rtl/app_wrrd.v(10)
+HDL-1007 : back to file '../../source_code/rtl/sdr/rtl/app_wrrd.v' in ../../source_code/rtl/sdr/rtl/app_wrrd.v(10)
+HDL-5372 WARNING: redeclaration of ANSI port 'full_flag' is not allowed in ../../source_code/rtl/sdr/rtl/app_wrrd.v(61)
+HDL-1007 : undeclared symbol 'afull', assumed default net type 'wire' in ../../source_code/rtl/sdr/rtl/app_wrrd.v(74)
+HDL-1007 : undeclared symbol 'aempty', assumed default net type 'wire' in ../../source_code/rtl/sdr/rtl/app_wrrd.v(75)
+HDL-1007 : undeclared symbol 'wrusedw', assumed default net type 'wire' in ../../source_code/rtl/sdr/rtl/app_wrrd.v(76)
+HDL-5333 WARNING: data object 'w_addr_cnt' is already declared in ../../source_code/rtl/sdr/rtl/app_wrrd.v(140)
+HDL-1007 : previous declaration of 'w_addr_cnt' is from here in ../../source_code/rtl/sdr/rtl/app_wrrd.v(38)
+HDL-5007 WARNING: second declaration of 'w_addr_cnt' is ignored in ../../source_code/rtl/sdr/rtl/app_wrrd.v(140)
+HDL-1007 : analyze verilog file ../../source_code/rtl/sdr/rtl/sdram_top.v
+HDL-1007 : analyze included file ../../source_code/rtl/sdr/rtl/../include/global_def.v in ../../source_code/rtl/sdr/rtl/sdram_top.v(10)
+HDL-1007 : back to file '../../source_code/rtl/sdr/rtl/sdram_top.v' in ../../source_code/rtl/sdr/rtl/sdram_top.v(10)
+HDL-1007 : undeclared symbol 'Rst_n', assumed default net type 'wire' in ../../source_code/rtl/sdr/rtl/sdram_top.v(70)
+HDL-5372 WARNING: redeclaration of ANSI port 'wr_done' is not allowed in ../../source_code/rtl/sdr/rtl/sdram_top.v(73)
+HDL-1007 : undeclared symbol 'SDR_CKE', assumed default net type 'wire' in ../../source_code/rtl/sdr/rtl/sdram_top.v(132)
+HDL-1007 : analyze verilog file ../../source_code/rtl/sd/sd_ctrl_top.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/sd/sd_init.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/sd/sd_read.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/sd/sd_read_photo.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/sdr/rtl/enc_file/sdr_as_ram.enc.v
+HDL-1007 : back to file '../../source_code/rtl/sdr/rtl/enc_file/sdr_as_ram.enc.v' in ../../source_code/rtl/sdr/rtl/enc_file/sdr_as_ram.enc.v(45)
+HDL-1007 : analyze verilog file ../../source_code/rtl/sdr/rtl/enc_file/sdr_init_ref.enc.v
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in ../../source_code/rtl/sdr/rtl/enc_file/sdr_init_ref.enc.v(57)
+HDL-1007 : back to file '../../source_code/rtl/sdr/rtl/enc_file/sdr_init_ref.enc.v' in ../../source_code/rtl/sdr/rtl/enc_file/sdr_init_ref.enc.v(148)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../source_code/rtl/sdr/rtl/enc_file/sdr_init_ref.enc.v(47)
+HDL-1007 : analyze verilog file ../../source_code/rtl/sdr/rtl/enc_file/sdr_wrrd.enc.v
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../source_code/rtl/sdr/rtl/enc_file/sdr_wrrd.enc.v(283)
+HDL-1007 : back to file '../../source_code/rtl/sdr/rtl/enc_file/sdr_wrrd.enc.v' in ../../source_code/rtl/sdr/rtl/enc_file/sdr_wrrd.enc.v(19)
+HDL-1007 : analyze verilog file ../../source_code/rtl/camera_data_gen.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ov5640/ov5640_dri.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ov5640/ov5640_delay.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ov5640/i2c_ov5640_rgb565_cfg.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ov5640/i2c_dri.v
+HDL-1007 : analyze verilog file ../../source_code/rtl/ov5640/cmos_capture_data.v

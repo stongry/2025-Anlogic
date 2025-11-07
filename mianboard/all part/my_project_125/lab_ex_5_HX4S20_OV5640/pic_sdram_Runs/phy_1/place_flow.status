@@ -1,0 +1,21 @@
+Location         : D:\Anlu\my_project_125\lab_ex_5_HX4S20_OV5640\pic_sdram_Runs\phy_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : manhattan
+Setup            : WNS -6693ps  TNS  -297824ps  NUM_FEPS    88
+Hold             : WNS   -14ps  TNS      -25ps  NUM_FEPS     2
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+      place      |    1     |  27s(100%)  |   43(100%)    |        352        |        352        
+    import_db    |    1     |   0s(0%)    |     0(0%)     |        184        |        184        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        83         |        83         
+--------------------------------------------------------------------------------------------------
+      total      |    3     |     27s     |      43       |        352        |        352        
+--------------------------------------------------------------------------------------------------

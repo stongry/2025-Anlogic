@@ -1,0 +1,154 @@
+============================================================
+   Tang Dynasty, V5.6.119222
+      Copyright (c) 2012-2024 Anlogic Inc.
+   Executable = E:/software/Anlogic/TD_5.6.5_Release_119.222/bin/td.exe
+   Built at =   17:28:21 May 30 2024
+   Run by =     28408
+   Run Date =   Fri Jun 27 13:54:05 2025
+
+   Run on =     BERUGA0023
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "open_project pic_sdram.al -update"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file al_ip/sys_pll.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in al_ip/sys_pll.v(70)
+HDL-1007 : analyze verilog file al_ip/video_pll.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in al_ip/video_pll.v(70)
+HDL-1007 : analyze verilog file al_ip/afifo_16_32_256.v
+HDL-1007 : analyze verilog file al_ip/afifo_32_16_256.v
+HDL-1007 : analyze verilog file src/color_bar.v
+HDL-1007 : analyze included file src/video_define.v in src/color_bar.v(2)
+HDL-1007 : back to file 'src/color_bar.v' in src/color_bar.v(2)
+HDL-1007 : analyze verilog file src/frame_fifo_read.v
+HDL-1007 : analyze verilog file src/frame_fifo_write.v
+HDL-1007 : analyze verilog file src/top.v
+HDL-1007 : undeclared symbol 'sdram_clk', assumed default net type 'wire' in src/top.v(96)
+HDL-1007 : analyze verilog file src/video_timing_data.v
+HDL-1007 : analyze verilog file src/sdram_r/sdram_para.v
+HDL-1007 : analyze verilog file src/sdram/enc_file/global_def.v
+HDL-1007 : analyze verilog file src/sdram/enc_file/sdr_as_ram.enc.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file 'src/sdram/enc_file/sdr_as_ram.enc.v' in src/sdram/enc_file/sdr_as_ram.enc.v(148)
+HDL-1007 : analyze verilog file src/sdram/enc_file/sdr_wrrd.enc.v
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in encrypted_text(0)
+HDL-1007 : back to file 'src/sdram/enc_file/sdr_wrrd.enc.v' in src/sdram/enc_file/sdr_wrrd.enc.v(255)
+HDL-1007 : analyze verilog file src/sdram/sdram.v
+HDL-1007 : analyze included file ./src/sdram/enc_file/global_def.v in src/sdram/sdram.v(10)
+HDL-1007 : back to file 'src/sdram/sdram.v' in src/sdram/sdram.v(10)
+HDL-1007 : undeclared symbol 'SDR_CKE', assumed default net type 'wire' in src/sdram/sdram.v(89)
+HDL-1007 : analyze verilog file src/frame_read_write.v
+HDL-1007 : analyze verilog file src/video_delay.v
+HDL-1007 : analyze VHDL file src/hdmi/enc_file/DVITransmitter.enc.vhd
+HDL-1007 : analyze entity dvitransmitter in src/hdmi/enc_file/DVITransmitter.enc.vhd(13)
+HDL-1007 : analyze architecture ** in encrypted_text(0)
+HDL-1007 : analyze VHDL file src/hdmi/enc_file/SerializerN_1_lvds.enc.vhd
+HDL-1007 : analyze entity ** in encrypted_text(0)
+HDL-1007 : analyze architecture ** in encrypted_text(0)
+HDL-1007 : analyze VHDL file src/hdmi/enc_file/SerializerN_1_lvds_dat.enc.vhd
+HDL-1007 : analyze entity ** in encrypted_text(0)
+HDL-1007 : analyze architecture ** in encrypted_text(0)
+HDL-1007 : analyze VHDL file src/hdmi/enc_file/TMDSEncoder.enc.vhd
+HDL-1007 : analyze entity ** in encrypted_text(0)
+HDL-1007 : analyze architecture ** in encrypted_text(0)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_1024768.enc.v
+HDL-5007 WARNING: literal value ** truncated to fit in ** bits in encrypted_text(0)
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_1024768.enc.v' in src/hdmi/enc_file/video_tpg_1024768.enc.v(216)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_1080p.enc.v
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_1080p.enc.v' in src/hdmi/enc_file/video_tpg_1080p.enc.v(208)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_12801024p.enc.v
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_12801024p.enc.v' in src/hdmi/enc_file/video_tpg_12801024p.enc.v(207)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_1280800.enc.v
+HDL-5007 WARNING: literal value ** truncated to fit in ** bits in encrypted_text(0)
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_1280800.enc.v' in src/hdmi/enc_file/video_tpg_1280800.enc.v(216)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_16801050p.enc.v
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_16801050p.enc.v' in src/hdmi/enc_file/video_tpg_16801050p.enc.v(209)
+HDL-1007 : analyze verilog file src/hdmi/enc_file/video_tpg_800600.enc.v
+HDL-1007 : back to file 'src/hdmi/enc_file/video_tpg_800600.enc.v' in src/hdmi/enc_file/video_tpg_800600.enc.v(211)
+HDL-1007 : analyze VHDL file src/hdmi/hdmi_tx.vhd
+HDL-1007 : analyze entity hdmi_tx in src/hdmi/hdmi_tx.vhd(11)
+HDL-1007 : analyze architecture behavioral in src/hdmi/hdmi_tx.vhd(33)
+HDL-1007 : analyze verilog file src/sdram/enc_file/sdr_init_ref.enc.v
+HDL-1007 : analyze included file ./src/sdram/enc_file/global_def.v in src/sdram/enc_file/sdr_init_ref.enc.v(11)
+HDL-1007 : back to file 'src/sdram/enc_file/sdr_init_ref.enc.v' in src/sdram/enc_file/sdr_init_ref.enc.v(11)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in encrypted_text(0)
+HDL-1007 : back to file 'src/sdram/enc_file/sdr_init_ref.enc.v' in src/sdram/enc_file/sdr_init_ref.enc.v(243)
+HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in encrypted_text(0)
+HDL-1007 : analyze verilog file src/ov5640/cmos_capture_data.v
+HDL-1007 : analyze verilog file src/ov5640/i2c_dri.v
+HDL-1007 : analyze verilog file src/ov5640/i2c_ov5640_rgb565_cfg.v
+HDL-1007 : analyze verilog file src/ov5640/ov5640_dri.v
+HDL-1007 : analyze verilog file src/ov5640/ov5640_delay.v
+RUN-1001 : Project manager successfully analyzed 34 source files.
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
