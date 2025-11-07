@@ -1,0 +1,470 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Company: anlgoic
+// Author: 	xg 
+// description: app write and read test pattern generator and check
+//////////////////////////////////////////////////////////////////////////////////
+
+`define DEBUG
+`include "../include/global_def.v"
+
+module app_wrrd 
+	(   
+		input   clk,
+        input   rst_n,
+		input   sd_clk,
+		input			Sdr_init_done,//synthesis keep
+		input			Sdr_init_ref_vld,
+		input   		full_flag_net,
+		input                sdr_data_valid,//synthesis keep
+		input     [23:0]     sdr_data,
+		input 				 Sdr_busy,
+        output						App_wr_en, 
+        output  [`ADDR_WIDTH-1:0]	App_wr_addr,  
+		output	[`DM_WIDTH-1:0]		App_wr_dm,
+		output	[`DATA_WIDTH-1:0]	App_wr_din,
+		
+		output						App_rd_en,
+		output	reg [`ADDR_WIDTH-1:0]	App_rd_addr,
+		input						Sdr_rd_en,
+		input	[`DATA_WIDTH-1:0]	Sdr_rd_dout,
+        output  full_flag,
+		output reg            wr_done,//synthesis keep
+		input  [11:0 ] udp_wrusedw,
+		output [15:0] UDP_PKT_BYTES
+		// output	reg		Check_ok	
+	);
+reg [18:0]w_addr_cnt;
+reg [7:0]  wr_frame_cnt;
+reg [7:0]  rd_frame_cnt;
+wire       frame_available;
+// 单缓冲方案：使用同一块SDRAM(0-307199)，通过时序控制避免冲突
+// reg	[2:0]	judge_cnt;
+// reg			tx_vld;
+// reg	[13:0]	tx_cnt;
+// reg			wr_en;
+// reg	[`ADDR_WIDTH-1:0]	wr_addr,wr_addr_1d;
+// reg	[`DATA_WIDTH-1:0]	wr_din;
+// reg						rd_en;
+// reg	[`ADDR_WIDTH-1:0]	rd_addr,rd_addr_1d;
+
+wire wr_done_debug;//synthesis keep
+assign wr_done_debug = wr_done;
+// 当写入完成一帧后，标记有新帧可读
+assign frame_available = (wr_frame_cnt != rd_frame_cnt);
+
+assign App_wr_dm =4'b0;
+assign UDP_PKT_BYTES = 16'd1440;  // UDP packet size in bytes (480 words * 3 bytes/word) - matches UDP_Example_Top.v
+reg [8:0] wr_fifo_cnt;//synthesis keep
+wire  [9:0] rdusedw;//synthesis keep
+wire  [23:0] sdr_rd_data;//synthesis keep
+reg wr_fifo_rd_en;//synthesis keep
+wire full_flag;//synthesis keep
+wire empty_flag;//synthesis keep
+fifo_sdr_data_2 u_wr_fifo_sdr_data(
+   .rst			   			(~rst_n		)	,  //asynchronous port,active hight
+   .clkw		   			(sd_clk		),  //write clock
+   .clkr		   			(clk		),  //read clock
+   .we			   			(sdr_data_valid			),  //write enable,active hight
+   .di			   			(sdr_data			),  //write data
+   .re			   			(wr_fifo_rd_en			),  //ead enable,active hight
+   .	dout		    	(App_wr_din		),  //read data
+   . 	valid		     	(		),  //read data valid flag
+   .	full_flag	    	(full_flag	),  //fifo full flag
+   .	empty_flag	    	(empty_flag	),  //fifo empty flag
+   .	afull		    	(afull		),  //fifo almost full flag
+   .	aempty		    	(aempty		),  //fifo almost empty flag
+   .	wrusedw	  	    	(wrusedw	)	,  	//	stored data number in fifo
+   .	rdusedw 	    	(rdusedw 	)//available data number for read //会持续两个快的时钟周期
+ 
+);
+
+assign App_wr_en = wr_fifo_rd_en;
+reg wr_fifo_rd_en_reg;
+//assign App_wr_en = wr_fifo_rd_en_reg ;
+//	always @(posedge clk or negedge rst_n)           
+//		begin                                        
+//			if(!rst_n)                               
+//			wr_fifo_cnt <=9'b0;	                                   
+//			else if(wr_fifo_cnt == 9'b0 & wr_fifo_rd_en )
+//			wr_fifo_cnt <= wr_fifo_cnt+1'b1;
+//			else if (wr_fifo_cnt >9'b0 & wr_fifo_cnt < 9'd511 & !Sdr_busy) 
+//			wr_fifo_cnt <= wr_fifo_cnt+1'b1;
+//			else if (wr_fifo_cnt == 9'd511)
+//			wr_fifo_cnt <=9'b0;										 
+//			else       
+//			wr_fifo_cnt <= wr_fifo_cnt;                              
+//		end                                          
+
+reg [1:0] brust_rd_cnt;
+reg empty_flag_reg;
+
+	always @(posedge clk )           
+		begin                                                                     
+			empty_flag_reg <=empty_flag;	                                                                
+		end   
+	always @(posedge clk or negedge rst_n)
+		begin
+			if(!rst_n)
+				wr_fifo_rd_en <=1'b0;
+			// 简化：移除读写互斥，依靠时序自然分离
+			else if(!Sdr_busy & (Sdr_init_ref_vld == 1'b0) & (w_addr_cnt < 19'd307200) & (rdusedw>4))
+				wr_fifo_rd_en <= 1'b1;
+			else if(!Sdr_busy & (Sdr_init_ref_vld == 1'b0) & (w_addr_cnt == 19'd307196) & (rdusedw==4))
+				wr_fifo_rd_en <= 1'b1;
+			else if (brust_rd_cnt ==3)
+				wr_fifo_rd_en <= 1'b0;
+			else
+				wr_fifo_rd_en <=wr_fifo_rd_en;
+		end    
+
+
+	always @(posedge clk or negedge rst_n)           
+		begin                                        
+			if(!rst_n)                               
+			brust_rd_cnt <=2'b0;	                                   							 
+			else  if (wr_fifo_rd_en & (brust_rd_cnt<3))      
+			brust_rd_cnt <=brust_rd_cnt+1;  
+			else if   (wr_fifo_rd_en & (brust_rd_cnt==3))    
+			brust_rd_cnt <=2'b0;                        
+		end   
+
+
+	always @(posedge clk or negedge rst_n)           
+		begin                                        
+			if(!rst_n)                               
+			wr_fifo_rd_en_reg <=1'b0;	                                   							 
+			else       
+			wr_fifo_rd_en_reg <=wr_fifo_rd_en;                              
+		end
+
+// 简化写入逻辑：移除读取冻结
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			w_addr_cnt <= 19'b0;
+			wr_done <= 1'b0;
+			wr_frame_cnt <= 8'd0;
+		end
+		// 当写入完成且没有新数据时，保持wr_done
+		else if(wr_done & !App_wr_en) begin
+			w_addr_cnt <= 19'b0;
+			wr_done <= 1'b1;
+			wr_frame_cnt <= wr_frame_cnt;
+		end
+		// 正常写入：从0计数到307199
+		else if(App_wr_en & w_addr_cnt < 19'd307199) begin
+			w_addr_cnt <= w_addr_cnt + 1'b1;
+			wr_done <= 1'b0;
+			wr_frame_cnt <= wr_frame_cnt;
+		end
+		// 最后一个字：完成写入，递增帧计数
+		else if(App_wr_en & w_addr_cnt == 19'd307199) begin
+			w_addr_cnt <= 19'b0;
+			wr_done <= 1'b1;
+			wr_frame_cnt <= wr_frame_cnt + 1'b1;
+		end
+		else begin
+			w_addr_cnt <= w_addr_cnt;
+			wr_done <= wr_done;
+			wr_frame_cnt <= wr_frame_cnt;
+		end
+	end
+        
+// 单缓冲延迟逻辑：写完整帧后等待SDRAM稳定，然后快速读取
+// 策略：写入24.6ms → 延迟40μs → 读取6.1ms → 等待下一帧写入
+reg [19:0]sdr_rd_delay;
+reg       sdr_rd_delay_done;
+reg       wr_done_d1;
+
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			wr_done_d1 <= 1'b0;
+		end
+		else begin
+			wr_done_d1 <= wr_done;
+		end
+	end
+
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			sdr_rd_delay <= 20'b0;
+			sdr_rd_delay_done <= 1'b0;
+		end
+		// wr_done上升沿：写入完成，开始延迟
+		else if(wr_done && !wr_done_d1) begin
+			sdr_rd_delay <= 20'b1;
+			sdr_rd_delay_done <= 1'b0;
+		end
+		// 延迟2000周期（40μs）等待SDRAM稳定
+		else if(sdr_rd_delay > 20'b0 && sdr_rd_delay < 20'd2000) begin
+			sdr_rd_delay <= sdr_rd_delay + 1'b1;
+			sdr_rd_delay_done <= 1'b0;
+		end
+		// 延迟完成，可以读取
+		else if(sdr_rd_delay >= 20'd2000 && !sdr_rd_delay_done) begin
+			sdr_rd_delay <= sdr_rd_delay;
+			sdr_rd_delay_done <= 1'b1;
+		end
+		// 读取完成，复位准备下一帧
+		else if(rd_done) begin
+			sdr_rd_delay <= 20'b0;
+			sdr_rd_delay_done <= 1'b0;
+		end
+		else begin
+			sdr_rd_delay <= sdr_rd_delay;
+			sdr_rd_delay_done <= sdr_rd_delay_done;
+		end
+	end
+ reg [18:0] sdr_rd_done_cnt;//synthesis keep
+
+ reg  sdr_en_done;   //synthesis keep
+ 	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			sdr_rd_done_cnt <= 19'b0;
+			sdr_en_done <= 1'b0;
+			rd_frame_cnt <= 8'd0;
+		end
+		else if(Sdr_rd_en) begin
+			if(sdr_rd_done_cnt == 19'd307199) begin
+				sdr_rd_done_cnt <= 19'd0;
+				sdr_en_done <= 1'b1;
+				rd_frame_cnt <= rd_frame_cnt + 1'b1;  // 读取完成，递增帧计数
+			end
+			else begin
+				sdr_rd_done_cnt <= sdr_rd_done_cnt + 1'b1;
+				sdr_en_done <= 1'b0;
+			end
+		end
+		else begin
+			sdr_rd_done_cnt <= sdr_rd_done_cnt;
+			sdr_en_done <= 1'b0;
+		end
+	end
+// 单缓冲：写入地址直接使用计数器
+assign App_wr_addr = w_addr_cnt;
+
+
+
+
+//以太网读sdram - 单缓冲方案
+
+//地址产生
+reg [1:0] burst_sdr_rd_cnt;
+reg [18:0] r_addr_cnt;//synthesis keep
+reg app_rd_en_reg;//synthesis keep
+reg rd_done;//synthesis keep
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			r_addr_cnt <= 19'b0;
+			rd_done <= 1'b0;
+			app_rd_en_reg <= 1'b0;
+		end
+		// 等待新帧可用且延迟完成
+		else if(!frame_available && r_addr_cnt == 19'd0) begin
+			r_addr_cnt <= r_addr_cnt;
+			rd_done <= 1'b0;
+			app_rd_en_reg <= 1'b0;
+		end
+		// 读取完成，复位准备下一帧
+		else if(rd_done) begin
+			r_addr_cnt <= 19'd0;
+			rd_done <= 1'b0;
+			app_rd_en_reg <= 1'b0;
+		end
+		// 读取条件：延迟完成 & FIFO未满 & SDRAM不忙
+		else if(!Sdr_busy & r_addr_cnt < 19'd307199 & sdr_rd_delay_done &
+		        (udp_wrusedw < 'd3500) & Sdr_init_ref_vld == 1'b0 & burst_sdr_rd_cnt == 2'b0) begin
+			r_addr_cnt <= r_addr_cnt + 1'b1;
+			app_rd_en_reg <= 1'b1;
+		end
+		else if(!Sdr_busy & r_addr_cnt < 19'd307199 & sdr_rd_delay_done &
+		        (udp_wrusedw < 'd3500) & Sdr_init_ref_vld == 1'b0 &
+		        (burst_sdr_rd_cnt > 0 & burst_sdr_rd_cnt < 3)) begin
+			r_addr_cnt <= r_addr_cnt + 1'b1;
+			app_rd_en_reg <= 1'b1;
+		end
+		else if(!Sdr_busy & r_addr_cnt < 19'd307199 & sdr_rd_delay_done &
+		        (udp_wrusedw < 'd3500) & Sdr_init_ref_vld == 1'b0 & burst_sdr_rd_cnt == 3) begin
+			app_rd_en_reg <= 1'b0;
+		end
+		// 最后一个地址
+		else if(!Sdr_busy & r_addr_cnt == 19'd307199 & sdr_rd_delay_done &
+		        (udp_wrusedw < 'd3500) & Sdr_init_ref_vld == 1'b0) begin
+			r_addr_cnt <= r_addr_cnt + 1'b1;
+			rd_done <= 1'b1;
+			app_rd_en_reg <= 1'b1;
+		end
+		else begin
+			r_addr_cnt <= r_addr_cnt;
+			rd_done <= rd_done;
+			app_rd_en_reg <= 1'b0;
+		end
+	end        
+
+
+	always @(posedge clk or negedge rst_n)           
+		begin                                        
+			if(!rst_n)                               
+			burst_sdr_rd_cnt <=2'b0;	                                   							 
+			else  if (app_rd_en_reg & (burst_sdr_rd_cnt<3))      
+			burst_sdr_rd_cnt <=burst_sdr_rd_cnt+1;  
+			else if   (app_rd_en_reg & (burst_sdr_rd_cnt==3))    
+			burst_sdr_rd_cnt <=2'b0;                        
+		end 
+
+
+assign App_rd_en = app_rd_en_reg;
+
+// 单缓冲：读取地址直接使用计数器
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			App_rd_addr <= 19'b0;
+		end
+		else begin
+			App_rd_addr <= r_addr_cnt;
+		end
+	end
+
+//sdram 有效读出的计数
+
+reg [18:0] sdr_rd_cnt;//synthesis keep
+reg sdr_rd_done  ; //synthesis keep
+	always @(posedge clk or negedge rst_n)           
+		begin                                        
+			if(!rst_n) begin                              
+			sdr_rd_cnt <= 19'b0;
+			sdr_rd_done <=1'b0;
+			end	                                   
+			else if(Sdr_rd_en & !sdr_rd_done)                                
+			begin
+            sdr_rd_cnt <=sdr_rd_cnt +1'b1;										 
+            end
+            else if(sdr_rd_cnt == 19'd307199) 
+			begin
+			sdr_rd_done <=1'b1;
+			end	
+			else begin
+			sdr_rd_cnt <=sdr_rd_cnt;
+			sdr_rd_done <=sdr_rd_done;
+			end
+		end 
+//读有效信号的产生
+
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		judge_cnt <= 'd0;
+// 	else if(Sdr_init_done)
+// 		judge_cnt <= judge_cnt+1'b1;
+// end	
+	
+	
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		tx_vld <= 'd0;
+// 	else if(judge_cnt==3'b111 & (!Sdr_init_ref_vld))
+// 		tx_vld <= 1'b1;
+// 	else if(tx_cnt[13] | Sdr_init_ref_vld)
+// 		tx_vld <= 1'b0;
+// end
+
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		tx_cnt <= 'd0;
+// 	else if(tx_vld)
+// 		tx_cnt <= tx_cnt+1'b1;
+// 	else
+// 		tx_cnt <= 'd0;
+// end
+
+
+
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		begin	
+// 			wr_en <= 1'b0;
+// 			wr_addr <= 'd0;
+// 			wr_din <= 'd0;
+			
+// 			wr_addr_1d <= 'd0;
+// 		end
+// 	else 
+// 		if(tx_cnt[12:11]==2'b01)
+// 			begin
+// 				wr_en <= 1'b1;
+// 				wr_addr <= wr_addr+1'b1;
+// 				wr_din <= wr_din+1'b1;
+// 			end
+// 		else
+// 			begin
+// 				wr_en <= 1'b0;
+// 				wr_addr <= wr_addr;
+// 				wr_din <= wr_din;
+// 			end
+// 		wr_addr_1d <= wr_addr;
+// end
+// assign		App_wr_en=wr_en;
+// assign  	App_wr_addr=wr_addr_1d;
+// assign		App_wr_dm=4'b0000;
+// assign		App_wr_din=wr_din;
+
+
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		begin	
+// 			rd_en <= 1'b0;
+// 			rd_addr <= 'd0;
+// 			rd_addr_1d <= 'd0;
+// 		end
+// 	else 
+// 		if(tx_cnt[12:11]==2'b11)
+// 			begin
+// 				rd_en <= 1'b1;
+// 				rd_addr <= rd_addr+1'b1;
+// 			end
+// 		else
+// 			begin
+// 				rd_en <= 1'b0;
+// 				rd_addr <= rd_addr;
+// 			end
+// 		rd_addr_1d <= rd_addr;
+// end
+
+// assign App_rd_en=rd_en;
+// assign App_rd_addr=rd_addr_1d;
+
+
+// reg			Sdr_rd_en_1d;
+// reg	[15:0]	init_data,Sdr_rd_dout_1d;
+
+// always @(posedge Clk)
+// begin
+// 	if(Rst)
+// 		init_data <= 'd0;
+// 	else if(Sdr_rd_en)
+// 		init_data <= init_data+1'b1;
+// end
+
+// always @(posedge Clk)
+// begin
+// 	Sdr_rd_dout_1d <= Sdr_rd_dout[15:0];
+// 	Sdr_rd_en_1d <= Sdr_rd_en;
+	
+// 	if(Sdr_rd_en_1d)
+// 		if(init_data!=Sdr_rd_dout_1d)
+// 			Check_ok <= 1'b1;
+// 		else
+// 			Check_ok <= 1'b0;
+// 	else
+// 		Check_ok <= 1'b0;
+// end
+	
+
+
+
+endmodule 

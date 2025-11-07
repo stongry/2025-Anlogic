@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RomConfig>
+    <FillMemoryInitValues>
+        <fill_all>NONE</fill_all>
+    </FillMemoryInitValues>
+    <GeneralConfig>
+        <Device>EG4S20BG256</Device>
+        <IP_ID>31</IP_ID>
+        <Type>EG_LOGIC_BRAM</Type>
+        <Version>1.0</Version>
+        <create_VHDL>true</create_VHDL>
+        <inst>ROM_0</inst>
+    </GeneralConfig>
+    <ImplementOption>
+        <imp_type>9k</imp_type>
+    </ImplementOption>
+    <MemoryInitialization>
+        <init_file>combined_digits_dilated.mif</init_file>
+        <init_file_enable>true</init_file_enable>
+    </MemoryInitialization>
+    <MemoryType>
+        <mem_type>SP</mem_type>
+    </MemoryType>
+    <PortAOption>
+        <depth_a>280</depth_a>
+        <register_a>None</register_a>
+        <width_a>28</width_a>
+    </PortAOption>
+    <UserConfig>
+        <debug_enable>false</debug_enable>
+        <pack_enable>false</pack_enable>
+    </UserConfig>
+    <GeneratedFiles>
+        <VHDL Enable="false">ROM_0.vhd</VHDL>
+        <Verilog Enable="true">ROM_0.v</Verilog>
+    </GeneratedFiles>
+</RomConfig>

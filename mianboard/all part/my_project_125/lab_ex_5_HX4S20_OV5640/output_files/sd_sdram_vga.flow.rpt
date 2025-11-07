@@ -1,0 +1,1337 @@
+Flow report for sd_sdram_vga
+Fri Dec 08 17:35:07 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Fri Dec 08 17:35:07 2023           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; sd_sdram_vga                                    ;
+; Top-level Entity Name              ; top                                             ;
+; Family                             ; Cyclone 10 LP                                   ;
+; Device                             ; 10CL006YU256C8G                                 ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 3,718 / 6,272 ( 59 % )                          ;
+;     Total combinational functions  ; 2,925 / 6,272 ( 47 % )                          ;
+;     Dedicated logic registers      ; 2,594 / 6,272 ( 41 % )                          ;
+; Total registers                    ; 2594                                            ;
+; Total pins                         ; 86 / 177 ( 49 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 100,352 / 276,480 ( 36 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                  ;
+; Total PLLs                         ; 2 / 2 ( 100 % )                                 ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/06/2023 17:09:22 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; sd_sdram_vga        ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                    ;
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                      ; Value                                                                                                                                       ; Default Value ; Entity Name ; Section Id       ;
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 250745402849626.170185376214344                                                                                                             ; --            ; --          ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                          ; --            ; --          ; Tb_QSPI_test     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                          ; --            ; --          ; Tb_Qspi_master   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                          ; --            ; --          ; Tb_flash_cmd     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                                                                          ; --            ; --          ; Tb_flash         ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                                                                                                                          ; --            ; --          ; eda_simulation   ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Tb_flash                                                                                                                                    ; --            ; --          ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                                                                                                 ; --            ; --          ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                                                                                                                          ; <None>        ; --          ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                                                                                             ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; Tb_QSPI_test.sv                                                                                                                             ; --            ; --          ; Tb_QSPI_test     ;
+; EDA_TEST_BENCH_FILE                  ; Tb_Qspi_master.sv                                                                                                                           ; --            ; --          ; Tb_Qspi_master   ;
+; EDA_TEST_BENCH_FILE                  ; Tb_flash_cmd.sv                                                                                                                             ; --            ; --          ; Tb_flash_cmd     ;
+; EDA_TEST_BENCH_FILE                  ; Tb_flash.sv                                                                                                                                 ; --            ; --          ; Tb_flash         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Tb_QSPI_test                                                                                                                                ; --            ; --          ; Tb_QSPI_test     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Tb_Qspi_master                                                                                                                              ; --            ; --          ; Tb_Qspi_master   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Tb_flash_cmd                                                                                                                                ; --            ; --          ; Tb_flash_cmd     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Tb_flash                                                                                                                                    ; --            ; --          ; Tb_flash         ;
+; EDA_TEST_BENCH_NAME                  ; Tb_Qspi_master                                                                                                                              ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; Tb_flash_cmd                                                                                                                                ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; Tb_QSPI_test                                                                                                                                ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; Tb_flash                                                                                                                                    ; --            ; --          ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                                                                                                                        ; --            ; --          ; eda_simulation   ;
+; ENABLE_SIGNALTAP                     ; On                                                                                                                                          ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                                                                          ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                                                                           ; --            ; --          ; --               ;
+; MISC_FILE                            ; src/ip_core/video_pll_bb.v                                                                                                                  ; --            ; --          ; --               ;
+; MISC_FILE                            ; src/ip_core/video_pll.ppf                                                                                                                   ; --            ; --          ; --               ;
+; MISC_FILE                            ; src/ip_core/sys_pll_bb.v                                                                                                                    ; --            ; --          ; --               ;
+; MISC_FILE                            ; src/ip_core/sys_pll.ppf                                                                                                                     ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                                                                                                           ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                                                                                                           ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                                                                                                  ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                                                                                                  ; --            ; --          ; --               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                                                                                                      ; --            ; top         ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                                                                                                      ; --            ; top         ; Top              ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                                                                                                      ; --            ; top         ; Top              ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                                                                                                         ; --            ; --          ; --               ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                                       ; --            ; --          ; --               ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                                                                                                ; --            ; --          ; --               ;
+; SLD_FILE                             ; db/stp1_auto_stripped.stp                                                                                                                   ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                  ; 110                                                                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                 ; sld_signaltap                                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_NODE_INFO=805334528                                                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_POWER_UP_TRIGGER=0                                                                                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STATE_BITS=11                                                                                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_BUFFER_FULL_STOP=1                                                                                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                                                ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INCREMENTAL_ROUTING=1                                                                                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL=1                                                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_IN_ENABLED=0                                                                                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_PIPELINE=0                                                                                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_RAM_PIPELINE=0                                                                                                                          ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_COUNTER_PIPELINE=0                                                                                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                                                ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=128                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=128                                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=33                                                                                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_BITS=33                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_TRIGGER_BITS=33                                                                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=120                                                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; TOP_LEVEL_ENTITY                     ; top                                                                                                                                         ; sd_sdram_vga  ; --          ; --               ;
+; USE_SIGNALTAP_FILE                   ; stp1.stp                                                                                                                                    ; --            ; --          ; --               ;
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4931 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:09     ; 1.7                     ; 6205 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4901 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4933 MB             ; 00:00:16                           ;
+; Partition Merge      ; 00:00:14     ; 1.0                     ; 4703 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:08     ; 1.7                     ; 6209 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4903 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.3                     ; 4882 MB             ; 00:00:09                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:09     ; 1.7                     ; 6206 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4901 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4866 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:03     ; 1.0                     ; 4731 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:08     ; 1.3                     ; 6186 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4901 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4878 MB             ; 00:00:16                           ;
+; Partition Merge      ; 00:00:02     ; 1.0                     ; 4728 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:09     ; 1.4                     ; 6190 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4902 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4855 MB             ; 00:00:07                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4731 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:05     ; 1.5                     ; 6192 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4902 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4655 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.1                     ; 4879 MB             ; 00:00:14                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4730 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:06     ; 1.5                     ; 6194 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4994 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4705 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.6                     ; 6218 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4904 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4982 MB             ; 00:00:06                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6214 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4902 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4980 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4706 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:09     ; 1.7                     ; 6206 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4902 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4983 MB             ; 00:00:19                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6216 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4685 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4902 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4985 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4706 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6212 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4903 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.1                     ; 4881 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6213 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4688 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4860 MB             ; 00:00:05                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4734 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6209 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4986 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6221 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4904 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4655 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4721 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4980 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4707 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6224 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4985 MB             ; 00:00:09                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6225 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6217 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4985 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6218 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4984 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6219 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:06                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:26     ; 1.5                     ; 6245 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4986 MB             ; 00:00:17                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6225 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.1                     ; 4886 MB             ; 00:00:06                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4731 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:06     ; 1.5                     ; 6206 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4904 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.1                     ; 4885 MB             ; 00:00:12                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4731 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:06     ; 1.5                     ; 6200 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4707 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6218 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.1                     ; 4877 MB             ; 00:00:19                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4728 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:06     ; 1.5                     ; 6196 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4903 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.3                     ; 4879 MB             ; 00:00:16                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4983 MB             ; 00:00:07                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:12     ; 1.6                     ; 6219 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.1                     ; 4893 MB             ; 00:00:20                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4733 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6208 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4688 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4909 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.1                     ; 4884 MB             ; 00:00:15                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6211 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4909 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.5                     ; 4891 MB             ; 00:00:15                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4714 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6221 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.1                     ; 4887 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4733 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6214 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:12                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6219 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4859 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4733 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6205 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4987 MB             ; 00:00:12                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6213 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4858 MB             ; 00:00:04                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4732 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:07     ; 1.6                     ; 6209 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4996 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:04     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:23     ; 1.4                     ; 6222 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4857 MB             ; 00:00:04                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4730 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:08     ; 1.6                     ; 6209 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4987 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:02     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:14     ; 1.7                     ; 6218 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4869 MB             ; 00:00:11                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:09     ; 1.5                     ; 6208 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4996 MB             ; 00:00:07                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:12     ; 1.6                     ; 6219 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.7                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4986 MB             ; 00:00:09                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4707 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6216 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6219 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4984 MB             ; 00:00:07                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6214 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4983 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6223 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4984 MB             ; 00:00:17                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6218 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4988 MB             ; 00:00:19                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6225 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4988 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4684 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4990 MB             ; 00:00:19                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4987 MB             ; 00:00:14                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4982 MB             ; 00:00:17                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6224 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4910 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4989 MB             ; 00:00:23                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6218 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6222 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 5004 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:12     ; 1.7                     ; 6224 MB             ; 00:00:08                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4689 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4722 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4717 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4719 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4980 MB             ; 00:00:09                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6229 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:14                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4707 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6218 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4987 MB             ; 00:00:08                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:13                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6223 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4905 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4987 MB             ; 00:00:20                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6223 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4907 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4722 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4984 MB             ; 00:00:14                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:12     ; 1.6                     ; 6221 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:21                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4711 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:11     ; 1.7                     ; 6222 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4987 MB             ; 00:00:21                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4709 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6219 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4908 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:20                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4710 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6220 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4989 MB             ; 00:00:23                           ;
+; Partition Merge      ; 00:00:00     ; 1.0                     ; 4708 MB             ; 00:00:00                           ;
+; Fitter               ; 00:00:10     ; 1.7                     ; 6225 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.8                     ; 4906 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Total                ; 00:41:55     ; --                      ; --                  ; 00:21:36                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T1B5OP5  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_map --read_settings_files=on --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_cdb --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_asm --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+quartus_sta sd_sdram_vga -c sd_sdram_vga
+quartus_eda --read_settings_files=off --write_settings_files=off sd_sdram_vga -c sd_sdram_vga
+
+
+

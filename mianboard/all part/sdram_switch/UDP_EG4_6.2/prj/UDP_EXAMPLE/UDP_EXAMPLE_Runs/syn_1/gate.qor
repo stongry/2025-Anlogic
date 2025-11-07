@@ -1,0 +1,100 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        -7291                |
+|     Setup TNS             |     -1056441                |
+|     Num of violated S-EP  |          420                |
+|     Hold WNS              |          471                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         4904                |
+|     #luts                 |         4523                |
+|     #lut1                 |           46                |
+|     #lut1(~A)             |           43                |
+|     #slices               |          375                |
+|     slices percentage     |        3.83%                |
+|     #RAMs                 |           36                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |           59                |
+|     #insts in MACRO       |          375                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          582                |
+|     #keep_hier            |          119                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        33.45                |
+| dff(single fanout)->dff   |          668                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     t3_sdram...           |           51                |
+|     t3_sdram...           |           16                |
+|     Total                 |           67                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+---------------------------------------------------------------------------------------------------------------------------------------------------
+               Clock                |  Index  |  Budget(Period)  |  Level(Quota)  |        Cell Type List         |        Reason        |  Slack  
+---------------------------------------------------------------------------------------------------------------------------------------------------
+  t3_sdram/u0_clk/pll_inst.clkc[1]  |    1    |    1854(8000)    |      4(3)      |  SEQ,LUT4,LUT3,LUT3,LUT3,SEQ  |  large launch delay  |  -4768  
+                                    |    2    |    1854(8000)    |      4(3)      |  SEQ,LUT4,LUT3,LUT3,LUT3,SEQ  |  large launch delay  |  -4768  
+                                    |    3    |    1854(8000)    |      4(3)      |  SEQ,LUT4,LUT3,LUT3,LUT3,SEQ  |  large launch delay  |  -4768  
+                                    |    4    |    1854(8000)    |      4(3)      |  SEQ,LUT4,LUT3,LUT3,LUT3,SEQ  |  large launch delay  |  -4768  
+                                    |    5    |    1854(8000)    |      4(3)      |  SEQ,LUT4,LUT3,LUT3,LUT3,SEQ  |  large launch delay  |  -4768  
+  t3_sdram/u0_clk/pll_inst.clkc[2]  |    1    |   -1713(8000)    |     0(-1)      |              PAD              |  large launch delay  |  -3213  
+                                    |    2    |   -1713(8000)    |     0(-1)      |              PAD              |  large launch delay  |  -3213  
+                                    |    3    |   -1713(8000)    |     0(-1)      |              PAD              |  large launch delay  |  -3213  
+                                    |    4    |   -1713(8000)    |     0(-1)      |              PAD              |  large launch delay  |  -3213  
+                                    |    5    |   -1713(8000)    |     0(-1)      |              PAD              |  large launch delay  |  -3213  
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                               |  Period            |  0     |  1     |  2     |  3    |  4     |  5    |  6    |  7    |  8    |  9    |  10  |  11
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                              |  20.000ns (50MHz)  |  19    |  12    |  6     |  12   |  23    |  21   |  5    |  0    |  32   |  0    |  0   |  0
+  phy1_rgmii_rx_clk                   |  8.000ns (125MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  pll_inst_125M_0                     |  80.000ns (12MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  pll_inst_125M_1                     |  40.000ns (25MHz)  |  1294  |  1199  |  894   |  521  |  3159  |  360  |  255  |  215  |  60   |  88   |  67  |  48
+  t3_sdram/u0_clk/pll_inst.clkc[0]    |  8.000ns (125MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  t3_sdram/u0_clk/pll_inst.clkc[1]    |  8.000ns (125MHz)  |  699   |  390   |  139   |  44   |  121   |  41   |  16   |  21   |  0    |  0    |  0   |  0
+  t3_sdram/u0_clk/pll_inst.clkc[2]    |  8.000ns (125MHz)  |  16    |  32    |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  u_pll_50/pll_inst.clkc[0]           |  20.000ns (50MHz)  |  111   |  29    |  36    |  13   |  1     |  1    |  1    |  1    |  1    |  1    |  1   |  1
+  u_pll_50/pll_inst.clkc[1]           |  20.000ns (50MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  u_pll_50/pll_inst.clkc[2]           |  4.000ns (250MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  udp_clk_125m                        |  40.000ns (25MHz)  |  0     |  0     |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  video_pll_m0/pll_inst.clkc[0]       |  40.000ns (25MHz)  |  404   |  65    |  40    |  23   |  18    |  8    |  42   |  37   |  15   |  12   |  1   |  1
+  video_pll_m0/pll_inst.clkc[1]       |  8.000ns (125MHz)  |  39    |  27    |  0     |  0    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0
+  Total                               |  NA                |  2584  |  1754  |  1115  |  613  |  3322  |  431  |  319  |  274  |  108  |  101  |  69  |  50
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++-------------------------------------------------------------------------------------------+
+|Inst                       |Model                   |Rent     |Cell     |Pin     |Term     |
++-------------------------------------------------------------------------------------------+
+|top                        |UDP_Example_Top         |0.23     |11240    |42724   |32       |
+|  t3_sdram                 |sdram_top_1             |0.42     |1935     |5897    |75       |
+|  u3_udp_ip_protocol_stack |udp_ip_protocol_stack_4 |0.32     |5116     |20882   |63       |
++-------------------------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+

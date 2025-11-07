@@ -1,0 +1,22 @@
+Location         : C:\Users\Neko\Documents\FPGA\github_anlu\2025-Anlogic\video640 19fps\UDP_EG4_6.2\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\phy_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : manhattan
+Setup            : WNS -4713ps  TNS  -243600ps  NUM_FEPS    80
+Hold             : WNS  -111ps  TNS    -1700ps  NUM_FEPS    50
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+      place      |    1     |  38s(100%)  |   51(100%)    |        527        |        527        
+    import_db    |    3     |   0s(0%)    |     0(0%)     |        368        |        368        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        86         |        86         
+      pack       |    1     |   0s(0%)    |     0(0%)     |        369        |        369        
+--------------------------------------------------------------------------------------------------
+      total      |    6     |     38s     |      51       |        527        |        527        
+--------------------------------------------------------------------------------------------------

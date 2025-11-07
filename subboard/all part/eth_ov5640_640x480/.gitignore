@@ -1,0 +1,16 @@
+# Ignore everything by default
+*
+
+# But keep src directory structure
+!.gitignore
+!claude.md
+!lab_ex_5_HX4S20_OV5640/
+!lab_ex_5_HX4S20_OV5640/src/
+!lab_ex_5_HX4S20_OV5640/src/**/*.v
+
+# Keep constraint files
+!**/*.sdc
+!**/*.adc
+
+# Keep git directory
+!.git/

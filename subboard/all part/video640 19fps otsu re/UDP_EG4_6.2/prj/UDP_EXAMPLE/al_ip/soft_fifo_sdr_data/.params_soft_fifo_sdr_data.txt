@@ -1,0 +1,60 @@
+ERAM : 1 : U : En :  :  : 
+DRAM : 0 : U : En :  :  : 
+URAM : 0 : U : Dis :  :  : 
+EMB9K_Area_Opt : 0 : U : En :  :  : 
+EMB9K_Timing_Opt : 0 : U : En :  :  : 
+ASYNC_CLK : 1 : G : En :  :  : 
+WRST_PIN : 1 : G : En :  :  : 
+RST_PIN : 0 : G : En :  :  : 
+SRST_PIN : 0 : G : En :  :  : 
+NORST : 0 : G : En :  :  : 
+EMB32K : 0 : U : En :  :  : 
+Auto : 1 : U : En :  :  : 
+EMB20K_Area_Opt : 0 : U : Dis :  :  : 
+EMB20K_Timing_Opt : 0 : U : Dis :  :  : 
+ASYNC : 1 : U : En :  :  : 
+SYNC : 0 : U : En :  :  : 
+Write_Width : 24 : U : En :  : 1 : 1024
+Write_Depth : 1024 : U : En : 16;;32;;64;;128;;256;;512;;1024;;2048;;4096;;8192;;16384 :  : 
+Read_Width : 24 : U : En : 3;;6;;12;;24;;48;;96;;192;;384 :  : 
+Read_Depth : 1024 : U : En :  :  : 
+Show_Ahead_Enable : 0 : U : En :  :  : 
+Show_Ahead_Disable : 1 : U : En :  :  : 
+Out_Reg_Enable : 0 : U : En :  :  : 
+Out_Reg_Disable : 1 : U : En :  :  : 
+Almost_Full_Num : 1000 : U : En :  : 3 : 1021
+Almost_Empty_Num : 24 : U : En :  : 2 : 1020
+Sync_Stages : 2 : U : En : 2;;3;;4;;5;;6;;7;;8 :  : 
+Reset_Type : ASYNC Reset : U : En : ASYNC Reset;;ASYNC Reset SYNC Release;;No Reset :  : 
+Dout_Reset_Value : 0 : U : Dis :  :  : 
+Write_Width_Range : 1~1024 : G : En :  :  : 
+Read_Width_Range : 1~1024 : G : En :  :  : 
+Almost_Full_Num_Range : 3-1021 : G : En :  :  : 
+Almost_Empty_Num_Range : 2-1020 : G : En :  :  : 
+COMMON_CLK_EN : 0 : G : En :  :  : 
+MEMORY_TYPE : 0 : G : En :  :  : 
+RST_TYPE : 1 : G : En :  :  : 
+DATA_WIDTH_W : 24 : G : En :  :  : 
+ADDR_WIDTH_W : 10 : G : En :  :  : 
+DATA_WIDTH_R : 24 : G : En :  :  : 
+ADDR_WIDTH_R : 10 : G : En :  :  : 
+DOUT_INITVAL : 24'h0 : G : En :  :  : 
+OUTREG_EN : NOREG : G : En :  :  : 
+SHOW_AHEAD_EN : 0 : G : En :  :  : 
+AL_FULL_NUM : 1000 : G : En :  :  : 
+AL_EMPTY_NUM : 24 : G : En :  :  : 
+RDUSEDW_WIDTH : 10 : G : En :  :  : 
+WRUSEDW_WIDTH : 10 : G : En :  :  : 
+ASYNC_RST_SYNC_RELS : 0 : G : En :  :  : 
+SYNC_STAGE : 2 : G : En :  :  : 
+EG4 : 1 : G : En :  :  : 
+EF2 : 0 : G : En :  :  : 
+EF3 : 0 : G : En :  :  : 
+EF4 : 0 : G : En :  :  : 
+EF5 : 0 : G : En :  :  : 
+SF1 : 0 : G : En :  :  : 
+SF2 : 0 : G : En :  :  : 
+PH1 : 0 : G : En :  :  : 
+PH2 : 0 : G : En :  :  : 
+DR1 : 0 : G : En :  :  : 
+EF3L15_25_45 : 0 : G : En :  :  : 

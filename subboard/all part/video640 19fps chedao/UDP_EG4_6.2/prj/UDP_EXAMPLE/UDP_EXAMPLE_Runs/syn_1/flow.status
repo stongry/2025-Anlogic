@@ -1,0 +1,23 @@
+Location         : /home/ysara/Desktop/ext/video640 19fps chedao/UDP_EG4_6.2/prj/UDP_EXAMPLE/UDP_EXAMPLE_Runs/syn_1
+Running with     : Tang Dynasty v6.2.175876
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS -8861ps  TNS  -647014ps  NUM_FEPS   284
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_gate  |    1     |  15s(65%)   |    14(63%)    |        582        |        616        
+  optimize_rtl   |    1     |   8s(34%)   |    8(36%)     |        572        |        650        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        268        |        268        
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        416        |        416        
+    read_sdc     |    3     |   0s(0%)    |     0(0%)     |        419        |        419        
+--------------------------------------------------------------------------------------------------
+      total      |    7     |     23s     |      22       |        582        |        650        
+--------------------------------------------------------------------------------------------------

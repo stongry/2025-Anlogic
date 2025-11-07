@@ -1,0 +1,96 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |       -49164                |
+|     Setup TNS             |      -893205                |
+|     Num of violated S-EP  |          593                |
+|     Hold WNS              |          471                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         4393                |
+|     #luts                 |         5013                |
+|     #lut1                 |           49                |
+|     #lut1(~A)             |           34                |
+|     #slices               |         1343                |
+|     slices percentage     |       13.70%                |
+|     #RAMs                 |           34                |
+|     #DSPs                 |            9                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |          212                |
+|     #insts in MACRO       |         1343                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          526                |
+|     #keep_hier            |           65                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        32.66                |
+| dff(single fanout)->dff   |          552                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     t3_sdram...           |           11                |
+|     Total                 |           11                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+               Clock                |  Index  |  Budget(Period)  |  Level(Quota)  |                                                                                                                                                                                         Cell Type List                                                                                                                                                                                          |  Reason  |  Slack   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  t3_sdram/u0_clk/pll_inst.clkc[1]  |    1    |    7854(8000)    |     51(10)     |                 SEQ,ADDER,ADDER,ADDER,LUT2,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,LUT4,LUT5,LUT5,LUT4,LUT5,EMB                 |  normal  |  -42489  
+                                    |    2    |    7854(8000)    |     51(10)     |                 SEQ,ADDER,ADDER,ADDER,LUT2,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,LUT4,LUT5,LUT5,LUT4,LUT5,EMB                 |  normal  |  -42489  
+                                    |    3    |    7854(8000)    |     51(10)     |                 SEQ,ADDER,ADDER,ADDER,LUT2,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,LUT4,LUT5,LUT5,LUT4,LUT5,EMB                 |  normal  |  -42489  
+                                    |    4    |    7854(8000)    |     51(10)     |  SEQ,ADDER,ADDER,ADDER,LUT2,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT4,LUT5,LUT5,LUT5,LUT4,LUT5,EMB  |  normal  |  -40515  
+                                    |    5    |    7854(8000)    |     51(10)     |  SEQ,ADDER,ADDER,ADDER,LUT2,MULT18,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,LUT2,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,LUT3,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,ADDER,LUT4,LUT5,LUT5,LUT5,LUT4,LUT5,EMB  |  normal  |  -40515  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+---------------------------------------------------------------------------------------------------------------------------------------
+  Clock                               |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  >=30
+---------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                              |  20.000ns (50MHz)  |  1     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  phy1_rgmii_rx_clk                   |  8.000ns (125MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  pll_inst_125M_0                     |  8.000ns (125MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  pll_inst_125M_1                     |  8.000ns (125MHz)  |  1295  |  1248  |  815   |  3307  |  590  |  396  |  511  |  19  |  242
+  t3_sdram/u0_clk/pll_inst.clkc[0]    |  80.000ns (12MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  t3_sdram/u0_clk/pll_inst.clkc[1]    |  8.000ns (125MHz)  |  742   |  392   |  142   |  191   |  86   |  21   |  53   |  60  |  242
+  t3_sdram/u0_clk/pll_inst.clkc[2]    |  8.000ns (125MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  u_pll_50/pll_inst.clkc[0]           |  20.000ns (50MHz)  |  11    |  2     |  2     |  7     |  0    |  0    |  0    |  0   |  242
+  u_pll_50/pll_inst.clkc[1]           |  20.000ns (50MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  u_pll_50/pll_inst.clkc[2]           |  4.000ns (250MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  u_rx_pll/pll_inst.clkc[0]           |  8.000ns (125MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  u_rx_pll/pll_inst.clkc[1]           |  8.000ns (125MHz)  |  519   |  142   |  108   |  102   |  33   |  2    |  0    |  0   |  242
+  u_rx_pll/pll_inst.clkc[2]           |  4.000ns (250MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  udp_clk_125m                        |  8.000ns (125MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  242
+  Total                               |  NA                |  2586  |  1816  |  1067  |  3607  |  709  |  419  |  564  |  79  |  242
+---------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++-------------------------------------------------------------------------------------------+
+|Inst                       |Model                   |Rent     |Cell     |Pin     |Term     |
++-------------------------------------------------------------------------------------------+
+|top                        |UDP_Example_Top         |0.19     |12008    |48330   |24       |
+|  u_blue_bbox_overlay      |blue_bbox_overlay_7     |0.48     |2048     |9806    |192      |
+|  t3_sdram                 |sdram_top_1             |0.41     |1939     |5884    |67       |
+|  u3_udp_ip_protocol_stack |udp_ip_protocol_stack_3 |0.32     |5176     |21261   |63       |
++-------------------------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+

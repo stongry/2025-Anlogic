@@ -1,0 +1,4 @@
+ipgen_gui_set_spin_box_text IP_Generator Write_Width 8
+ipgen_gui_set_spin_box_text IP_Generator Write_Width 24
+ipgen_gui_select_window IP_Generator
+ipgen_gui_close_window IP_Generator

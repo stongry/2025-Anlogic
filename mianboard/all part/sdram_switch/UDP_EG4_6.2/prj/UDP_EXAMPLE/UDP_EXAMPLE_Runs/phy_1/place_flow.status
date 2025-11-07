@@ -1,0 +1,21 @@
+Location         : D:\Anlu\double_fpga_udp\tx\sdram_switch\UDP_EG4_6.2\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\phy_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : manhattan
+Setup            : WNS -6713ps  TNS  -401039ps  NUM_FEPS   133
+Hold             : WNS    30ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+      place      |    1     |  32s(100%)  |   45(100%)    |        382        |        382        
+    import_db    |    1     |   0s(0%)    |     0(0%)     |        180        |        180        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        84         |        84         
+--------------------------------------------------------------------------------------------------
+      total      |    3     |     32s     |      45       |        382        |        382        
+--------------------------------------------------------------------------------------------------

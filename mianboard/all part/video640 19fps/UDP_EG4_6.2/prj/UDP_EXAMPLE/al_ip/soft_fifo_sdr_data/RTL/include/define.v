@@ -1,0 +1,2 @@
+`define ASYNC_CLK_1ac9ed6c858a
+`define WRST_PIN_1ac9ed6c858a
